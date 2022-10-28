@@ -1,11 +1,11 @@
-import cogoToast from 'cogo-toast'
 import React, { useContext, useEffect, useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
 import { addInvestors, getInvestors, editInvestors, deleteInvestors, getInvestorFileFromBlob } from '../../services/investors'
 import { InvestorType } from '../../types/investorsTypes'
 import AddEdit from '../addEdit'
 import AppLoginContext from '../AppLoginContext'
 import CommonModal from '../CommonModal/CommonModal'
-
+import 'react-toastify/dist/ReactToastify.css';
 
 const Investors = () => {
     const [data, setData] = useState([]);
@@ -31,7 +31,6 @@ const Investors = () => {
         setIsOpen(false)
     }
 
-    //create new News
     const createInvestors = async (data: any) => {
         const tempData: InvestorType = {
             heading: data.heading,
@@ -41,19 +40,20 @@ const Investors = () => {
         try {
             const resp = await addInvestors(tempData, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             setIsOpen(false)
             await fetchAllInvestors()
-            if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
-            } else {
-                cogoToast.success(resp.data?.message)
-            }
         } catch (err: any) {
-            cogoToast.error(err.response.data.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -68,13 +68,19 @@ const Investors = () => {
         try {
             const resp = await editInvestors(tempData, loginContext.token, InvestorsId)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             fetchAllInvestors();
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -84,13 +90,19 @@ const Investors = () => {
         try {
             const resp = await deleteInvestors(InvestorsId, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllInvestors()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         }
     }
     return (
@@ -127,6 +139,7 @@ const Investors = () => {
                     isLoading={isLoading}
                 />
             </CommonModal>
+            <ToastContainer />
         </div>
     )
 }

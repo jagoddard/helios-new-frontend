@@ -1,10 +1,12 @@
-import cogoToast from 'cogo-toast'
 import React, { useContext, useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import { getAllArticles, addArticle, editArticle, deleteArticle, getArticleFileFromBlob } from '../../services/articles'
 import { ArticleType } from '../../types/articleTypes'
 import AddEdit from '../addEdit'
 import AppLoginContext from '../AppLoginContext'
 import CommonModal from '../CommonModal/CommonModal'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Articles = () => {
     const [data, setData] = useState([]);
@@ -44,14 +46,20 @@ const Articles = () => {
         try {
             const resp = await addArticle(tempData, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             setIsOpen(false)
             await fetchAllArticles()
         } catch (err: any) {
-            cogoToast.error(err.response.data.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -69,13 +77,19 @@ const Articles = () => {
         try {
             const resp = await editArticle(tempData, loginContext.token, ArticleId)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllArticles()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -85,13 +99,19 @@ const Articles = () => {
         try {
             const resp = await deleteArticle(ArticleId, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllArticles()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         }
     }
     return (
@@ -111,9 +131,9 @@ const Articles = () => {
                             tab="ARTICLES"
                             key={item.id}
                             data={item}
-                            onDelete={(id:number)=>handleDeleteArticle(id)}
-                            openFile={(id: number)=>getArticleFileFromBlob(id)}
-                            onEdit={(data, id)=>editArticles(data, id)}
+                            onDelete={(id: number) => handleDeleteArticle(id)}
+                            openFile={(id: number) => getArticleFileFromBlob(id)}
+                            onEdit={(data, id) => editArticles(data, id)}
                         />
                     )
 
@@ -124,10 +144,11 @@ const Articles = () => {
                     tab='ARTICLES'
                     isAddNew={true}
                     onClose={() => closeModal()}
-                    onAdd={(data)=>createNewArticle(data)}
+                    onAdd={(data) => createNewArticle(data)}
                     isLoading={isLoading}
                 />
             </CommonModal>
+            <ToastContainer />
         </div>
     )
 }

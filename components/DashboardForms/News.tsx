@@ -1,17 +1,18 @@
-import cogoToast from 'cogo-toast'
 import React, { useContext, useEffect, useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
 import { addNews, deleteNews, editNews, getAllNews, getFileFromBlob } from '../../services/news'
 import { NewsType } from '../../types/newsTypes'
 import AddEdit from '../addEdit'
 import AppLoginContext from '../AppLoginContext'
 import CommonModal from '../CommonModal/CommonModal'
+import 'react-toastify/dist/ReactToastify.css'
 
 const News = () => {
     const [data, setData] = useState([]);
     const loginContext = useContext(AppLoginContext);
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [isLoading, setIsLoading] = useState<boolean>(false)
-    //get News
+
     const fetchAllNews = async () => {
         try {
             const resp = await getAllNews();
@@ -30,7 +31,6 @@ const News = () => {
         setIsOpen(false)
     }
 
-    //create new News
     const createNewNews = async (data: any) => {
         const tempData: NewsType = {
             content: data.content,
@@ -43,14 +43,21 @@ const News = () => {
         try {
             const resp = await addNews(tempData, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
+
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             setIsOpen(false)
             await fetchAllNews()
         } catch (err: any) {
-            cogoToast.error(err.response.data.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -68,13 +75,19 @@ const News = () => {
         try {
             const resp = await editNews(tempData, loginContext.token, NewsId)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllNews()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }  
@@ -84,13 +97,19 @@ const News = () => {
         try {
             const resp = await deleteNews(NewsId, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllNews()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         }
     }
 
@@ -129,6 +148,7 @@ const News = () => {
                     isLoading={isLoading}
                 />
             </CommonModal>
+            <ToastContainer />
         </div>
 
     )

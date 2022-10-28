@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
 import AppLoginContext from '../../components/AppLoginContext';
 import { login } from '../../services/login';
-import cogoToast from 'cogo-toast';
 import { useRouter } from 'next/router';
 import { routes } from '../../routes/routes';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [hide, setHide] = useState(true);
@@ -20,7 +21,9 @@ const Login = () => {
         try {
             const loginResp = await login(data)
             if (loginResp.data.status === 400) {
-                cogoToast.error(loginResp.data.message)
+                toast.error(loginResp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
                 return;
             } else {
                 loginContext.setToken(loginResp.data.accessToken)
@@ -28,7 +31,9 @@ const Login = () => {
                 router.push(routes.dashboard)
             }
         } catch (err: any) {
-            cogoToast.error(err.response.data.message)
+            toast.error(err?.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         }
     }
 
@@ -79,6 +84,7 @@ const Login = () => {
                     </button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     )
 }

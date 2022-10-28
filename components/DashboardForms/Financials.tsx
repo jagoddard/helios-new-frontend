@@ -1,10 +1,11 @@
-import cogoToast from 'cogo-toast'
 import React, { useContext, useEffect, useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
 import { addFinancials, deleteFinancials, editFinancials, getFinancialFileFromBlob, getFinancialMdaFileFromBlob, getFinancials } from '../../services/financials'
 import { FinancialType } from '../../types/financialTypes'
 import AddEdit from '../addEdit'
 import AppLoginContext from '../AppLoginContext'
 import CommonModal from '../CommonModal/CommonModal'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Financials = () => {
@@ -43,14 +44,20 @@ const Financials = () => {
         try {
             const resp = await addFinancials(tempData, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             fetchAllFinancials()
             closeModal()
         } catch (err: any) {
-            cogoToast.error(err.response.data.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -67,13 +74,19 @@ const Financials = () => {
         try {
             const resp = await editFinancials(tempData, loginContext.token, FinancialsId)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             fetchAllFinancials()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -83,13 +96,19 @@ const Financials = () => {
         try {
             const resp = await deleteFinancials(FinancialsId, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             fetchAllFinancials()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         }
     }
     return (
@@ -128,6 +147,7 @@ const Financials = () => {
                     isLoading={isLoading}
                 />
             </CommonModal>
+            <ToastContainer />
         </div>
     )
 }
