@@ -1,0 +1,28 @@
+@tailwind components;
+
+@layer components {
+    .header {
+        @apply absolute top-0 z-50 flex justify-between  items-center px-4 md:px-[15px] bg-bgOpacity w-full h-20
+    }
+    .logo {
+        @apply cursor-pointer h-12
+    }
+    .nav {
+        @apply hidden headerMd:flex items-center justify-between headerXl:gap-10 headerMd:gap-3 h-full
+    }
+    .navLink {
+        @apply text-lg uppercase cursor-pointer flex items-center h-full font-normal hover:text-primaryColor
+    }
+    .shareLogin {
+        @apply hidden headerMd:flex justify-between items-center gap-3
+    }
+    .sharePrice {
+        @apply text-white text-lg font-medium
+    }
+    .shareName {
+        @apply text-primaryColor
+    }
+    .login {
+        @apply bg-primaryColor px-3 py-[6px] rounded-lg font-normal text-white uppercase text-lg
+    }
+}

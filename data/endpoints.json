@@ -1,0 +1,11 @@
+{
+    "news":{
+      "fetchNews": "/news",
+      "fetchArticles": "/articles",
+      "fetchInvestors": "/investors",
+      "fetchReports": "/investors/technical-reports",
+      "fetchFinancials": "/investors/financials",
+      "fetchAgmReports": "/investors/agm"
+    },
+    "login": "/auth/login"
+}

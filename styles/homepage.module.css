@@ -1,0 +1,131 @@
+@tailwind components;
+
+@layer components {
+    .heloandHeader {
+        @apply relative h-fit w-full
+    }
+
+    .hero {
+        @apply h-fit max-h-screen bg-black w-full flex justify-center items-center -z-10
+    }
+
+    .homeAbout {
+        @apply relative w-full bg-[#25272B]
+    }
+
+    .homeaboutBackground {
+        @apply absolute right-0 top-0 h-full hidden md:flex;
+    }
+
+    .homeAboutInner {
+        @apply p-5 md:py-10 md:px-20;
+    }
+
+    .homeAboutTitle {
+        @apply text-primaryColor text-[32px] md:text-[40px] font-bold
+    }
+
+    /* .homeAboutTitleX {
+        @apply text-black dark:text-white
+    } */
+
+    .homeAboutSubTitle {
+        @apply text-primaryColor text-lg md:text-2xl pt-3 pb-6 font-normal
+    }
+
+    .homeAboutDesc {
+        @apply mb-5 text-white
+    }
+
+    .homeAboutLastDesc {
+        @apply mb-5 text-white
+    }
+
+    /* .wwh {
+        @apply p-[80px] bg-darkTheme
+    } */
+/* 
+    .wwhTitle {
+        @apply text-[30px] md:text-[56px] text-center font-bold font-sans text-white
+    } */
+
+    .wwhTitleEndText {
+        @apply text-primaryColor
+    }
+
+    .wwhGroup {
+        @apply flex flex-col headerMd:flex-row justify-center md:gap-[7%] gap-[30px] mt-8 md:mt-[50px]
+    }
+
+    .wwhCard {
+        @apply flex-col justify-center items-center cursor-pointer
+    }
+
+    .wwhCardImage {
+        @apply h-60 md:h-72 w-full md:w-72
+    }
+
+    .wwhCardTitle {
+        @apply text-center mt-10 md:mt-5 text-[28px] font-medium text-white
+    }
+
+    .kum {
+        @apply py-10 md:py-16 bg-[#25272A]
+    }
+
+    .kumTitle {
+        @apply text-[56px] text-center font-sans text-bgColor font-bold
+    }
+
+    /* .kumGroup {
+        @apply mt-10
+    } */
+
+    .kumCard {
+        @apply bg-bgLight px-5 py-5 md:px-14 md:py-10 w-[90vw] mx-auto md:w-full rounded-lg 
+    }
+
+    .kumCardTitle {
+        @apply text-kumItemTitle text-[32px] md:text-[40px] mb-12 font-bold
+    }
+
+    .kmuButton {
+        @apply flex justify-center mt-10 md:ml-0
+    }
+
+    .kmuBtn {
+        @apply bg-primaryColor text-white px-10 py-2 rounded-lg text-xl font-semibold
+    }
+
+    /* .map {
+        @apply bg-bgColor
+    } */
+
+    .mapBackground {
+        @apply bg-ourProjectBg
+    }
+
+    /* .mapTitle {
+        @apply text-[56px] text-center font-bold font-sans text-white py-10
+    } */
+
+    .mapContainer{
+        @apply relative w-full xl:w-[1000px]  mx-auto
+    }
+
+    .mapLastPartTitle {
+        @apply text-primaryColor
+    }
+
+    .mapPointerTitleone {
+        @apply absolute max-w-[150px] md:max-w-[220px] top-[30px] md:top-[127px] left-[15px] md:left-[185px] min-h-[40px] md:min-h-[61px] bg-[#00000090] backdrop-blur-[6px] border-2 border-primaryColor rounded-lg p-2 flex justify-center items-center cursor-pointer;
+    }
+
+    .mapPointerTitleTwo{
+        @apply absolute max-w-[150px] md:max-w-[220px] top-[70px] md:top-[245px] left-[180px] md:left-[213px] min-h-[40px] md:min-h-[61px] bg-[#00000090] backdrop-blur-[6px] border-2 border-primaryColor rounded-lg p-2 flex justify-center items-center cursor-pointer;
+    }
+
+    .mapPointerTitleThree{
+        @apply absolute max-w-[150px] md:max-w-[220px] top-[180px] md:top-[520px] left-[80px] md:left-[402px] min-h-[40px] md:min-h-[61px] bg-[#00000090] backdrop-blur-[6px] border-2 border-primaryColor rounded-lg p-2 flex justify-center items-center cursor-pointer;
+    }
+}

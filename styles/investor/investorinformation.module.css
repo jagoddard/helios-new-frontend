@@ -1,0 +1,31 @@
+@tailwind components;
+
+@layer components {
+    .InvestorInformation {
+        @apply px-5 py-3 md:px-20 md:py-10 bg-darkTheme
+    }
+    .pageTitle {
+        @apply text-headerMobile md:text-header mt-3 md:mt-0 font-semibold text-white uppercase
+    }
+    .infoMedia {
+        @apply gap-5 md:gap-20 mt-5 md:mt-10 mb-12 md:w-fit mx-auto
+    }
+    .youtubeInner {
+        @apply w-[90%] m-auto md:w-[500px] px-3 pt-3 bg-[#25272A] rounded
+    }
+    .youtube {
+        @apply h-[230px]
+    }
+    .youtubeDesc {
+        @apply py-2 px-4 bg-[#25272A] text-white
+    }
+    .InfoPdf {
+        @apply md:w-3/5 m-auto py-6
+    }
+    .informationData {
+        @apply bg-[#25272A] border-b-8 border-primaryColor
+    }
+    .informationDataBackground {
+        @apply bg-bgInformation bg-cover px-5 md:px-20 py-10
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "news": "/news",
+    "articles": "/articles",
+    "technical_reports": "/technical-reports",
+    "financial": "/financial",
+    "investors": "/investors",
+    "agm": "/agm", 
+    "login": "/auth/login"
+}
