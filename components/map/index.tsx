@@ -32,7 +32,7 @@ const markers: markersTypes[] = [
         markerOffset: -210,
         markerYOffset: -10,
         name: "Fox Creek, Alberta, Canada",
-        acerage: "(315,060 acres)",
+        acerage: "(583,952 acres)",
         coordinates: [-116.79502835738636, 54.39761248388819],
         mapImg: (
             <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>

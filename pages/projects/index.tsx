@@ -90,7 +90,7 @@ const Project = () => {
                                     <p className='text-white text-xs md:text-sm'>interest in mineral claims</p>
                                     <p className='text-white text-xs md:text-sm'>at <span className='font-bold'>Fox Creek,</span> Alberta,</p>
                                     <p className='text-white text-xs md:text-sm'>Canada</p>
-                                    <p className='text-white text-xs md:text-sm'>Fox Creek – 315,060 acres</p>
+                                    <p className='text-white text-xs md:text-sm'>Fox Creek – 583,952 acres</p>
                                 </div>
                             </div>
                             <img src='foxCreek.svg' className='h-auto w-full' />
