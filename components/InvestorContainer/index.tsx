@@ -1,7 +1,7 @@
-import cogoToast from 'cogo-toast';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify';
 import { InvestorsTabs } from '../../data/InvestorsTabs';
 import { routes } from '../../routes/routes';
 import { getAgmConfig } from '../../services/agm';
@@ -10,6 +10,8 @@ import { TabType } from '../../types/tabsTypes';
 import Footer from '../footer';
 import Header from '../header';
 import MobileTabs from '../mobileTabs';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 interface ChildrenType {
   selectedTab: string,
@@ -30,7 +32,9 @@ const InvestorContainer = ({ selectedTab, children }: ChildrenType) => {
       let response = await getAgmConfig();
       setIsAgmEnabled(response.data.payload[0].isAgmTabEnabled)
     } catch (error: any) {
-      cogoToast.error(error.response.data?.message)
+      toast.error(error.response?.data?.message, {
+        position: toast.POSITION.TOP_CENTER
+    })
     }
   }
 
@@ -85,6 +89,7 @@ const InvestorContainer = ({ selectedTab, children }: ChildrenType) => {
        <MobileTabs tabData={isAgmEnabled ? InvestorTabWithAgm : InvestorsTabs} />
       </section>
       <section>{children}</section>
+      <ToastContainer />
       <Footer />
     </div>
   )

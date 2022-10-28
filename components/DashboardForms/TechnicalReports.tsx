@@ -1,10 +1,11 @@
-import cogoToast from 'cogo-toast'
 import React, { useContext, useEffect, useState } from 'react'
 import { getTechnicalReports, addTechnicalReports, editTechnicalReports, deleteTechnicalReports, getTechnicalFileFromBlob } from '../../services/technicalReports'
 import { TechnicalReportsType } from '../../types/technicalReportsType'
 import AddEdit from '../addEdit'
 import AppLoginContext from '../AppLoginContext'
 import CommonModal from '../CommonModal/CommonModal'
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify'
 
 
 const TechnicalReports = () => {
@@ -30,8 +31,7 @@ const TechnicalReports = () => {
     const closeModal = () => {
         setIsOpen(false)
     }
-
-    //create new Tecnical Reports
+    
     const createNewTecnicalReports = async (data: any) => {
         const tempData: TechnicalReportsType = {
             date: data.date,
@@ -42,14 +42,20 @@ const TechnicalReports = () => {
         try {
             const resp = await addTechnicalReports(tempData, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllTecnicalReports()
             setIsOpen(false)
         } catch (err: any) {
-            cogoToast.error(err.response.data.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         }
@@ -65,13 +71,19 @@ const TechnicalReports = () => {
         try {
             const resp = await editTechnicalReports(tempData, loginContext.token, ReportId)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllTecnicalReports()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         } finally {
             setIsLoading(false)
         } 
@@ -81,13 +93,19 @@ const TechnicalReports = () => {
         try {
             const resp = await deleteTechnicalReports(ReportId, loginContext.token)
             if (resp.data.status === 400) {
-                cogoToast.error(resp.data?.message)
+                toast.error(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             } else {
-                cogoToast.success(resp.data?.message)
+                toast.success(resp?.data?.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             }
             await fetchAllTecnicalReports()
         } catch (err: any) {
-            cogoToast.error(err.response.data?.message)
+            toast.error(err.response?.data?.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         }
     }
     return (
@@ -124,6 +142,7 @@ const TechnicalReports = () => {
                     isLoading={isLoading}
                 />
             </CommonModal>
+            <ToastContainer />
         </div>
     )
 }

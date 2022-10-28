@@ -12,13 +12,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [token, setToken] = useState("")
   return (
-    <AppLoginContext.Provider value={{isLoggedIn, setIsLoggedIn, token, setToken}}>
+    <AppLoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, token, setToken }}>
       <Head>
         <title>HeliosX</title>
       </Head>
       <main className="">
 
-        <Component {...pageProps} />
+        <Component {...pageProps}></Component>
         <Script
           src="https://qmod.quotemedia.com/js/qmodLoader.js"
           id="qmod"
