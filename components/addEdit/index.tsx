@@ -174,7 +174,7 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
                 {(tab === "ARTICLES" || tab === "NEWS") && <CommonInput
                     type={"text"}
                     Label='Video URL:'
-                    value={videoUrl || "null"}
+                    value={videoUrl || ""}
                     onChange={(e: any) => setVideoUrl(e.target.value)}
                     disabled={!isEditMode}
                 />}
