@@ -59,7 +59,7 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
             file: file,
             mdaFile: mdaFile
         }
-        if(onEdit && data){
+        if (onEdit && data) {
             onEdit(tempData, data?.id)
         }
         setIsEditMode(false)
@@ -84,24 +84,20 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
     return (
         <div className='bg-addEditBg py-4 px-20 w-[700px] m-auto relative'>
             {!isAddNew && <div className='flex justify-end gap-4'>
-                <div className='flex bg-bgColor px-2 gap-2'>
-                    <button
-                        onClick={onEditClick}
-                        className='text-white py-2 rounded-[5px] font-semibold'
-                    >
-                        EDIT
-                    </button>
+                <button
+                    onClick={onEditClick}
+                    className='text-white py-2 rounded-[5px] font-semibold bg-bgColor flex gap-1 justify-center items-center w-24 '
+                >
+                    EDIT
                     <img src="/edit.svg" className='w-5 cursor-pointer' />
-                </div>
-                <div className='flex border border-[#FF0000] px-2 gap-2'>
-                    {(data && onDelete) && <button 
-                        onClick={()=>onDelete(data.id)}
-                        className=' text-[#FF0000] py-2 rounded-[5px] font-semibold'
-                    >
-                        DELETE
-                    </button>}
+                </button>
+                {(data && onDelete) && <button
+                    onClick={() => onDelete(data.id)}
+                    className=' text-[#FF0000] border border-[#FF0000] py-2 rounded-[5px] font-semibold flex gap-1 justify-center items-center w-24 '
+                >
+                    DELETE
                     <img src="/delete.svg" className='w-5 cursor-pointer' />
-                </div>
+                </button>}
             </div>}
             <div className='mt-20 mb-10'>
                 {onClose && <button className='absolute top-[10px] right-[10px]' onClick={onClose}><AiOutlineClose /></button>}
@@ -140,14 +136,14 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
                 </div>}
                 <div className='mb-6'>
                     <p className='font-medium mb-2 text-xl'>File Upload:</p>
-                    <input 
+                    <input
                         type="file"
                         disabled={!isEditMode}
-                        onChange={(e:any) => setFile(e.target.files[0])} 
+                        onChange={(e: any) => setFile(e.target.files[0])}
                     />
-                    {(data?.file && openFile) && 
-                        <p 
-                            onClick={()=>openFile(data.id)}
+                    {(data?.file && openFile) &&
+                        <p
+                            onClick={() => openFile(data.id)}
                             className='cursor-pointer border-b border-[#787676] text-[#787676] w-fit mt-2'
                         >
                             View File
@@ -156,14 +152,14 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
 
                 {(tab === "FINANCIALS") && <div className='mb-6'>
                     <p className='font-medium mb-2 text-xl'>Mda Upload:</p>
-                    <input 
+                    <input
                         disabled={!isEditMode}
                         type="file"
-                        onChange={(e:any) => setMdaFile(e.target.files[0])}
+                        onChange={(e: any) => setMdaFile(e.target.files[0])}
                     />
-                    {(data?.mdaFile && openMda) && 
-                        <p 
-                            onClick={()=>openMda(data.id)}
+                    {(data?.mdaFile && openMda) &&
+                        <p
+                            onClick={() => openMda(data.id)}
                             className='cursor-pointer border-b border-[#787676] text-[#787676] w-fit mt-2'
                         >
                             View File
@@ -195,7 +191,7 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
                     disabled={isLoading}
                     className='bg-bgColor text-primaryColor w-28 py-2 rounded-[5px] font-semibold disabled:opacity-60'
                 >
-                    {isLoading ? "SUBMITING...": "SUBMIT"}
+                    {isLoading ? "SUBMITING..." : "SUBMIT"}
                 </button>
             </div>}
         </div>

@@ -13,11 +13,11 @@ const index = () => {
                     <div className='md:w-[60%] m-auto bg-bgColor py-5 px-8 mt-10 rounded-2xl projectBoxShadow'>
                         <div className='flex flex-col md:flex-row gap-10 md:gap-0 justify-between'>
                             <div className='w-full flex flex-col justify-center items-center'>
-                                <p className='text-primaryColor font-bold text-xl'>127,500</p>
+                                <p className='text-primaryColor font-bold text-xl'>234,269</p>
                                 <p className='pt-2 text-white'>Hectares</p>
                             </div>
                             <div className='md:border-l border-t md:border-t-0 border-b md:border-b-0 border-white py-10 md:py-0 w-full flex flex-col justify-center items-center'>
-                                <p className='text-primaryColor font-bold text-xl'>315,060</p>
+                                <p className='text-primaryColor font-bold text-xl'>578,891</p>
                                 <p className='pt-2 text-white'>Acres</p>
                             </div>
                         </div>
