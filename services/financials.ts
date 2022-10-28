@@ -23,8 +23,11 @@ export const editFinancials = async (data: FinancialType, token: string, id:numb
     let formData = new FormData()
     formData.append('year', data.year.toUpperCase())
     formData.append('heading', data.heading)
-    formData.append('mdaFile', data.mdaFile)
-    formData.append('file', data.file)
+    if(data.file){
+        
+    }
+    formData.append('mdaFile', new Blob([]))
+    formData.append('file', new Blob([]))
     return await api.put(`${endpoint.financial}/${id}`, formData)
 }
 
