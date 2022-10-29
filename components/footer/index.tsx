@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <>
             <div className='bg-primaryColor h-2 w-full' />
-            <section className={styles.footer}>
+            <div className={styles.footer}>
                 <div className={styles.footerNav}>
                     <Link href={routes.homepage}>
                         <img src="/logo.svg" className={styles.footerLogo} />
@@ -84,7 +84,7 @@ const Footer = () => {
                     </Link>
                 </div>
 
-            </section>
+            </div>
         </>
     )
 }

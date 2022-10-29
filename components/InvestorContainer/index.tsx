@@ -11,7 +11,12 @@ import Footer from '../footer';
 import Header from '../header';
 import MobileTabs from '../mobileTabs';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import dynamic from 'next/dynamic';
+
+const ToastContainer = dynamic<any>(() =>
+  import('react-toastify').then((module) => module.ToastContainer),
+  { ssr: false }
+)
 
 interface ChildrenType {
   selectedTab: string,
@@ -34,7 +39,7 @@ const InvestorContainer = ({ selectedTab, children }: ChildrenType) => {
     } catch (error: any) {
       toast.error(error.response?.data?.message, {
         position: toast.POSITION.TOP_CENTER
-    })
+      })
     }
   }
 
@@ -45,15 +50,15 @@ const InvestorContainer = ({ selectedTab, children }: ChildrenType) => {
 
   return (
     <div>
-      <section className={styles.heloandHeader}>
+      <div className={styles.heloandHeader}>
         <Header tabname='Investors' />
         <div className={styles.hero}>
           <div className='flex justify-center items-center p-4 bg-bgOpacity absolute bottom-20'>
             <p className='text-primaryColor text-2xl md:text-4xl font-bold'>Investors</p>
           </div>
         </div>
-      </section>
-      <section className={styles.investFilter}>
+      </div>
+      <div className={styles.investFilter}>
         <Link href="/investores/investor-information">
           <p className={`${selectedTab === "Investor Information" ? "text-primaryColor" : "text-white"} ${styles.investFilterItemName}`}>
             Investor Information
@@ -84,11 +89,11 @@ const InvestorContainer = ({ selectedTab, children }: ChildrenType) => {
             Annual General Meeting - AGM
           </p>
         </Link>}
-      </section>
-      <section className='bg-bgColor py-4 px-20 w-full md:hidden'>
-       <MobileTabs tabData={isAgmEnabled ? InvestorTabWithAgm : InvestorsTabs} />
-      </section>
-      <section>{children}</section>
+      </div>
+      <div className='bg-bgColor py-4 px-20 w-full md:hidden'>
+        <MobileTabs tabData={isAgmEnabled ? InvestorTabWithAgm : InvestorsTabs} />
+      </div>
+      <div>{children}</div>
       <ToastContainer />
       <Footer />
     </div>

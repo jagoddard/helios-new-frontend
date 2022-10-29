@@ -1,12 +1,31 @@
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { useTheme } from 'next-themes';
-import {
-    ComposableMap,
-    Geographies,
-    Geography,
-    Annotation,
-    Marker
-} from "react-simple-maps";
+import dynamic from 'next/dynamic';
+
+const ComposableMap = dynamic<any>(() =>
+    import('react-simple-maps').then(module => module.ComposableMap),
+    { ssr: false }
+)
+
+const Geographies = dynamic<any>(() =>
+    import('react-simple-maps').then(module => module.Geographies),
+    { ssr: false }
+)
+
+const Geography = dynamic<any>(() =>
+    import('react-simple-maps').then(module => module.Geography),
+    { ssr: false }
+)
+
+const Annotation = dynamic<any>(() =>
+    import('react-simple-maps').then(module => module.Annotation),
+    { ssr: false }
+)
+
+const Marker = dynamic<any>(() =>
+    import('react-simple-maps').then(module => module.Marker),
+    { ssr: false }
+)
 
 interface MapProps {
     setContent: Dispatch<SetStateAction<JSX.Element>>
@@ -71,10 +90,10 @@ const markers: markersTypes[] = [
         coordinates: [-118.34694327503382, 38.20556233485941],
         mapImg: (
             <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52923.32364990205!2d-118.38828463459622!3d38.21962347022427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x641e9fcebc1bd014!2zMzjCsDEyJzIwLjAiTiAxMTjCsDIwJzQ5LjAiVw!5e1!3m2!1sen!2sin!4v1664453030956!5m2!1sen!2sin" 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52923.32364990205!2d-118.38828463459622!3d38.21962347022427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x641e9fcebc1bd014!2zMzjCsDEyJzIwLjAiTiAxMTjCsDIwJzQ5LjAiVw!5e1!3m2!1sen!2sin!4v1664453030956!5m2!1sen!2sin"
                     style={{ width: "100%", height: "100%" }}
-                    loading="lazy" 
+                    loading="lazy"
                 >
                 </iframe>
             </div>
@@ -87,11 +106,11 @@ const markers: markersTypes[] = [
         acerage: "(230,000 acres)",
         coordinates: [-66.21195190525212, -23.964050144675575],
         mapImg: <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-            <iframe 
+            <iframe
                 style={{ width: "100%", height: "100%" }}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126702.44203729229!2d-66.25291198248605!3d-23.98186383360072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x347bee773b7d5307!2zMjPCsDU3JzUzLjAiUyA2NsKwMTInNDMuMCJX!5e1!3m2!1sen!2sin!4v1664452680707!5m2!1sen!2sin"
-                loading="lazy" 
-            > 
+                loading="lazy"
+            >
             </iframe>
         </div>
     },
@@ -134,8 +153,8 @@ const Map = ({ setContent }: MapProps) => {
                 style={{ height: "100%", width: "100%" }}
             >
                 <Geographies geography="/geo1.json">
-                    {({ geographies }) =>
-                        geographies.map((geo) => (
+                    {({ geographies }: any) =>
+                        geographies.map((geo: any) => (
                             <Geography
                                 key={geo.rsmKey}
                                 geography={geo}
@@ -146,8 +165,8 @@ const Map = ({ setContent }: MapProps) => {
                     }
                 </Geographies>
                 <Geographies geography="/geo2.json">
-                    {({ geographies }) =>
-                        geographies.map((geo) => (
+                    {({ geographies }: any) =>
+                        geographies.map((geo: any) => (
                             <Geography
                                 key={geo.rsmKey}
                                 geography={geo}
@@ -160,7 +179,7 @@ const Map = ({ setContent }: MapProps) => {
                 {
                     annotations.map((annotation: annotationTypes, index: number) => (
                         <Annotation
-                            key={index+1}
+                            key={index + 1}
                             subject={annotation.coordinates}
                             dx={annotation.dx}
                             dy={annotation.dy}
@@ -198,7 +217,7 @@ const Map = ({ setContent }: MapProps) => {
                                 <g filter="url(#filter0_b_557_2017)">
                                     <rect width="225" height="51" rx="8" fill="black" fillOpacity="0.48" />
                                     <text textAnchor="middle" x={110} y={20} fill='#FFF' style={{ cursor: "pointer" }}>{name}</text>
-                                    <text textAnchor="middle" x={110+5} y={40} fill='#FFF' style={{ cursor: "pointer" }}>{acerage}</text>
+                                    <text textAnchor="middle" x={110 + 5} y={40} fill='#FFF' style={{ cursor: "pointer" }}>{acerage}</text>
                                     <rect x="1" y="1" width="223" height="50" rx="7" stroke="#F78222" strokeWidth="2" />
                                 </g>
                                 <defs>

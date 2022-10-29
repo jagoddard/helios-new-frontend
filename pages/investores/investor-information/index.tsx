@@ -29,7 +29,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
   return (
     <InvestorContainer selectedTab='Investor Information'>
       <>
-        <section className={styles.InvestorInformation}>
+        <div className={styles.InvestorInformation}>
           <p className={styles.pageTitle}>Information</p>
           <div className={`${styles.infoMedia} flex md:hidden`}>
             <Swiper
@@ -165,8 +165,8 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               })
             }
           </div>
-        </section>
-        <section className={styles.informationData}>
+        </div>
+        <div className={styles.informationData}>
           <div className={styles.informationDataBackground}>
             <p className='text-headerMobile md:text-header font-semibold text-white'>Stock <span className='text-primaryColor'>Information</span></p>
             <div className='stockInfo overflow-auto mb-10'>
@@ -228,7 +228,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               />
             </div>
           </div>
-        </section>
+        </div>
 
       </>
     </InvestorContainer>
