@@ -18,7 +18,6 @@ const Financials = () => {
         try {
             const resp = await getFinancials();
             setData(resp.data)
-            console.log(resp.data)
         } catch (err) {
             console.log(err)
         }

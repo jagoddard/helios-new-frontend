@@ -25,7 +25,6 @@ export const getServerSideProps = async () => {
 }
 
 const InvestorInformation = ({ data }: InvestorInfoProps) => {
-  // console.log(data)
   return (
     <InvestorContainer selectedTab='Investor Information'>
       <>

@@ -50,7 +50,6 @@ const Homepage = ({ data }: HomepageProps) => {
     //Enabled when theme toggle is required
     // const { theme } = useTheme();
     // const isMobile: boolean = size.width < 992
-    console.log(data)
 
     const twitterPlaceholder = <>
         <div className='w-[90vw] mx-auto md:w-[650px] h-[560px] md:h-[742px] flex justify-center items-center bg-black rounded-lg'>
