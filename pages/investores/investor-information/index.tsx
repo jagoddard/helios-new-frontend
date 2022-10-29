@@ -14,13 +14,14 @@ interface InvestorInfoProps {
   data: any;
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const investorRes = await getInvestors();
   const investorData = JSON.stringify(investorRes.data);
   return {
     props: {
       data: JSON.parse(investorData)
-    }
+    },
+    revalidate: 10
   }
 }
 

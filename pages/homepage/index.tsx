@@ -27,7 +27,7 @@ interface HomepageProps {
     }
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const newsRes = await getAllNews();
     const newsData = JSON.stringify(newsRes.data);
     const articleRes = await getAllArticles();
@@ -35,7 +35,8 @@ export const getServerSideProps = async () => {
     return {
         props: {
             data: { news: JSON.parse(newsData), articles: JSON.parse(articleData) }
-        }
+        },
+        revalidate: 10
     }
 }
 

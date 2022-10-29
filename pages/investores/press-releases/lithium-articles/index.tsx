@@ -7,7 +7,7 @@ interface Props {
     data: any;
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     let newsResp = await getAllArticles();
     let latestArticles
     if (newsResp.status === 200) {
@@ -18,7 +18,8 @@ export const getServerSideProps = async () => {
     return {
         props: {
             data: latestArticles
-        }
+        },
+        revalidate: 10
     }
 }
 
