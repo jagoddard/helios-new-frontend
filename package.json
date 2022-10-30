@@ -6,7 +6,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:nxt": "next start"
   },
   "dependencies": {
     "@types/react-simple-maps": "^1.0.8",
