@@ -22,16 +22,6 @@ const TechnicalReports = ({ data }: Props) => {
     <InvestorContainer selectedTab='Technical Reports'>
       <section className='py-10 px-5 md:px-20 border-b-8 border-primaryColor bg-darkTheme'>
         <p className='text-headerMobile md:text-header font-semibold mb-6 text-white'>TECHNICAL REPORTS</p>
-        <Informationpdf
-          pdfText='Fox Creek NI 43-101 Technical Report - March 2022'
-          pdfLinkText1='PDF'
-          pdflink='./files/technicalReports/NI_43_101_Fox_Creek_Independent_Report_March 2022.pdf'
-        />
-        <Informationpdf
-          pdfText='Teels Marsh NI 43-101 Technical Report - February 2022'
-          pdfLinkText1='PDF'
-          pdflink='./files/technicalReports/9Teels MarshNI 43-101 2022-02-02_draft.pdf'
-        />
         {
           data.payload.map((reports: any, index:number) => {
             return (
