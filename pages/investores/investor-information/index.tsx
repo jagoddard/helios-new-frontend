@@ -6,7 +6,6 @@ import styles from '../../../styles/investor/investorinformation.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-// import { getInvestors } from '../../../services/api_old';
 import ReactPlayer from 'react-player';
 import { getInvestorFileFromBlob, getInvestors } from '../../../services/investors';
 
@@ -14,18 +13,18 @@ interface InvestorInfoProps {
   data: any;
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const investorRes = await getInvestors();
   const investorData = JSON.stringify(investorRes.data);
   return {
     props: {
       data: JSON.parse(investorData)
-    }
+    },
+    revalidate: 10,
   }
 }
 
 const InvestorInformation = ({ data }: InvestorInfoProps) => {
-  // console.log(data)
   return (
     <InvestorContainer selectedTab='Investor Information'>
       <>

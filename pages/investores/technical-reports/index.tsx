@@ -7,13 +7,14 @@ interface Props {
   data: any
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let reportResp = await getTechnicalReports();
   let reportData = JSON.stringify(reportResp.data);
   return {
     props: {
       data: JSON.parse(reportData)
-    }
+    },
+    revalidate: 10,
   }
 }
 

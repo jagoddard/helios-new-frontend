@@ -8,13 +8,14 @@ interface Props {
   data: any
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const financialResp = await getFinancials();
   const financialData = JSON.stringify(financialResp.data);
   return {
     props: {
       data: JSON.parse(financialData)
-    }
+    },
+    revalidate: 10
   }
 }
 

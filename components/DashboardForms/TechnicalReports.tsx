@@ -18,7 +18,6 @@ const TechnicalReports = () => {
         try {
             const resp = await getTechnicalReports();
             setData(resp.data.payload)
-            console.log(resp.data.payload)
         } catch (err) {
             console.log(err)
         }

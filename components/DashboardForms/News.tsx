@@ -17,7 +17,6 @@ const News = () => {
         try {
             const resp = await getAllNews();
             setData(resp.data.payload)
-            console.log(resp.data.payload)
         } catch (err) {
             console.log(err)
         }

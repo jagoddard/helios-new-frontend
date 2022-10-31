@@ -17,7 +17,6 @@ const Investors = () => {
         try {
             const resp = await getInvestors();
             setData(resp.data.payload)
-            console.log(resp.data.payload)
         } catch (err) {
             console.log(err)
         }

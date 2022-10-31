@@ -15,7 +15,6 @@ const Sidebar = ({ open, setOpen, tabname }: SidebarProps) => {
       document.body.style.overflow = 'unset';
     }
   }, []);
-  console.log(tabname);
   return (
     <div className='fixed headerMd:hidden w-screen bg-[#b6b6b678] z-10 flex justify-end top-[80px] left-0' style={{ height: "calc(100vh - 80px)" }}>
       <div className='bg-black text-white w-6/12 p-4 h-full flex flex-col justify-between sidbarShadow'>
