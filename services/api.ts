@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+export const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://heliosx.azurewebsites.net/api"
 
 export const api = axios.create({
     baseURL: baseURL
