@@ -29,10 +29,6 @@ const index = () => {
                     <p className='my-3 text-white'><strong>Primary (non-Rechargeable):</strong> Including coin or cylindrical batteries used in calculators and digital cameras. Lithium batteries have higher energy density compared to alkaline batteries, as well as lower weight and long shelf and operating life.</p>
                     <p className='my-3 text-white'><strong>Secondary (rechargeable):</strong> Key current applications for lithium batteries are in powering cell phones, laptops and other handheld electronic devices, power tools and large format batteries for electricity grid stabilisation. The advantage of the lithium secondary battery are its higher energy density and lighter weight, compared to nickel cadmium and nickel metal hydride batteries.</p>
                     <p className='my-3 text-white'>A growing application for lithium batteries is a power source for a wide range of electric vehicles, including electric bikes, scooters, buses, taxies, and passenger electric vehicles. There are three main categories of electric passenger vehicles: Hybrid Electric Vehicles, Plug-In Hybrid Vehicles and Electric Vehicles. The electrification of vehicles is strongly supported by governments around the world due to increasing political and consumer focus on climate change and energy security. The introduction of mass produced passenger electric vehicles has the potential to significantly increase the future consumption of lithium.</p>
-                    <div className='flex flex-col items-center md:justify-center mt-6'>
-                        <img src="/lithium3.svg" />
-                        <p className='mt-2 text-white text-center'>Typical non-rechargeable batteries found in items like remote controls and children's toys.</p>
-                    </div>
                 </section>
                 <section className='px-5 md:px-20 py-10'>
                     <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>OTHER CHEMICAL APPLICATIONS:</p>

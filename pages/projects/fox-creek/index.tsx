@@ -42,7 +42,7 @@ const index = () => {
                 <section className='px-5 md:px-20 py-10'>
                     <p className='font-semibold text-primaryColor mb-6 text-headerMobile md:text-header'>FORMATIONS OF INTEREST</p>
                     <div className='flex flex-col items-center gap-10'>
-                        <p className='text-white'>The Lithium brine bearing formations are hosted in reefal carbonates of the Devonian Beaverhill Lake and Woodbend Groups. The specific carbonate units of interest are the Leduc Formation of the Woodbend Group and the Swan Hills Formation of the Beaverhill Lake Group. To date, initial indications are that the highest concentrations tend to be associated with the Swan Hills carbonate complexes. </p>
+                        <p className='text-white'>The Lithium brine bearing formations are hosted in reefal carbonates of the Devonian Beaverhill Lake and Woodbend Groups. The specific carbonate units of interest are the Leduc Formation of the Woodbend Group and the Swan Hills Formation of the Beaverhill Lake Group. To date, initial indications are that the highest concentrations tend to be associated within the Swan Hills carbonate complexes. </p>
                         <img src="/fc1.png" />
                     </div>
                 </section>
