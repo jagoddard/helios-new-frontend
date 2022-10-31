@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useContext, useEffect, useState } from 'react'
-import AddEdit from '../../components/addEdit'
 import AppLoginContext from '../../components/AppLoginContext';
-import CommonModal from '../../components/CommonModal/CommonModal';
 import Agm from '../../components/DashboardForms/Agm';
 import Articles from '../../components/DashboardForms/Articles';
 import Financials from '../../components/DashboardForms/Financials';
@@ -34,7 +32,6 @@ const Dashboard = () => {
         try {
             const resp = await getAllNews();
             setData(resp.data.payload)
-            console.log(resp.data.payload)
         } catch (err) {
             console.log(err)
         }

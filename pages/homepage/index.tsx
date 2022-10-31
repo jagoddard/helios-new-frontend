@@ -12,13 +12,14 @@ import styles from '../../styles/homepage.module.css';
 //Enabled when theme toggle is required
 // import useWindowSize, { windowSizeType } from '../../utils/useWindowSize'
 // import { useTheme } from 'next-themes';
-import { getArticles, getNews } from '../../services/api_old';
 import Link from 'next/link';
 import { routes } from '../../routes/routes'
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import ReactPlayer from 'react-player/youtube';
 import { getAllNews } from '../../services/news'
-import { getAllArticles } from '../../services/articles'
+import { getAllArticles } from '../../services/articles';
+import dynamic from 'next/dynamic'
+
+const ReactPlayer = dynamic(()=>import('react-player/lazy'), {ssr: false})
 
 interface HomepageProps {
     data: {
@@ -27,7 +28,7 @@ interface HomepageProps {
     }
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const newsRes = await getAllNews();
     const newsData = JSON.stringify(newsRes.data);
     const articleRes = await getAllArticles();
@@ -35,7 +36,8 @@ export const getServerSideProps = async () => {
     return {
         props: {
             data: { news: JSON.parse(newsData), articles: JSON.parse(articleData) }
-        }
+        },
+        revalidate: 10,
     }
 }
 
@@ -50,7 +52,6 @@ const Homepage = ({ data }: HomepageProps) => {
     //Enabled when theme toggle is required
     // const { theme } = useTheme();
     // const isMobile: boolean = size.width < 992
-    console.log(data)
 
     const twitterPlaceholder = <>
         <div className='w-[90vw] mx-auto md:w-[650px] h-[560px] md:h-[742px] flex justify-center items-center bg-black rounded-lg'>
@@ -63,34 +64,15 @@ const Homepage = ({ data }: HomepageProps) => {
             <section className={styles.heloandHeader}>
                 <Header tabname="Home" />
                 <div className={styles.hero}>
-                    {/* Enable when taken from youtube */}
-                    {/* <ReactPlayer
-                        url={"https://www.youtube.com/watch?v=OjMwQAZZTKc"}
+                    <ReactPlayer
+                        url='videos/homepageVideo.m4v'
                         loop={true}
                         controls={false}
                         playing={true}
                         volume={0}
-                        width="100%"
-                        height="100%"
-                        config={{
-                            playerVars: { showinfo: 0 }
-                        }}
-                        style={{ width: '100%' }}
-                    /> */}
-                    <video
-                        id="background-video"
-                        loop
-                        autoPlay
-                        muted
-                        style={{
-                            width: '100%',
-                        }}
-                    >
-                        <source src="homepageVideo.m4v" type="video/mp4" />
-                        <div className='flex justify-center items-center p-4 rounded-full bg-bgOpacity'>
-                            <img src="play.svg" alt="play" className='w-6 h-6' />
-                        </div>
-                    </video>
+                        width={"100%"}
+                        height="fit-content"
+                    />
                 </div>
             </section>
             <section className={styles.homeAbout}>
