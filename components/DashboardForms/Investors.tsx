@@ -122,7 +122,7 @@ const Investors = () => {
                             key={item.id}
                             data={item}
                             onDelete={(id:number)=>handleDeleteFinancials(id)}
-                            openFile={(id: number)=>getInvestorFileFromBlob(id)}
+                            openFile={`/pdf-viewer/investor-information/${item.id}`}
                             onEdit={(data, id)=>editInvestorsDetails(data, id)}
                         />
                     )

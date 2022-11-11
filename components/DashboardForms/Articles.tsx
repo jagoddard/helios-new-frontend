@@ -131,7 +131,7 @@ const Articles = () => {
                             key={item.id}
                             data={item}
                             onDelete={(id: number) => handleDeleteArticle(id)}
-                            openFile={(id: number) => getArticleFileFromBlob(id)}
+                            openFile={`/pdf-viewer/articles/${item.id}`}
                             onEdit={(data, id) => editArticles(data, id)}
                         />
                     )

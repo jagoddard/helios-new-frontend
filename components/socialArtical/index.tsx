@@ -15,7 +15,7 @@ const SocialArtical = ({ headline, description, date, fileLink }: Props) => {
                     {
                         fileLink != '#' ? (
                             <p className='text-white text-base md:text-newsArticalHeader hover:text-primaryColor'>
-                                <a href={`${process.env.NEXT_PUBLIC_BASE_URL}${fileLink.slice(1)}`} target="_blank" rel="noopener noreferrer">
+                                <a href={fileLink} target="_blank" rel="noopener noreferrer">
                                     {reduceString(40, headline)}
                                 </a>
                             </p>

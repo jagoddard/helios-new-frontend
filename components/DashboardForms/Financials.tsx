@@ -130,8 +130,8 @@ const Financials = () => {
                             onEdit={(data, id) => editFinancialsDetails(data, id)}
                             onDelete={(id) => handleDeleteFinancials(id)}
                             isLoading={isLoading}
-                            openFile={(id: number)=> getFinancialFileFromBlob(id)}
-                            openMda={(id: number)=> getFinancialMdaFileFromBlob(id)}
+                            openFile={`/pdf-viewer/financial/${item.id}`}
+                            openMda={`/pdf-viewer/financial-mda/${item.id}`}
                         />
                     )
 

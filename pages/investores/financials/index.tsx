@@ -48,9 +48,10 @@ const Financials = ({ data }: Props) => {
                           pdfText={item.heading}
                           pdfLinkText1="Financials"
                           pdflink={item.file}
+                          route={`/pdf-viewer/financial/${item.id}`}
                           openFile={()=>getFinancialFileFromBlob(item.id)}
-                          mdaLink={item.mdaFile}
-                          openMda={()=>getFinancialMdaFileFromBlob(item.id)}
+                          mdaLink={`/pdf-viewer/financial-mda/${item.id}`}
+                          
                         />
                       )
                     })

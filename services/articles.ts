@@ -46,11 +46,5 @@ export const getArticleFileFromBlob = async (id: number) => {
     })
     const fileData = response.data;
     const url = window.URL.createObjectURL(new Blob([fileData], { type: "application/pdf" }));
-    const link = document.createElement("a");
-    link.href = url;
-    // link.setAttribute("download", fileName);
-    // link.setAttribute("target", "_blank");
-    document.body.appendChild(link);
-    // link.click();
-    window.open(url)
+    return url;
 }

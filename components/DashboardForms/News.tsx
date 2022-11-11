@@ -130,7 +130,7 @@ const News = () => {
                             key={item.id}
                             data={item}
                             onDelete={(id:number)=>deleteNewsArticle(id)}
-                            openFile={(id: number)=>getFileFromBlob(id, item.file)}
+                            openFile={`/pdf-viewer/news/${item.id}`}
                             onEdit={(data, id)=>editNewsArticles(data, id)}
                             isLoading={isLoading}
                         />

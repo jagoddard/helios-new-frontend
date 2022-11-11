@@ -19,6 +19,7 @@
     "react-icons": "^4.6.0",
     "react-player": "^2.11.0",
     "react-simple-maps": "^3.0.0",
+    "react-spinners": "^0.13.6",
     "react-toastify": "^9.0.8",
     "react-tooltip": "^4.2.21",
     "react-tradingview-embed": "^3.0.6",
