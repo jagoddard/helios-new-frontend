@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 interface props {
   pdfText: string;
@@ -6,10 +7,11 @@ interface props {
   pdflink?: string;
   pdfLocalLink?: string;
   mdaLink?: string;
-  openFile?: () => void 
-  openMda?: () => void
+  openFile?: () => void;
+  openMda?: () => void;
+  route?:string
 }
-const Informationpdf = ({ pdfText, pdf2, pdfLinkText1, pdflink, mdaLink, pdfLocalLink, openFile, openMda }: props) => {
+const Informationpdf = ({ pdfText, pdf2, pdfLinkText1, pdflink, mdaLink, pdfLocalLink, openFile,route, openMda }: props) => {
   return (
     <div className='border-b border-[#efefef] pb-2 mb-3 cursor-pointer'>
       <div className='flex gap-4 md:gap-0 justify-between items-center'>
@@ -26,11 +28,15 @@ const Informationpdf = ({ pdfText, pdf2, pdfLinkText1, pdflink, mdaLink, pdfLoca
             ) : null
           }
           {
-            pdflink && openFile ? (
-              <div onClick={openFile} className='flex gap-2 items-center w-1/3 md:w-fit md:justify-start'>
+            pdflink && route ? (
+          <Link href={route}>
+          <a  target="_blank" rel="noopener noreferrer">
+               <div className='flex gap-2 items-center w-1/3 md:w-fit md:justify-start'>
                 <img src="/pdf.png" className='w-6 h-6 md:h-8' />
                 <p className='text-primaryColor'>{pdfLinkText1}</p>
               </div>
+              </a>
+              </Link>
             ) : null
           }
           {

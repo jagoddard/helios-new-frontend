@@ -45,6 +45,6 @@ export const getInvestorFileFromBlob = async (id: number) => {
     // link.setAttribute("download", fileName);
     // link.setAttribute("target", "_blank");
     document.body.appendChild(link);
-    // link.click();
+    // link.click();       
     window.open(url)
 }
