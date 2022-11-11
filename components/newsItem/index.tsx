@@ -5,6 +5,7 @@ interface Props {
     newsDescription: string,
     pdfLink: string,
     openFile: () => void,
+    route?:string
 }
 const NewsItem = ({ title, newsDate, newsDescription, pdfLink, openFile }: Props) => {
     return (
@@ -17,7 +18,7 @@ const NewsItem = ({ title, newsDate, newsDescription, pdfLink, openFile }: Props
                 <div className='flex md:justify-end gap-5 md:w-[20%] mt-5 md:mt-0'>
                    {pdfLink && <div 
                         className='flex gap-2 items-center cursor-pointer'
-                        onClick={openFile}
+                        // onClick={openFile}
                     >
                         <img src="/pdf.png" className='w-4 h-5' />
                         <p className='text-primaryColor text-base'>View</p>
