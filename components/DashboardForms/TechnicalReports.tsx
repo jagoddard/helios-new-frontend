@@ -125,7 +125,7 @@ const TechnicalReports = () => {
                             key={item.id}
                             data={item}
                             onDelete={(id:number)=>handleDeleteTecnicalReports(id)}
-                            openFile={(id:number)=>getTechnicalFileFromBlob(id)}
+                            openFile={`/pdf-viewer/technical-report/${item.id}`}
                             onEdit={(data,id)=>editTecnicalReports(data,id)}
                         />
                     )

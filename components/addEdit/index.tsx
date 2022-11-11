@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CommonInput from '../commonInput'
 import { AiOutlineClose } from 'react-icons/ai';
+import Link from 'next/link';
 
 type data = {
     id: number,
@@ -21,9 +22,9 @@ interface Props {
     onEdit?: (data: any, id: number) => void;
     onDelete?: (id: number) => void;
     onClose?: () => void;
-    openFile?: (id: number) => void;
+    openFile?: string;
     isLoading?: boolean;
-    openMda?: (id: number) => void;
+    openMda?: string;
 }
 
 const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoading, openFile, openMda }: Props) => {
@@ -142,12 +143,16 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
                         onChange={(e: any) => setFile(e.target.files[0])}
                     />
                     {(data?.file && openFile) &&
-                        <p
-                            onClick={() => openFile(data.id)}
-                            className='cursor-pointer border-b border-[#787676] text-[#787676] w-fit mt-2'
-                        >
-                            View File
-                        </p>}
+                        <Link href={openFile}>
+                            <a target="_blank" rel="noopener noreferrer">
+                                <p
+                                    className='cursor-pointer border-b border-[#787676] text-[#787676] w-fit mt-2'
+                                >
+                                    View File
+                                </p>
+                            </a>
+                        </Link>
+                    }
                 </div>
 
                 {(tab === "FINANCIALS") && <div className='mb-6'>
@@ -158,44 +163,47 @@ const AddEdit = ({ data, isAddNew, tab, onDelete, onAdd, onEdit, onClose, isLoad
                         onChange={(e: any) => setMdaFile(e.target.files[0])}
                     />
                     {(data?.mdaFile && openMda) &&
-                        <p
-                            onClick={() => openMda(data.id)}
-                            className='cursor-pointer border-b border-[#787676] text-[#787676] w-fit mt-2'
-                        >
-                            View File
-                        </p>
+                        <Link href={openMda}>
+                            <a target="_blank" rel="noopener noreferrer">
+                                <p
+                                    className='cursor-pointer border-b border-[#787676] text-[#787676] w-fit mt-2'
+                                >
+                                    View File
+                                </p>
+                            </a>
+                        </Link>
                     }
-                </div>}
+                        </div>}
 
-                {(tab === "ARTICLES" || tab === "NEWS") && <CommonInput
-                    type={"text"}
-                    Label='Video URL:'
-                    value={videoUrl || ""}
-                    onChange={(e: any) => setVideoUrl(e.target.value)}
-                    disabled={!isEditMode}
-                />}
-            </div>
+                    {(tab === "ARTICLES" || tab === "NEWS") && <CommonInput
+                        type={"text"}
+                        Label='Video URL:'
+                        value={videoUrl || ""}
+                        onChange={(e: any) => setVideoUrl(e.target.value)}
+                        disabled={!isEditMode}
+                    />}
+                </div>
             {(isEditMode && !isAddNew) && <div className='flex justify-center gap-4'>
-                <button
-                    disabled={isLoading}
-                    onClick={onSaveClick}
-                    className='bg-bgColor text-primaryColor w-28 py-2 rounded-[5px] font-semibold disabled:opacity-60'
+                    <button
+                        disabled={isLoading}
+                        onClick={onSaveClick}
+                        className='bg-bgColor text-primaryColor w-28 py-2 rounded-[5px] font-semibold disabled:opacity-60'
 
-                >
-                    {isLoading ? "SAVING..." : "SAVE"}
-                </button>
-            </div>}
-            {isAddNew && <div className='flex justify-center gap-4'>
-                <button
-                    onClick={onSubmitNew}
-                    disabled={isLoading}
-                    className='bg-bgColor text-primaryColor w-28 py-2 rounded-[5px] font-semibold disabled:opacity-60'
-                >
-                    {isLoading ? "SUBMITING..." : "SUBMIT"}
-                </button>
-            </div>}
-        </div>
-    )
+                    >
+                        {isLoading ? "SAVING..." : "SAVE"}
+                    </button>
+                </div>}
+                {isAddNew && <div className='flex justify-center gap-4'>
+                    <button
+                        onClick={onSubmitNew}
+                        disabled={isLoading}
+                        className='bg-bgColor text-primaryColor w-28 py-2 rounded-[5px] font-semibold disabled:opacity-60'
+                    >
+                        {isLoading ? "SUBMITING..." : "SUBMIT"}
+                    </button>
+                </div>}
+            </div>
+            )
 }
 
-export default AddEdit
+            export default AddEdit

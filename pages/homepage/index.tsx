@@ -144,6 +144,7 @@ const Homepage = ({ data }: HomepageProps) => {
                                 articleData={data.news}
                                 heading='News Releases'
                                 viewMore={routes.latestNewReleases}
+                                route={`/pdf-viewer/news`}
                             />
                         </SwiperSlide>
                         <SwiperSlide className='swiper-slide mx-auto md:ml-0'>
@@ -151,6 +152,7 @@ const Homepage = ({ data }: HomepageProps) => {
                                 articleData={data.articles}
                                 heading='Articles'
                                 viewMore={routes.investorLithiumArticles}
+                                route={`/pdf-viewer/articles`}
                             />
                         </SwiperSlide>
                         <SwiperSlide className='swiper-slide mx-auto md:ml-4'>

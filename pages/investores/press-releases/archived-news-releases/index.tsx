@@ -38,9 +38,7 @@ const ArchivedNewsReleases = ({ data }: Props) => {
                                 title={item.heading}
                                 newsDate={new Date(item.date).toDateString().slice(4)}
                                 newsDescription={item.content}
-                                pdfLink={item.file}
-                                route={`/pdf-viewer/${item.id}`}
-                                openFile={()=>getFileFromBlob(item.id)}
+                                pdfLink={`/pdf-viewer/news/${item.id}`}
                             />
                         )
                         )

@@ -38,8 +38,7 @@ const LithiumArticle = ({ data }: Props) => {
                                 title={item.heading}
                                 newsDate={new Date(item.date).toDateString().slice(4)}
                                 newsDescription={item.content}
-                                pdfLink={item.file}
-                                openFile={()=>getArticleFileFromBlob(item.id)}
+                                pdfLink={`/pdf-viewer/articles/${item.id}`}
                             />
                         )
                         )

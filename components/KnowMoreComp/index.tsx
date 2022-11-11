@@ -7,9 +7,10 @@ interface KnowMoreProps {
     heading: string;
     articleData?: any;
     viewMore?: string;
+    route: string;
 }
 
-const KnowMoreComp = ({ heading, articleData, viewMore }: KnowMoreProps) => {
+const KnowMoreComp = ({ heading, articleData, viewMore, route }: KnowMoreProps) => {
     const router = useRouter()
     return (
         <div className={styles.kumCard}>
@@ -23,7 +24,7 @@ const KnowMoreComp = ({ heading, articleData, viewMore }: KnowMoreProps) => {
                             headline={data.heading}
                             description={data.content}
                             date={new Date(data.date).toDateString().slice(4)}
-                            fileLink={(data.fileUrl != null && data.fileUrl != "null") ? data.fileUrl : '#'}
+                            fileLink={`${route}/${data.id}`}
                         />
                     </>
 

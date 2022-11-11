@@ -159,11 +159,8 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   pdfText={investor.heading} 
                   pdfLinkText1="PDF" 
                   pdflink={investor.file} 
-                  route={`/pdf-viewer/${investor.id}`}
-                   openFile={()=>{
-                    
-                    getInvestorFileFromBlob(investor.id)}}
-                
+                  route={`/pdf-viewer/investor-information/${investor.id}`}
+                  openFile={()=>{getInvestorFileFromBlob(investor.id)}}
                 />
               })
             }

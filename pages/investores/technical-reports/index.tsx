@@ -31,7 +31,7 @@ const TechnicalReports = ({ data }: Props) => {
                 pdfText={reports.heading}
                 pdfLinkText1="PDF"
                 pdflink={reports.file}
-                openFile={()=>getTechnicalFileFromBlob(reports.id)}
+                route={`/pdf-viewer/technical-report/${reports.id}`}
               />
             )
           })
