@@ -10,6 +10,7 @@ import { getInvestorFileFromBlob } from "../../../services/investors";
 import { getFileFromBlob } from "../../../services/news";
 import { getTechnicalFileFromBlob } from "../../../services/technicalReports";
 import useWindowSize from "../../../utils/useWindowSize";
+import { FiDownload } from "react-icons/fi"
 
 const BarLoader = dynamic(() => import("react-spinners/BarLoader"), {
   ssr: false,
@@ -132,26 +133,40 @@ function FilePage() {
     }
   }, [fileId, page]);
 
+  const onDownloadFile = (objUrl: string) => {
+    const link = document.createElement("a");
+    link.href = objUrl;
+    link.download = `${page}-${fileId}`;
+    link.click();
+    URL.revokeObjectURL(objUrl);
+  }
+
+  const renderPdf = () => {
+    if (width < 992) {
+      return <>
+        <button
+          onClick={() => onDownloadFile(pdfUrl)}
+          className="bg-primaryColor font-hind text-white rounded-[3px] gap-2 py-1 px-5 flex items-center justify-center font-semibold text-[22px] "
+        >
+          Download
+          <FiDownload />
+        </button>
+      </>
+    } else {
+      return <>
+        <iframe width={"100%"} className="h-screen" src={pdfUrl}></iframe>
+      </>
+    }
+
+  }
+
   return (
-    <div className="h-screen bg-[#323639]">
+    <div className="h-screen bg-[#323639] flex justify-center items-center">
       {preload ? (
         <div className="flex items-center justify-center h-screen">
           <BarLoader color="#F18628" width={300} height={4} />
         </div>
-      ) : width >= 992 ? (
-        <>
-          <iframe width={"100%"} className="h-screen" src={pdfUrl}></iframe>
-        </>
-      ) : (
-        <>
-          <button
-            onClick={() => window.open(pdfUrl)}
-            className="bg-[#25272A] font-hind text-primaryColor rounded-[3px] w-full h-full flex items-center justify-center font-semibold text-[22px] "
-          >
-            Download
-          </button>
-        </>
-      )}
+      ) : renderPdf()}
     </div>
   );
 }
