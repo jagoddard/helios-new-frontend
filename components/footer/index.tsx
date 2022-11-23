@@ -58,7 +58,7 @@ const Footer = () => {
                     <div></div>
                 </div>
                 <p className={styles.copyRight}>© Copyright 2022 HeliosX</p>
-                <p className={styles.copyRightDesc}>All project entities, reports and intellectual property are wholly owned by HeliosX Lithium & Technologies Corp. as of the Shareholder’s unanimous approval of the Plan of Arrangement between Dajin Lithium Corp. and HeliosX Corp on November 19, 2021</p>
+                
                 <div className={styles.developBy}>Site is Developed and Maintained by <a className='underline hover:text-primaryColor' href='http://bodhisaar.com/' target="_blank" rel="noopener noreferrer">Bodhisaar Learning</a></div>
 
 

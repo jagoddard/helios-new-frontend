@@ -192,7 +192,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                     <td>HXLTF</td>
                     <td className='bg-[#FFF8F2] text-black'>OTC Markets</td>
                     <td className='text-black'>36,231,804</td>
-                    <td className='bg-[#FFF8F2] text-black'>3,425,000</td>
+                    <td className='bg-[#FFF8F2] text-black'>3,385,000</td>
                     <td className='text-black'>10,080,000 at $0.75 expiring <br />August 5, 2023</td>
                   </tr>
                   <tr>
