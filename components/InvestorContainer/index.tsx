@@ -66,7 +66,7 @@ const InvestorContainer = ({ selectedTab, children }: ChildrenType) => {
         </Link>
         <Link href={routes.latestNewReleases}>
           <p className={`${selectedTab === "Press Releases" ? "text-primaryColor" : "text-white"} ${styles.investFilterItemName}`}>
-            Press Releases
+          News Releases
           </p>
         </Link>
         <Link href="/investores/technical-reports">

@@ -6,9 +6,9 @@ const index = () => {
         <ProjectContainer selectedTab="Alkali Lake" >
             <div className='border-b-8 border-primaryColor bg-darkTheme'>
                 <section className='px-5 md:px-20 py-10'>
-                    <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>ALKALI SPRING VALLEY LITHIUM PROJECT – NEVADA</p>
-                    <p className='mt-3 mb-5 text-primaryColor text-xl'>(also known as Alkali Lake)</p>
-                    <p className='text-white'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 2,780 acres in the Alkali Lake Valley, in Esmeralda County, Nevada.</p>
+                    <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>ALKALI SPRING LITHIUM PROJECT – NEVADA</p>
+                   
+                    <p className='text-white'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 2,780 acres in the Alkali Lake, in Esmeralda County, Nevada.</p>
                 </section>
                 <section className='px-5 md:px-20 py-10 bg-bgColor'>
                     <div className='flex flex-col md:flex-row items-center gap-10'>

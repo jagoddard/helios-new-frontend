@@ -11,7 +11,7 @@ export const InvestorsTabs: TabType[] = [
         link: routes.markets
     },
     {
-        name: "Press Releases",
+        name: "News Releases",
         link: routes.latestNewReleases
     },
     {
