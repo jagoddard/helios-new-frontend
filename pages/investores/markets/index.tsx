@@ -42,7 +42,7 @@ const Markets = () => {
                   }} /> :
                   <AdvancedChart widgetProps={{
                     "theme": "dark",
-                    "symbol": "SH7",
+                    "symbol": "C2U0",
                     "width": "100%",
                     "height": "500px",
                   }} />
