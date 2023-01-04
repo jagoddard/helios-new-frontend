@@ -49,7 +49,7 @@ const markers: markersTypes[] = [
         markerOffset: 15,
         markerYOffset: -20,
         name: "Alkali Lake",
-        acerage: "(2,780 acres)",
+        acerage: "(8,825 acres)",
         coordinates: [-119.84732024641305, 41.71314416252361],
         mapImg: (
             <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>

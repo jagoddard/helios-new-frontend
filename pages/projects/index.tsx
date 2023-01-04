@@ -33,7 +33,7 @@ const Project = () => {
                         title='ALKALI LAKE, ESMERALDA COUNTY, NEVADA, USA'
                     />
                     <div className='mt-5 mb-2 flex flex-col-reverse md:flex-row items-center gap-10'>
-                        <p className='text-white md:w-[50%]'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 2,780 acres in the Alkali Lake, in Esmeralda County, Nevada. The Alkali Lake Lithium property is located about 7 miles northeast of Albemarle's Silver Peak Lithium mine; which is the only operational, Lithium brine mine in North America. Like Clayton Valley, Alkali Lake Valley is a classic, fault bounded closed basin. There is an active geothermal system, Alkali Hot Spring along the southern margin of the basin. Just as with circulating basin waters, deep fluids, particularly hot ones associated with the geothermal resource, dissolve rocks, liberating Boron, Lithium and other elements such as sodium and chloride. These minerals are brought to the surface as springs emanating from the faults bounding the playa. The association of a closed basin with an arid environment, a geothermal system and plentiful sources of Lithium suggests that Alkali Lake may host significant Lithium rich brines.</p>
+                        <p className='text-white md:w-[50%]'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 8,825 acres in the Alkali Lake, in Esmeralda County, Nevada. The Alkali Lake Lithium property is located about 7 miles northeast of Albemarle's Silver Peak Lithium mine; which is the only operational, Lithium brine mine in North America. Like Clayton Valley, Alkali Lake Valley is a classic, fault bounded closed basin. There is an active geothermal system, Alkali Hot Spring along the southern margin of the basin. Just as with circulating basin waters, deep fluids, particularly hot ones associated with the geothermal resource, dissolve rocks, liberating Boron, Lithium and other elements such as sodium and chloride. These minerals are brought to the surface as springs emanating from the faults bounding the playa. The association of a closed basin with an arid environment, a geothermal system and plentiful sources of Lithium suggests that Alkali Lake may host significant Lithium rich brines.</p>
                         <div className='h-auto min-h-[200px] w-full md:w-3/6 max-w-full relative'>
                             <div className='absolute max-w-[150px] md:max-w-[192px] bottom-0'>
                                 <p className='text-white font-medium mb-3 text-base md:text-lg'>Our Properties</p>
@@ -42,7 +42,7 @@ const Project = () => {
                                     <p className='text-white text-xs md:text-sm'>interest in mineral claims</p>
                                     <p className='text-white text-xs md:text-sm'>at <span className='font-semibold'>Alkali Lake,</span> Esmeralda</p>
                                     <p className='text-white text-xs md:text-sm'>Country, Nevada, USA</p>
-                                    <p className='text-white text-xs md:text-sm'>Alkali Lake – 2,780 acres</p>
+                                    <p className='text-white text-xs md:text-sm'>Alkali Lake – 8,825 acres</p>
                                 </div>
                             </div>
                             <img src='alkalilake.svg' className='h-auto w-full' />
