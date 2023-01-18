@@ -24,7 +24,11 @@ const TechnicalReports = ({ data }: Props) => {
       <section className='py-10 px-5 md:px-20 border-b-8 border-primaryColor bg-darkTheme'>
         <p className='text-headerMobile md:text-header font-semibold mb-6 text-white'>TECHNICAL REPORTS</p>
         {
-          data.payload.map((reports: any, index:number) => {
+          data.payload.sort((a: any, b: any) => {
+            let c: any = new Date(a.date);
+            let d: any = new Date(b.date);
+            return d - c
+          }).map((reports: any, index: number) => {
             return (
               <Informationpdf
                 key={index}

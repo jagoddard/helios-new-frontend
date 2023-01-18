@@ -120,7 +120,9 @@ const Financials = () => {
                 >Add More</button>
             </div>
             <div className='flex flex-col gap-4'>
-                {data?.map((item: any) => {
+                {data?.sort((a:any, b:any) => {
+                            return b.year - a.year
+                        }).map((item: any) => {
                     return (
                         <AddEdit
                             isAddNew={false}
