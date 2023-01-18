@@ -17,7 +17,11 @@ const KnowMoreComp = ({ heading, articleData, viewMore, route }: KnowMoreProps) 
             <p className={styles.kumCardTitle}>{heading}</p>
             <div className='md:h-[465px] scrollable-content'>
             {
-                articleData && articleData?.payload?.slice(0, 4).map((data: any, index: number) => {
+                articleData && articleData?.payload?.sort((a:any, b:any) => {
+                    let c: any = new Date(a.date);
+                    let d: any = new Date(b.date);
+                    return d - c
+                }).slice(0, 4).map((data: any, index: number) => {
                     return <>
                         <SocialArtical
                             key={index+1}
