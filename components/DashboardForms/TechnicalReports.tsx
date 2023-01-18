@@ -30,7 +30,7 @@ const TechnicalReports = () => {
     const closeModal = () => {
         setIsOpen(false)
     }
-    
+
     const createNewTecnicalReports = async (data: any) => {
         const tempData: TechnicalReportsType = {
             date: data.date,
@@ -85,7 +85,7 @@ const TechnicalReports = () => {
             })
         } finally {
             setIsLoading(false)
-        } 
+        }
     }
 
     const handleDeleteTecnicalReports = async (ReportId: number) => {
@@ -117,16 +117,20 @@ const TechnicalReports = () => {
                 >Add More</button>
             </div>
             <div className='flex flex-col gap-4'>
-                {data.map((item: any) => {
+                {data.sort((a: any, b: any) => {
+                    let c: any = new Date(a.date);
+                    let d: any = new Date(b.date);
+                    return d - c
+                }).map((item: any) => {
                     return (
                         <AddEdit
                             isAddNew={false}
                             tab="TECHNICAL REPORTS"
                             key={item.id}
                             data={item}
-                            onDelete={(id:number)=>handleDeleteTecnicalReports(id)}
+                            onDelete={(id: number) => handleDeleteTecnicalReports(id)}
                             openFile={`/pdf-viewer/technical-report/${item.id}`}
-                            onEdit={(data,id)=>editTecnicalReports(data,id)}
+                            onEdit={(data, id) => editTecnicalReports(data, id)}
                         />
                     )
 
@@ -137,7 +141,7 @@ const TechnicalReports = () => {
                     tab="TECHNICAL REPORTS"
                     isAddNew={true}
                     onClose={() => closeModal()}
-                    onAdd={(data)=>createNewTecnicalReports(data)}
+                    onAdd={(data) => createNewTecnicalReports(data)}
                     isLoading={isLoading}
                 />
             </CommonModal>
