@@ -123,7 +123,11 @@ const Articles = () => {
                 >Add More</button>
             </div>
             <div className='flex flex-col gap-4'>
-                {data.map((item: any) => {
+                {data.sort((a: any, b: any) => {
+                    let c: any = new Date(a.date);
+                    let d: any = new Date(b.date);
+                    return d - c
+                }).map((item: any) => {
                     return (
                         <AddEdit
                             isAddNew={false}
