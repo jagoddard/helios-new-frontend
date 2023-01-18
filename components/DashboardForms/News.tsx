@@ -8,7 +8,7 @@ import CommonModal from '../CommonModal/CommonModal'
 import 'react-toastify/dist/ReactToastify.css'
 
 const News = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<any[]>([]);
     const loginContext = useContext(AppLoginContext);
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -122,7 +122,11 @@ const News = () => {
                 >Add More</button>
             </div>
             <div className='flex flex-col gap-4'>
-                {data.map((item: any) => {
+                {data.sort((a,b)=>{
+                        let c: any = new Date(a.date);
+                        let d: any = new Date(b.date);
+                    return  d-c
+                }).map((item: any) => {
                     return (
                         <AddEdit
                             isAddNew={false}
