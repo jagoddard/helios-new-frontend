@@ -33,7 +33,11 @@ const LatestNewsReleases = ({ data }: Props) => {
                 <p className='text-headerMobile md:text-header font-semibold mb-10 text-white'>Latest News Releases</p>
                 <div className='flex flex-col gap-14'>
                     {
-                        data.map((item: any) => (
+                        data.sort((a:any, b:any) => {
+                            let c: any = new Date(a.date);
+                            let d: any = new Date(b.date);
+                            return d - c
+                        }).map((item: any) => (
                             <NewsItem
                                 key={item.id}
                                 title={item.heading}
