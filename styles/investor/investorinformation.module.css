@@ -20,7 +20,7 @@
         @apply py-2 px-4 bg-[#25272A] text-white
     }
     .InfoPdf {
-        @apply md:w-3/5 m-auto py-6
+        @apply py-6
     }
     .informationData {
         @apply bg-[#25272A] border-b-8 border-primaryColor

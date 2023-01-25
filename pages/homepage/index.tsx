@@ -79,11 +79,13 @@ const Homepage = ({ data }: HomepageProps) => {
       </section>
       <section className={styles.homeAbout}>
         <div className={styles.homeAboutInner}>
-          <div className="flex items-center gap-2">
+          <div>
             <p className={styles.homeAboutTitle}>
               Helios<span className=" text-white">X</span>
             </p>
-            <p className="text-white text-xl">TSX.v: HX / OTCQB: HXLTF / Germany: C2U0</p>
+            <p className="text-primaryColor text-[18px] md:text-[26px] font-semibold">
+              TSX.v: <span className="text-white">HX |</span> OTCQB: <span className="text-white">HXLTF |</span> Germany: <span className="text-white">C2U0</span>
+            </p>
           </div>
           <p className={styles.homeAboutSubTitle}>
             A Lithium Brine (Battery Metal) Exploration Company
