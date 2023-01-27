@@ -32,9 +32,14 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
     <InvestorContainer selectedTab="Investor Information">
       <>
         <section className="px-5 py-3 md:px-20 md:py-10 bg-darkTheme">
-          <p className="text-headerMobile md:text-header font-semibold text-white">
-            Stock <span className="text-primaryColor">Information</span>
-          </p>
+         <div className="md:flex flex-row gap-4 items-center">
+            <p className="text-headerMobile md:text-header font-semibold text-white m-0">
+              Stock <span className="text-primaryColor">Information</span>
+            </p>
+            <p className="text-primaryColor text-[16px] md:text-[22px] font-medium -mb-1">
+                -  TSX.v: <span className="text-white">HX |</span> OTCQB: <span className="text-white">HXLTF |</span> Germany: <span className="text-white">C2U0</span>
+            </p>
+          </div>
           <div className="stockInfo overflow-auto mb-10">
             <table className="w-full m-auto mt-10 ">
               <thead className="bg-tableHeadeBg">
