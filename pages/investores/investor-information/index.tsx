@@ -102,7 +102,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
         <section className="bg-[#25272A]">
           <div className="bg-bgInformation bg-cover bg-center px-5 md:px-20 py-10">
             <p className="text-headerMobile md:text-header font-semibold text-white">
-              Presentation
+              Presentations
             </p>
             <div className={styles.InfoPdf}>
               {data.payload.map((investor: any, index: number) => {
@@ -124,7 +124,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
         </section>
         <section className={styles.InvestorInformation}>
           <p className="text-headerMobile md:text-header font-semibold text-white">
-            Information
+            Videos
           </p>
           <div className={`${styles.infoMedia} flex md:hidden`}>
             <Swiper
