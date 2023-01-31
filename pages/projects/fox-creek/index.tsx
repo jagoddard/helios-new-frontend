@@ -35,7 +35,7 @@ const index = () => {
                             </div>
                         </div>
                         <div className='md:w-1/2 flex justify-end'>
-                            <img src="/foxCreek.png" />
+                            <img src="/FoxCreekMap.png" />
                         </div>
                     </div>
                 </section>
