@@ -1,13 +1,16 @@
-import React from 'react'
-import Informationpdf from '../../../components/informationpdf';
-import InvestorContainer from '../../../components/InvestorContainer';
-import InvestorNews from '../../../components/investorNews';
-import styles from '../../../styles/investor/investorinformation.module.css'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from "react";
+import Informationpdf from "../../../components/informationpdf";
+import InvestorContainer from "../../../components/InvestorContainer";
+import InvestorNews from "../../../components/investorNews";
+import styles from "../../../styles/investor/investorinformation.module.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import ReactPlayer from 'react-player';
-import { getInvestorFileFromBlob, getInvestors } from '../../../services/investors';
+import ReactPlayer from "react-player";
+import {
+  getInvestorFileFromBlob,
+  getInvestors,
+} from "../../../services/investors";
 
 interface InvestorInfoProps {
   data: any;
@@ -18,18 +21,111 @@ export const getStaticProps = async () => {
   const investorData = JSON.stringify(investorRes.data);
   return {
     props: {
-      data: JSON.parse(investorData)
+      data: JSON.parse(investorData),
     },
     revalidate: 10,
-  }
-}
+  };
+};
 
 const InvestorInformation = ({ data }: InvestorInfoProps) => {
   return (
-    <InvestorContainer selectedTab='Investor Information'>
+    <InvestorContainer selectedTab="Investor Information">
       <>
+        <section className="px-5 py-3 md:px-20 md:py-10 bg-darkTheme">
+         <div className="md:flex flex-row gap-4 items-center">
+            <p className="text-headerMobile md:text-header font-semibold text-white m-0">
+              Stock <span className="text-primaryColor">Information</span>
+            </p>
+            <p className="text-primaryColor hidden md:inline-block text-[16px] md:text-[22px] font-medium -mb-1">-</p>
+            <p className="text-white text-[16px] md:text-[22px] font-medium -mb-1">
+              TSX.v: <span className="text-primaryColor">HX </span>| OTCQB: <span className="text-primaryColor">HXLTF </span>| Germany: <span className="text-primaryColor">C2U0</span>
+            </p>
+          </div>
+          <div className="stockInfo overflow-auto mb-10">
+            <table className="w-full m-auto mt-10 ">
+              <thead className="bg-tableHeadeBg">
+                <tr>
+                  <th className="py-4">
+                    <p className="px-10 md:px-0 md:border-r border-borderright">
+                      Trading Symbol
+                    </p>
+                  </th>
+                  <th className="py-4">
+                    <p className="px-10 md:px-0 md:border-r border-borderright">
+                      Exchange
+                    </p>
+                  </th>
+                  <th className="py-4">
+                    <p className="px-10 md:px-0 md:border-r border-borderright">
+                      Common Shares Issued
+                    </p>
+                  </th>
+                  <th className="py-4">
+                    <p className="px-10 md:px-0 md:border-r border-borderright">
+                      Incentive Stock Options
+                    </p>
+                  </th>
+                  <th className="py-4">
+                    <p>Warrants</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                <tr>
+                  <td className="text-black">HX</td>
+                  <td className="bg-[#FFF8F2] text-black">TSX Venture</td>
+                  <td></td>
+                  <td className="bg-[#FFF8F2] text-black"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>HXLTF</td>
+                  <td className="bg-[#FFF8F2] text-black">OTC Markets</td>
+                  <td className="text-black">36,231,804</td>
+                  <td className="bg-[#FFF8F2] text-black">3,385,000</td>
+                  <td className="text-black">
+                    10,080,000 at $0.75 expiring <br />
+                    August 5, 2023
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-black">C2U0</td>
+                  <td className="bg-[#FFF8F2] text-black">Germany</td>
+                  <td></td>
+                  <td className="bg-[#FFF8F2]"></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section className="bg-[#25272A]">
+          <div className="bg-bgInformation bg-cover bg-center px-5 md:px-20 py-10">
+            <p className="text-headerMobile md:text-header font-semibold text-white">
+              Presentations
+            </p>
+            <div className={styles.InfoPdf}>
+              {data.payload.map((investor: any, index: number) => {
+                return (
+                  <Informationpdf
+                    key={index}
+                    pdfText={investor.heading}
+                    pdfLinkText1="PDF"
+                    pdflink={investor.file}
+                    route={`/pdf-viewer/investor-information/${investor.id}`}
+                    openFile={() => {
+                      getInvestorFileFromBlob(investor.id);
+                    }}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </section>
         <section className={styles.InvestorInformation}>
-          <p className={styles.pageTitle}>Information</p>
+          <p className="text-headerMobile md:text-header font-semibold text-white">
+            Videos
+          </p>
           <div className={`${styles.infoMedia} flex md:hidden`}>
             <Swiper
               slidesPerView={1}
@@ -38,26 +134,30 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               breakpoints={{
                 768: {
                   slidesPerView: "auto",
-                  spaceBetween: 0
-                }
+                  spaceBetween: 0,
+                },
               }}
               modules={[Navigation]}
             >
-              <SwiperSlide className='swiper-slide'>
+              <SwiperSlide className="swiper-slide">
                 <div className={styles.youtubeInner}>
                   <div className={styles.youtube}>
                     <ReactPlayer
-                      url={"https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmvest-prod.s3.amazonaws.com%2Fconference%2Fvideos%2FMining_Panel_2_102022.mp4&data=05%7C01%7Candrew%40heliosx.ca%7C3d6f1225f2bb4fbbd6b508dab1fbd451%7C70420506c4654571985f9adbc81e73ad%7C0%7C0%7C638017992406381866%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&sdata=qrjJS4dC8P2ire8ypzanxVJOcugyWrcMoET%2BNMpXaic%3D&reserved=0"}
+                      url={
+                        "https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmvest-prod.s3.amazonaws.com%2Fconference%2Fvideos%2FMining_Panel_2_102022.mp4&data=05%7C01%7Candrew%40heliosx.ca%7C3d6f1225f2bb4fbbd6b508dab1fbd451%7C70420506c4654571985f9adbc81e73ad%7C0%7C0%7C638017992406381866%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&sdata=qrjJS4dC8P2ire8ypzanxVJOcugyWrcMoET%2BNMpXaic%3D&reserved=0"
+                      }
                       controls={true}
                       height="100%"
                       width="100%"
                       light={"/Maxim-group-panel-thumbnail.jpg"}
                     />
                   </div>
-                  <p className={styles.youtubeDesc}>Maxim Group panel:  Mining and its role in EV Supply</p>
+                  <p className={styles.youtubeDesc}>
+                    Maxim Group panel: Mining and its role in EV Supply
+                  </p>
                 </div>
               </SwiperSlide>
-              <SwiperSlide className='swiper-slide'>
+              <SwiperSlide className="swiper-slide">
                 <div className={styles.youtubeInner}>
                   <div className={styles.youtube}>
                     <iframe
@@ -68,10 +168,13 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                   </div>
-                  <p className={styles.youtubeDesc}>Red Cloud Webinar:  Commercializing Lithium Brine with Tailored DLE Technologies.</p>
+                  <p className={styles.youtubeDesc}>
+                    Red Cloud Webinar: Commercializing Lithium Brine with
+                    Tailored DLE Technologies.
+                  </p>
                 </div>
               </SwiperSlide>
-              <SwiperSlide className='swiper-slide'>
+              <SwiperSlide className="swiper-slide">
                 <div className={styles.youtubeInner}>
                   <div className={styles.youtube}>
                     <iframe
@@ -82,10 +185,13 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                   </div>
-                  <p className={styles.youtubeDesc}>Christopher Brown, CEO: Presentation to Pre-PEDAC, March 4, 2022.</p>
+                  <p className={styles.youtubeDesc}>
+                    Christopher Brown, CEO: Presentation to Pre-PEDAC, March 4,
+                    2022.
+                  </p>
                 </div>
               </SwiperSlide>
-              <SwiperSlide className='swiper-slide'>
+              <SwiperSlide className="swiper-slide">
                 <div className={styles.youtubeInner}>
                   <div className={styles.youtube}>
                     <iframe
@@ -96,23 +202,31 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                   </div>
-                  <p className={styles.youtubeDesc}>Q&A with Christopher Brown of HeliosX</p>
+                  <p className={styles.youtubeDesc}>
+                    Q&A with Christopher Brown of HeliosX
+                  </p>
                 </div>
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className={`${styles.infoMedia} hidden md:flex flex-wrap lg:grid lg:grid-cols-2 `}>
+          <div
+            className={`${styles.infoMedia} hidden md:flex flex-wrap lg:grid lg:grid-cols-2 `}
+          >
             <div className={styles.youtubeInner}>
               <div className={styles.youtube}>
                 <ReactPlayer
-                  url={"https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmvest-prod.s3.amazonaws.com%2Fconference%2Fvideos%2FMining_Panel_2_102022.mp4&data=05%7C01%7Candrew%40heliosx.ca%7C3d6f1225f2bb4fbbd6b508dab1fbd451%7C70420506c4654571985f9adbc81e73ad%7C0%7C0%7C638017992406381866%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&sdata=qrjJS4dC8P2ire8ypzanxVJOcugyWrcMoET%2BNMpXaic%3D&reserved=0"}
+                  url={
+                    "https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmvest-prod.s3.amazonaws.com%2Fconference%2Fvideos%2FMining_Panel_2_102022.mp4&data=05%7C01%7Candrew%40heliosx.ca%7C3d6f1225f2bb4fbbd6b508dab1fbd451%7C70420506c4654571985f9adbc81e73ad%7C0%7C0%7C638017992406381866%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&sdata=qrjJS4dC8P2ire8ypzanxVJOcugyWrcMoET%2BNMpXaic%3D&reserved=0"
+                  }
                   controls={true}
                   height="100%"
                   width="100%"
                   light={"/Maxim-group-panel-thumbnail.jpg"}
                 />
               </div>
-              <p className={styles.youtubeDesc}>Maxim Group panel:  Mining and its role in EV Supply</p>
+              <p className={styles.youtubeDesc}>
+                Maxim Group panel: Mining and its role in EV Supply
+              </p>
             </div>
             <div className={styles.youtubeInner}>
               <div className={styles.youtube}>
@@ -124,7 +238,10 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </div>
-              <p className={styles.youtubeDesc}>Red Cloud Webinar:  Commercializing Lithium Brine with Tailored DLE Technologies.</p>
+              <p className={styles.youtubeDesc}>
+                Red Cloud Webinar: Commercializing Lithium Brine with Tailored
+                DLE Technologies.
+              </p>
             </div>
             <div className={styles.youtubeInner}>
               <div className={styles.youtube}>
@@ -136,7 +253,10 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </div>
-              <p className={styles.youtubeDesc}>Christopher Brown, CEO: Presentation to Pre-PEDAC, March 4, 2022.</p>
+              <p className={styles.youtubeDesc}>
+                Christopher Brown, CEO: Presentation to Pre-PEDAC, March 4,
+                2022.
+              </p>
             </div>
             <div className={styles.youtubeInner}>
               <div className={styles.youtube}>
@@ -148,69 +268,34 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </div>
-              <p className={styles.youtubeDesc}>Q&A with Christopher Brown of HeliosX</p>
+              <p className={styles.youtubeDesc}>
+                Q&A with Christopher Brown of HeliosX
+              </p>
             </div>
-          </div>
-          <div className={styles.InfoPdf}>
-            {
-              data.payload.map((investor: any, index: number) => {
-                return <Informationpdf 
-                  key={index} 
-                  pdfText={investor.heading} 
-                  pdfLinkText1="PDF" 
-                  pdflink={investor.file} 
-                  route={`/pdf-viewer/investor-information/${investor.id}`}
-                  openFile={()=>{getInvestorFileFromBlob(investor.id)}}
-                />
-              })
-            }
           </div>
         </section>
         <section className={styles.informationData}>
           <div className={styles.informationDataBackground}>
-            <p className='text-headerMobile md:text-header font-semibold text-white'>Stock <span className='text-primaryColor'>Information</span></p>
-            <div className='stockInfo overflow-auto mb-10'>
-              <table className='w-full m-auto mt-10 '>
-                <thead className='bg-tableHeadeBg'>
-                  <tr>
-                    <th className='py-4'><p className='px-10 md:px-0 md:border-r border-borderright'>Trading Symbol</p></th>
-                    <th className='py-4'><p className='px-10 md:px-0 md:border-r border-borderright'>Exchange</p></th>
-                    <th className='py-4'><p className='px-10 md:px-0 md:border-r border-borderright'>Common Shares Issued</p></th>
-                    <th className='py-4'><p className='px-10 md:px-0 md:border-r border-borderright'>Incentive Stock Options</p></th>
-                    <th className='py-4'><p>Warrants</p></th>
-                  </tr>
-                </thead>
-                <tbody className='bg-white'>
-                  <tr>
-                    <td className='text-black'>HX</td>
-                    <td className='bg-[#FFF8F2] text-black'>TSX Venture</td>
-                    <td></td>
-                    <td className='bg-[#FFF8F2] text-black'></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>HXLTF</td>
-                    <td className='bg-[#FFF8F2] text-black'>OTC Markets</td>
-                    <td className='text-black'>36,231,804</td>
-                    <td className='bg-[#FFF8F2] text-black'>3,385,000</td>
-                    <td className='text-black'>10,080,000 at $0.75 expiring <br />August 5, 2023</td>
-                  </tr>
-                  <tr>
-                    <td className='text-black'>C2U0</td>
-                    <td className='bg-[#FFF8F2] text-black'>Germany</td>
-                    <td></td>
-                    <td className='bg-[#FFF8F2]'></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
             <div>
-              <p className='text-headerMobile md:text-header font-semibold text-white'>Lithium <span className='text-primaryColor'>News</span></p>
-              <p className='text-xl mt-5 mb-4 text-white'>HeliosX is committed to getting our company message out to the investment community. Our goal is to inform shareholders in a timely manner of corporate developments, and to inform readers about Lithium producer developments around the world. HeliosX wants to keep readers up-to-date on events that will materially affect the price movement of various forms of lithium.</p>
-              <p className='text-xl text-white mb-2'>HeliosX is committed to telling our story and has retained various channels of distribution including the service of TheNewswire, Benchmark Mineral Intelligence and Lithium Investing News to disseminate our company’s news.</p>
+              <p className="text-headerMobile md:text-header font-semibold text-white">
+                Lithium <span className="text-primaryColor">News</span>
+              </p>
+              <p className="text-xl mt-5 mb-4 text-white">
+                HeliosX is committed to getting our company message out to the
+                investment community. Our goal is to inform shareholders in a
+                timely manner of corporate developments, and to inform readers
+                about Lithium producer developments around the world. HeliosX
+                wants to keep readers up-to-date on events that will materially
+                affect the price movement of various forms of lithium.
+              </p>
+              <p className="text-xl text-white mb-2">
+                HeliosX is committed to telling our story and has retained
+                various channels of distribution including the service of
+                TheNewswire, Benchmark Mineral Intelligence and Lithium
+                Investing News to disseminate our company’s news.
+              </p>
             </div>
-            <div className='flex flex-col md:flex-row gap-6 mt-10'>
+            <div className="flex flex-col md:flex-row gap-6 mt-10">
               <InvestorNews
                 image="/news1.png"
                 newsText="We are part of the Investing News Network. We bring unbiased, independent news and information, specifically for investors, miners and end users interested in Lithium. Our mission is to become the number one source of independent, unbiased news and education helping investors realize their financial goals. To be internationally respected for our integrity, our people and our commitment to excellence. And to create an environment where sophisticated investors can understand and connect directly with trusted organizations and businesses."
@@ -229,10 +314,9 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
             </div>
           </div>
         </section>
-
       </>
     </InvestorContainer>
-  )
-}
+  );
+};
 
-export default InvestorInformation
+export default InvestorInformation;
