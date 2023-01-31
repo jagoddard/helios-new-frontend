@@ -83,8 +83,8 @@ const Homepage = ({ data }: HomepageProps) => {
             <p className={styles.homeAboutTitle}>
               Helios<span className=" text-white">X</span>
             </p>
-            <p className="text-primaryColor text-[18px] md:text-[26px] font-semibold">
-              TSX.v: <span className="text-white">HX |</span> OTCQB: <span className="text-white">HXLTF |</span> Germany: <span className="text-white">C2U0</span>
+            <p className="text-white text-[18px] md:text-[26px] font-semibold">
+              TSX.v: <span className="text-primaryColor">HX </span>| OTCQB: <span className="text-primaryColor">HXLTF </span>| Germany: <span className="text-primaryColor">C2U0</span>
             </p>
           </div>
           <p className={styles.homeAboutSubTitle}>
