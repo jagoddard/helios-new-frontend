@@ -37,7 +37,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               Stock <span className="text-primaryColor">Information</span>
             </p>
             <p className="text-primaryColor text-[16px] md:text-[22px] font-medium -mb-1">
-                -  TSX.v: <span className="text-white">HX |</span> OTCQB: <span className="text-white">HXLTF |</span> Germany: <span className="text-white">C2U0</span>
+              TSX.v: <span className="text-white">HX |</span> OTCQB: <span className="text-white">HXLTF |</span> Germany: <span className="text-white">C2U0</span>
             </p>
           </div>
           <div className="stockInfo overflow-auto mb-10">
