@@ -7,7 +7,7 @@ const ManagementTeam = () => {
         <AboutContainer selectedTab="management-team">
             <section className='bg-darkTheme relative py-12 md:py-10 px-5 md:px-20 md:pr-[45%] border-b-8 border-primaryColor'>
                 <p className='text-headerMobile md:text-header font-semibold text-white'>MANAGEMENT & DIRECTORS</p>
-                <AboutData
+                {/* <AboutData
                     title="Christopher Brown"
                     subTitle="CEO & Director, HeliosX"
                     desc="Mr. Brown has more than 25 years engineering, capital markets and Indigenous partnership experience. Worked as a financial analyst for BMO Capital Markets and Canaccord on international energy and infrastructure opportunities. Has more than 10 years direct energy experience managing budgets in excess of $300 million. Restructured Huntington Exploration Inc. as Director, President & CEO (listed on TSXv (HEI)) into a junior gold exploration company."
@@ -16,7 +16,7 @@ const ManagementTeam = () => {
                     title="Sameer Uplenchwar"
                     subTitle="CFO & Director, HeliosX"
                     desc="Mr. Uplenchwar has more than 15 years of financial and business development experience. Served as Managing Director of Global Hunter Securities in Calgary, and Head of US Research with GMP Capital in Houston. Was Senior Energy Analyst supporting a $550MM gross long/short strategy fund in New York for Surveyor Capital LLC. Worked for Morgan Stanley in New York, as well as KPMG and Lasalle/ABN AMRO Bank."
-                />
+                /> */}
                 <AboutData
                     title="Brian Findlay"
                     subTitle="President & Director, HeliosX"
