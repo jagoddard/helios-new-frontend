@@ -20,9 +20,8 @@ const index = () => {
             <Address address='HEAD OFFICE' />
             <p className='pt-4 md:w-1/2 text-white'>
               HeliosX Lithium & Technologies Corp.<br />
-              Suite 205, 1170 Kensington Crescent NW,
-              Calgary, Alberta, T2N 1X6
-              Canada
+              Suite 202, 8661 – 201 Street, Langley,
+              BC, Canada, V2Y0G9
             </p>
             <p className=' md:w-1/2 text-white'>
               Email: info@heliosx.ca

@@ -32,7 +32,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
     <InvestorContainer selectedTab="Investor Information">
       <>
         <section className="px-5 py-3 md:px-20 md:py-10 bg-darkTheme">
-         <div className="md:flex flex-row gap-4 items-center">
+          <div className="md:flex flex-row gap-4 items-center">
             <p className="text-headerMobile md:text-header font-semibold text-white m-0">
               Stock <span className="text-primaryColor">Information</span>
             </p>
@@ -99,179 +99,25 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
             </table>
           </div>
         </section>
-        <section className="bg-[#25272A]">
-          <div className="bg-bgInformation bg-cover bg-center px-5 md:px-20 py-10">
-            <p className="text-headerMobile md:text-header font-semibold text-white">
-              Presentations
-            </p>
-            <div className={styles.InfoPdf}>
-              {data.payload.map((investor: any, index: number) => {
-                return (
-                  <Informationpdf
-                    key={index}
-                    pdfText={investor.heading}
-                    pdfLinkText1="PDF"
-                    pdflink={investor.file}
-                    route={`/pdf-viewer/investor-information/${investor.id}`}
-                    openFile={() => {
-                      getInvestorFileFromBlob(investor.id);
-                    }}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </section>
         <section className={styles.InvestorInformation}>
           <p className="text-headerMobile md:text-header font-semibold text-white">
-            Videos
+            Presentations
           </p>
-          <div className={`${styles.infoMedia} flex md:hidden`}>
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={0}
-              navigation={true}
-              breakpoints={{
-                768: {
-                  slidesPerView: "auto",
-                  spaceBetween: 0,
-                },
-              }}
-              modules={[Navigation]}
-            >
-              <SwiperSlide className="swiper-slide">
-                <div className={styles.youtubeInner}>
-                  <div className={styles.youtube}>
-                    <ReactPlayer
-                      url={
-                        "https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmvest-prod.s3.amazonaws.com%2Fconference%2Fvideos%2FMining_Panel_2_102022.mp4&data=05%7C01%7Candrew%40heliosx.ca%7C3d6f1225f2bb4fbbd6b508dab1fbd451%7C70420506c4654571985f9adbc81e73ad%7C0%7C0%7C638017992406381866%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&sdata=qrjJS4dC8P2ire8ypzanxVJOcugyWrcMoET%2BNMpXaic%3D&reserved=0"
-                      }
-                      controls={true}
-                      height="100%"
-                      width="100%"
-                      light={"/Maxim-group-panel-thumbnail.jpg"}
-                    />
-                  </div>
-                  <p className={styles.youtubeDesc}>
-                    Maxim Group panel: Mining and its role in EV Supply
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className={styles.youtubeInner}>
-                  <div className={styles.youtube}>
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/S18CpSz9K7I"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
-                  </div>
-                  <p className={styles.youtubeDesc}>
-                    Red Cloud Webinar: Commercializing Lithium Brine with
-                    Tailored DLE Technologies.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className={styles.youtubeInner}>
-                  <div className={styles.youtube}>
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/S18CpSz9K7I"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
-                  </div>
-                  <p className={styles.youtubeDesc}>
-                    Christopher Brown, CEO: Presentation to Pre-PEDAC, March 4,
-                    2022.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className={styles.youtubeInner}>
-                  <div className={styles.youtube}>
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/S18CpSz9K7I"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
-                  </div>
-                  <p className={styles.youtubeDesc}>
-                    Q&A with Christopher Brown of HeliosX
-                  </p>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div
-            className={`${styles.infoMedia} hidden md:flex flex-wrap lg:grid lg:grid-cols-2 `}
-          >
-            <div className={styles.youtubeInner}>
-              <div className={styles.youtube}>
-                <ReactPlayer
-                  url={
-                    "https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmvest-prod.s3.amazonaws.com%2Fconference%2Fvideos%2FMining_Panel_2_102022.mp4&data=05%7C01%7Candrew%40heliosx.ca%7C3d6f1225f2bb4fbbd6b508dab1fbd451%7C70420506c4654571985f9adbc81e73ad%7C0%7C0%7C638017992406381866%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&sdata=qrjJS4dC8P2ire8ypzanxVJOcugyWrcMoET%2BNMpXaic%3D&reserved=0"
-                  }
-                  controls={true}
-                  height="100%"
-                  width="100%"
-                  light={"/Maxim-group-panel-thumbnail.jpg"}
+          <div className={styles.InfoPdf}>
+            {data.payload.map((investor: any, index: number) => {
+              return (
+                <Informationpdf
+                  key={index}
+                  pdfText={investor.heading}
+                  pdfLinkText1="PDF"
+                  pdflink={investor.file}
+                  route={`/pdf-viewer/investor-information/${investor.id}`}
+                  openFile={() => {
+                    getInvestorFileFromBlob(investor.id);
+                  }}
                 />
-              </div>
-              <p className={styles.youtubeDesc}>
-                Maxim Group panel: Mining and its role in EV Supply
-              </p>
-            </div>
-            <div className={styles.youtubeInner}>
-              <div className={styles.youtube}>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/S18CpSz9K7I"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                ></iframe>
-              </div>
-              <p className={styles.youtubeDesc}>
-                Red Cloud Webinar: Commercializing Lithium Brine with Tailored
-                DLE Technologies.
-              </p>
-            </div>
-            <div className={styles.youtubeInner}>
-              <div className={styles.youtube}>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/S18CpSz9K7I"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                ></iframe>
-              </div>
-              <p className={styles.youtubeDesc}>
-                Christopher Brown, CEO: Presentation to Pre-PEDAC, March 4,
-                2022.
-              </p>
-            </div>
-            <div className={styles.youtubeInner}>
-              <div className={styles.youtube}>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/S18CpSz9K7I"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                ></iframe>
-              </div>
-              <p className={styles.youtubeDesc}>
-                Q&A with Christopher Brown of HeliosX
-              </p>
-            </div>
+              );
+            })}
           </div>
         </section>
         <section className={styles.informationData}>
