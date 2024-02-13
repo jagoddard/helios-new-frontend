@@ -9,7 +9,7 @@ const TeelsMarsh = () => {
     <ProjectContainer selectedTab="Teels Marsh" >
       <div className='border-b-8 border-primaryColor bg-darkTheme'>
         <section className='px-5 md:px-20 py-10'>
-          <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>TEELS MARSH LITHIUM PROJECT – NEVADA</p>
+          <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>TEELS MARSH BRINE PROJECT – NEVADA - USA</p>
           <div className='md:w-[60%] m-auto bg-bgColor py-5 px-8 mt-10 rounded-2xl projectBoxShadow'>
             <div className='flex flex-col md:flex-row gap-10 md:gap-0 justify-between'>
               <div className='w-full flex flex-col justify-center items-center'>
@@ -25,7 +25,7 @@ const TeelsMarsh = () => {
                 <p className='pt-2 text-white'>Placer Claims</p>
               </div>
             </div>
-            <p className='text-center mt-6 text-white'><span className='text-primaryColor'>100%</span> owned by Dajin Resources(US) Corp., a wholly owned subsidiary of HeliosX</p>
+            <p className='text-center mt-6 text-white'><span className='text-primaryColor'>100%</span> owned by Dajin Resources(US) Corp., a wholly owned subsidiary of D2 LITHIUM</p>
           </div>
         </section>
         <section className='px-5 md:px-20 py-10 bg-bgColor'>

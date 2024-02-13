@@ -8,7 +8,7 @@ const index = () => {
                 <section className='px-5 md:px-20 py-10'>
                     <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>ALKALI SPRING LITHIUM PROJECT – NEVADA</p>
                    
-                    <p className='text-white'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 8,825 acres in the Alkali Lake, in Esmeralda County, Nevada.</p>
+                    <p className='text-white'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 8,825 acres in the Alkali Valley, in Esmeralda County, Nevada.</p>
                     <div className='md:w-[60%] m-auto bg-bgColor py-5 px-8 mt-10 rounded-2xl projectBoxShadow'>
                         <div className='flex flex-col md:flex-row gap-10 md:gap-0 justify-between'>
                             <div className='w-full flex flex-col justify-center items-center'>

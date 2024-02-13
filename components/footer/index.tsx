@@ -9,7 +9,7 @@ const Footer = () => {
             <section className={styles.footer}>
                 <div className={styles.footerNav}>
                     <Link href={routes.homepage}>
-                        <img src="/logo.svg" className={styles.footerLogo} />
+                        <img src="/D2_Lithium_Corp_LOGO_v1.jpg" className={styles.footerLogo} />
                     </Link>
                     <div className={styles.footerNavbarMobile}>
                         <div className={styles.footerNavItemMobile}>
