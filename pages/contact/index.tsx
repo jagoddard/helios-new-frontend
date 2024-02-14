@@ -24,7 +24,7 @@ const index = () => {
               BC, Canada, V2Y0G9
             </p>
             <p className=' md:w-1/2 text-white'>
-              Email: brian@dzlithium.com
+              Email: brian@d2lithium.com
             </p>
           </div>
           <div className='md:w-1/2'>
