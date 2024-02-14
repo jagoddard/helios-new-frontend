@@ -19,7 +19,7 @@ const ManagementTeam = () => {
                 /> */}
                 <AboutData
                     title="Brian Findlay"
-                    subTitle="President & Director, HeliosX"
+                    subTitle="President & Director"
                     desc="Mr. Findlay brings decades of senior management experience in corporate development, international mining, mergers and acquisitions, exploration and development, mine operations, corporate social responsibility; and managing, financing and administration of public companies. Helped raise more than $200 million in capital for junior resource and technology companies. An expert at managing public companies with international interests."
                 />
                 {/* <AboutData
