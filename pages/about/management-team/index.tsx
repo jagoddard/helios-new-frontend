@@ -22,11 +22,11 @@ const ManagementTeam = () => {
                     subTitle="President & Director, HeliosX"
                     desc="Mr. Findlay brings decades of senior management experience in corporate development, international mining, mergers and acquisitions, exploration and development, mine operations, corporate social responsibility; and managing, financing and administration of public companies. Helped raise more than $200 million in capital for junior resource and technology companies. An expert at managing public companies with international interests."
                 />
-                <AboutData
+                {/* <AboutData
                     title="Frank Busch"
                     subTitle="Director, HeliosX"
                     desc="Mr. Busch is a member of Nisichawayasihk (Nee-chise-away-a-see) Cree Nation. Bachelor's degree in Indigenous Studies from the University of Manitoba, 5 certificates from the Canadian Securities Institute and Post-Graduate Certificate in Finance from Harvard University. CEO of NationFUND, and in addition to HeliosX, also on the Board of Huntington Exploration Inc. and Kelso Technologies Inc.; a publicly traded, cross-border, industrial technology company, and as such, is a registered 'insider' on the Toronto and New York Stock Exchanges."
-                />
+                /> */}
                 <AboutData
                     title="Bob Verhelst"
                     subTitle="Director, HeliosX"
@@ -36,7 +36,7 @@ const ManagementTeam = () => {
                 <AboutData
                     title="Cosme Beccar-Verela"
                     subTitle="Director of Dajin Resources S.A."
-                    desc="Cosme Beccar-Verela was born in New York City and graduated as a lawyer at the University of Buenos Aires in 1989. He practiced as a Foreign Associate in Winthrop, Stimson, Putnam & Roberts, New York (1990) and in Huygué de Mahenge, Bloxham et Michaud, Paris (1995). He was an associate Professor of Contract Law in the University of Buenos Aires from his graduation until 2004. Cosme represented Placer Dome while this company explored in Argentina; signed contracts on behalf of Placer with the provincial authorities of Catamarca (Cerro Atajo) and Neuquén (Andacollo). He has represented Continental Illinois Bank and was member of the Committee of banking lawyers as well as a member of the Board of American Express Argentina and of ABB Oil & Gas. His legal practice also includes insurance, trading and industrial companies. Cosme is fluent in English, French and Portuguese and has basic knowledge of Dutch. DICK BENOIT, MSC"
+                    desc="Cosme Beccar-Verela was born in New York City and graduated as a lawyer at the University of Buenos Aires in 1989. He practiced as a Foreign Associate in Winthrop, Stimson, Putnam & Roberts, New York (1990) and in Huygué de Mahenge, Bloxham et Michaud, Paris (1995). He was an associate Professor of Contract Law in the University of Buenos Aires from his graduation until 2004. Cosme represented Placer Dome while this company explored in Argentina; signed contracts on behalf of Placer with the provincial authorities of Catamarca (Cerro Atajo) and Neuquén (Andacollo). He has represented Continental Illinois Bank and was member of the Committee of banking lawyers as well as a member of the Board of American Express Argentina and of ABB Oil & Gas. His legal practice also includes insurance, trading and industrial companies. Cosme is fluent in English, French and Portuguese and has basic knowledge of Dutch."
                 />
                 <img src="/bgAbout.svg" className='hidden md:w-[45%] md:block absolute top-0 right-0' />
             </section>

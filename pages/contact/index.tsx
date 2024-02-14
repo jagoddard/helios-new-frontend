@@ -24,7 +24,7 @@ const index = () => {
               BC, Canada, V2Y0G9
             </p>
             <p className=' md:w-1/2 text-white'>
-              Email: info@heliosx.ca
+              Email: brian@d2lithium.com
             </p>
           </div>
           <div className='md:w-1/2'>
@@ -52,7 +52,7 @@ const index = () => {
               Phone: 778.819.1184
             </p>
           </div>
-          <div className='md:w-1/2'>
+          {/* <div className='md:w-1/2'>
             <Address address='LEGAL COUNSEL' />
             <div className='flex flex-col md:flex-row gap-6 text-white'>
               <div>
@@ -77,7 +77,7 @@ const index = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className='flex flex-col md:flex-row gap-10'>
           <div className='md:w-1/2'>
