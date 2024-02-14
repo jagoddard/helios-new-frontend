@@ -99,7 +99,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
             </table>
           </div>
         </section>
-        <section className={styles.InvestorInformation}>
+        {/* <section className={styles.InvestorInformation}>
           <p className="text-headerMobile md:text-header font-semibold text-white">
             Presentations
           </p>
@@ -119,7 +119,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               );
             })}
           </div>
-        </section>
+        </section> */}
         <section className={styles.informationData}>
           <div className={styles.informationDataBackground}>
             <div>
