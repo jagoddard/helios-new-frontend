@@ -22,11 +22,11 @@ const ManagementTeam = () => {
                     subTitle="President & Director, HeliosX"
                     desc="Mr. Findlay brings decades of senior management experience in corporate development, international mining, mergers and acquisitions, exploration and development, mine operations, corporate social responsibility; and managing, financing and administration of public companies. Helped raise more than $200 million in capital for junior resource and technology companies. An expert at managing public companies with international interests."
                 />
-                <AboutData
+                {/* <AboutData
                     title="Frank Busch"
                     subTitle="Director, HeliosX"
                     desc="Mr. Busch is a member of Nisichawayasihk (Nee-chise-away-a-see) Cree Nation. Bachelor's degree in Indigenous Studies from the University of Manitoba, 5 certificates from the Canadian Securities Institute and Post-Graduate Certificate in Finance from Harvard University. CEO of NationFUND, and in addition to HeliosX, also on the Board of Huntington Exploration Inc. and Kelso Technologies Inc.; a publicly traded, cross-border, industrial technology company, and as such, is a registered 'insider' on the Toronto and New York Stock Exchanges."
-                />
+                /> */}
                 <AboutData
                     title="Bob Verhelst"
                     subTitle="Director, HeliosX"
