@@ -29,7 +29,7 @@ const ManagementTeam = () => {
                 /> */}
                 <AboutData
                     title="Bob Verhelst"
-                    subTitle="Director, HeliosX"
+                    subTitle="Director"
                     desc="Mr. Verhelst has more than 20 years of senior management experience, including 11 as Partner, Director and Officer of several Western Canada brokerage firms. During this time, he was also President and CEO of a US (FINRA) regulated foreign broker dealer. He has senior risk management experience at CIBC and 11 years combined experience in enforcement for the RCMP, Alberta Securities Commission and Vancouver Stock Exchange. He also has management and board experience with TSX Venture Exchange companies and brings a strong corporate governance background to the Board."
                 />
                 <p className='text-2xl md:text-4xl font-semibold mt-20 text-white'>DAJIN RESOURCES S.A.</p>
