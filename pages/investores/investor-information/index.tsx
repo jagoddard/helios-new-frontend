@@ -38,7 +38,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
             </p>
             <p className="text-primaryColor hidden md:inline-block text-[16px] md:text-[22px] font-medium -mb-1">-</p>
             <p className="text-white text-[16px] md:text-[22px] font-medium -mb-1">
-              TSX.v: <span className="text-primaryColor">HX </span>| OTCQB: <span className="text-primaryColor">HXLTF </span>| Germany: <span className="text-primaryColor">C2U0</span>
+              TSX.v: <span className="text-primaryColor">DTWO </span>| OTCQB: <span className="text-primaryColor">DTWOF </span>| Germany: <span className="text-primaryColor">C2U0</span>
             </p>
           </div>
           <div className="stockInfo overflow-auto mb-10">
@@ -72,20 +72,19 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               </thead>
               <tbody className="bg-white">
                 <tr>
-                  <td className="text-black">HX</td>
+                  <td className="text-black">DTWO</td>
                   <td className="bg-[#FFF8F2] text-black">TSX Venture</td>
                   <td></td>
                   <td className="bg-[#FFF8F2] text-black"></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>HXLTF</td>
+                  <td>DTWOF</td>
                   <td className="bg-[#FFF8F2] text-black">OTC Markets</td>
                   <td className="text-black">36,231,804</td>
-                  <td className="bg-[#FFF8F2] text-black">3,385,000</td>
+                  <td className="bg-[#FFF8F2] text-black">1,335,000</td>
                   <td className="text-black">
-                    10,080,000 at $0.75 expiring <br />
-                    August 5, 2023
+                    
                   </td>
                 </tr>
                 <tr>
