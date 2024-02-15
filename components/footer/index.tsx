@@ -9,7 +9,7 @@ const Footer = () => {
             <section className={styles.footer}>
                 <div className={styles.footerNav}>
                     <Link href={routes.homepage}>
-                        <img src="/logo.svg" className={styles.footerLogo} />
+                        <img src="/D2_Lithium_Corp_LOGO_v1.jpg" className={styles.footerLogo} />
                     </Link>
                     <div className={styles.footerNavbarMobile}>
                         <div className={styles.footerNavItemMobile}>
@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
                     <div></div>
                 </div>
-                <p className={styles.copyRight}>© Copyright 2022 HeliosX</p>
+                <p className={styles.copyRight}>© Copyright 2022 D2 LITHIUM</p>
                 
                 <div className={styles.developBy}>Site is Developed and Maintained by <a className='underline hover:text-primaryColor' href='http://bodhisaar.com/' target="_blank" rel="noopener noreferrer">Bodhisaar Learning</a></div>
 
