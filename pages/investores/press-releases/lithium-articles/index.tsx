@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
         props: {
             data: latestArticles
         },
-        revalidate: 10
+        revalidate: 120
     }
 }
 

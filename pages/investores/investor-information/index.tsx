@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
     props: {
       data: JSON.parse(investorData),
     },
-    revalidate: 10,
+    revalidate: 120,
   };
 };
 
