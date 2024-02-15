@@ -60,7 +60,7 @@ const Header = ({ tabname }: HeaderProps) => {
     return (
         <section className={styles.header}>
             <Link href="/homepage">
-                <img src="/logo.svg" alt="logo" className={styles.logo} />
+                <img src="/D2_Lithium_Corp_LOGO_v1.jpg" alt="logo" className={styles.logo} />
             </Link>
             <div className={styles.nav}>
                 <Link href={routes.homepage}>

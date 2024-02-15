@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
         props: {
             data: latestNews
         },
-        revalidate: 10,
+        revalidate: 120,
     }
 }
 
