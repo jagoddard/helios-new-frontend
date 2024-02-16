@@ -11,7 +11,6 @@ interface Props {
 export const getStaticProps = async () => {
   const financialResp = await getFinancials();
   const financialData = JSON.stringify(financialResp.data);
-  console.log(financialData)
   return {
     props: {
       data: JSON.parse(financialData)
@@ -24,9 +23,7 @@ const Financials = ({ data }: Props) => {
   let years: string[] = data.map((item: any) => {
     return item.year
   })
-  // years = years.filter((item, index) => years.indexOf(item) === index)
-
-  console.log({data, years})
+  years = years.filter((item, index) => years.indexOf(item) === index)
 
   const finData: any = years.reduce((accumulator, value) => {
     return {...accumulator, [value]: data.filter((item: any)=> item.year === value)};
