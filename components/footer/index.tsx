@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
                     <div></div>
                 </div>
-                <p className={styles.copyRight}>© Copyright 2022 D2 LITHIUM</p>
+                <p className={styles.copyRight}>© Copyright 2024 D2 LITHIUM</p>
                 
                 <div className={styles.developBy}>Site is Developed and Maintained by <a className='underline hover:text-primaryColor' href='http://bodhisaar.com/' target="_blank" rel="noopener noreferrer">Bodhisaar Learning</a></div>
 

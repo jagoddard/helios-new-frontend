@@ -65,9 +65,9 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                       Incentive Stock Options
                     </p>
                   </th>
-                  <th className="py-4">
+                  {/* <th className="py-4">
                     <p>Warrants</p>
-                  </th>
+                  </th> */}
                 </tr>
               </thead>
               <tbody className="bg-white">
@@ -76,23 +76,23 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   <td className="bg-[#FFF8F2] text-black">TSX Venture</td>
                   <td></td>
                   <td className="bg-[#FFF8F2] text-black"></td>
-                  <td></td>
+                  {/* <td></td> */}
                 </tr>
                 <tr>
                   <td>DTWOF</td>
                   <td className="bg-[#FFF8F2] text-black">OTC Markets</td>
                   <td className="text-black">36,231,804</td>
                   <td className="bg-[#FFF8F2] text-black">1,335,000</td>
-                  <td className="text-black">
+                  {/* <td className="text-black">
                     
-                  </td>
+                  </td> */}
                 </tr>
                 <tr>
                   <td className="text-black">C2U0</td>
                   <td className="bg-[#FFF8F2] text-black">Germany</td>
                   <td></td>
                   <td className="bg-[#FFF8F2]"></td>
-                  <td></td>
+                  {/* <td></td> */}
                 </tr>
               </tbody>
             </table>

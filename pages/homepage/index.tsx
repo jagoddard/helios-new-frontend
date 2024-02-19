@@ -185,14 +185,14 @@ const Homepage = ({ data }: HomepageProps) => {
             }}
             modules={[Navigation]}
           >
-            <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
+            {/* <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
               <KnowMoreComp
                 articleData={data.news}
                 heading="News Releases"
                 viewMore={routes.latestNewReleases}
                 route={`/pdf-viewer/news`}
               />
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide className="swiper-slide mx-auto md:ml-0">
               <KnowMoreComp
                 articleData={data.articles}

@@ -13,7 +13,7 @@ export const routes = {
     teelsMarsh: '/projects/teels-marsh',
     alkaliLake: '/projects/alkali-lake',
     guayatoyoc: '/projects/guayatoyoc',
-    foxCreek:'/projects/fox-creek',
+    // foxCreek:'/projects/fox-creek',
     theLithiumMarket: '/lithium/the-lithium-market',
     supplyAndDemand: '/lithium/supply-and-demand',
     lithiumProducts: '/lithium/lithium-products',
