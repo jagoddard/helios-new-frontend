@@ -25,7 +25,7 @@ const TeelsMarsh = () => {
                 <p className='pt-2 text-white'>Placer Claims</p>
               </div>
             </div>
-            <p className='text-center mt-6 text-white'><span className='text-primaryColor'>100%</span> owned by Dajin Resources(US) Corp., a wholly owned subsidiary of D2 LITHIUM</p>
+            <p className='text-center mt-6 text-white'><span className='text-primaryColor'>100%</span> owned by Dajin Resources (US) Corp., a wholly owned subsidiary of D2 LITHIUM</p>
           </div>
         </section>
         <section className='px-5 md:px-20 py-10 bg-bgColor'>
