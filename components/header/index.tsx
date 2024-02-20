@@ -89,7 +89,7 @@ const Header = ({ tabname }: HeaderProps) => {
             </div>
 
             <div className={styles.shareLogin}>
-                <div>
+                {/* <div>
                     <div className={styles.sharePrice}>TSXv:&nbsp;
                         <a href="https://money.tmx.com/en/quote/HX" className={styles.shareName}>HX</a>
                         &nbsp;$
@@ -105,7 +105,7 @@ const Header = ({ tabname }: HeaderProps) => {
                             id="TSXV"
                         ></div>
                     </div>
-                </div>
+                </div> */}
                 {loginContext.isLoggedIn ? 
                     <button className={styles.login} onClick={handleLogout}>Logout</button> 
                     : 

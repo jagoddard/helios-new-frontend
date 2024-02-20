@@ -130,15 +130,15 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                 Lithium <span className="text-primaryColor">News</span>
               </p>
               <p className="text-xl mt-5 mb-4 text-white">
-                HeliosX is committed to getting our company message out to the
+              D2 Lithium is committed to getting our company message out to the
                 investment community. Our goal is to inform shareholders in a
                 timely manner of corporate developments, and to inform readers
-                about Lithium producer developments around the world. HeliosX
+                about Lithium producer developments around the world. D2 Lithium
                 wants to keep readers up-to-date on events that will materially
                 affect the price movement of various forms of lithium.
               </p>
               <p className="text-xl text-white mb-2">
-                HeliosX is committed to telling our story and has retained
+              D2 Lithium is committed to telling our story and has retained
                 various channels of distribution including the service of
                 TheNewswire, Benchmark Mineral Intelligence and Lithium
                 Investing News to disseminate our company’s news.

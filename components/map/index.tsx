@@ -28,27 +28,27 @@ type annotationTypes = {
 }
 
 const markers: markersTypes[] = [
-    {
-        markerOffset: -210,
-        markerYOffset: -10,
-        name: "Fox Creek, Alberta, Canada",
-        acerage: "(583,952 acres)",
-        coordinates: [-116.79502835738636, 54.39761248388819],
-        mapImg: (
-            <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-                <iframe
-                    style={{ width: "100%", height: "100%" }}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4495.284040462123!2d-116.79742373751738!3d54.396184368988614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f7e230138a9c55!2zNTTCsDIzJzUxLjAiTiAxMTbCsDQ3JzQyLjAiVw!5e1!3m2!1sen!2sin!4v1664452379618!5m2!1sen!2sin"
-                    loading="lazy"
-                >
-                </iframe>
-            </div>
-        )
-    },
+    // {
+    //     markerOffset: -210,
+    //     markerYOffset: -10,
+    //     name: "Fox Creek, Alberta, Canada",
+    //     acerage: "(583,952 acres)",
+    //     coordinates: [-116.79502835738636, 54.39761248388819],
+    //     mapImg: (
+    //         <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
+    //             <iframe
+    //                 style={{ width: "100%", height: "100%" }}
+    //                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4495.284040462123!2d-116.79742373751738!3d54.396184368988614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f7e230138a9c55!2zNTTCsDIzJzUxLjAiTiAxMTbCsDQ3JzQyLjAiVw!5e1!3m2!1sen!2sin!4v1664452379618!5m2!1sen!2sin"
+    //                 loading="lazy"
+    //             >
+    //             </iframe>
+    //         </div>
+    //     )
+    // },
     {
         markerOffset: 15,
         markerYOffset: -20,
-        name: "Alkali Lake",
+        name: "Akali Lake Valley, Nevada, USA",
         acerage: "(8,825 acres)",
         coordinates: [-119.84732024641305, 41.71314416252361],
         mapImg: (
@@ -98,11 +98,11 @@ const markers: markersTypes[] = [
 ];
 
 const annotations: annotationTypes[] = [
-    {
-        coordinates: [-116.79502835738636, 54.39761248388819],
-        dx: -20,
-        dy: -8
-    },
+    // {
+    //     coordinates: [-116.79502835738636, 54.39761248388819],
+    //     dx: -20,
+    //     dy: -8
+    // },
     {
         coordinates: [-119.84732024641305, 41.71314416252361],
         dx: 23,

@@ -9,7 +9,7 @@ interface Props {
 }
 const SocialArtical = ({ headline, description, date, fileLink }: Props) => {
     return (
-        <div className='flex justify-between border-b border-bgColor pb-3 mt-6 cursor-pointer md:w-[600px]'>
+        <div className='flex justify-between border-b border-bgColor pb-3 mt-6 cursor-pointer'>
             <div className='flex gap-3 items-center'>
                 <div className='ml-2 md:mr-0'>
                     {

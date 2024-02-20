@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppLoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, token, setToken }}>
       <Head>
-        <title>HeliosX</title>
+        <title>D2 Lithium</title>
       </Head>
       <main className="">
 

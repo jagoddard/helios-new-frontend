@@ -12,9 +12,9 @@ const Project = () => {
           </p>
           <p className="text-[#F2F2F2] my-5">
             All project entities, reports and intellectual property are wholly
-            owned by HeliosX Lithium & Technologies Corp. as of the
+            owned by D2 Lithium Lithium & Technologies Corp. as of the
             Shareholder’s unanimous approval of the Plan of Arrangement between
-            Dajin Lithium Corp. and HeliosX Corp. on November 19, 2021.{" "}
+            Dajin Lithium Corp. and D2 Lithium Corp. on November 19, 2021.{" "}
           </p>
           <Title title="TEELS MARSH VALLEY, MINERAL COUNTY, NEVADA, USA" />
           <div className="my-5 flex flex-col md:flex-row items-center justify-between gap-10">
@@ -25,7 +25,7 @@ const Project = () => {
                 </p>
                 <div>
                   <p className="text-primaryColor text-xs  md:text-sm">
-                    Helios<span className="text-white">X controls 100%</span>
+                  D2 <span className="text-white">Lithium controls 100%</span>
                   </p>
                   <p className="text-white text-xs md:text-sm">
                     interest in mineral claims at{" "}
@@ -94,7 +94,7 @@ const Project = () => {
                 </p>
                 <div>
                   <p className="text-primaryColor text-xs  md:text-sm">
-                    Helios<span className="text-white">X controls 100%</span>
+                  D2 <span className="text-white">Lithium controls 100%</span>
                   </p>
                   <p className="text-white text-xs md:text-sm">
                     interest in mineral claims
@@ -125,7 +125,7 @@ const Project = () => {
                 </p>
                 <div>
                   <p className="text-primaryColor text-xs  md:text-sm">
-                    Helios<span className="text-white">X has a 49%</span>
+                  D2 <span className="text-white">Lithium has a 49%</span>
                   </p>
                   <p className="text-white text-xs md:text-sm">joint venture</p>
                   <p className="text-white text-xs md:text-sm">
@@ -152,7 +152,7 @@ const Project = () => {
               “brines.” On August 8, 2016, Dajin's wholly owned Argentinian
               subsidiary, Dajin Resources S. A., signed a binding Memorandum of
               Understanding ("MOU") with LSC Lithium Corporation ("LSC") whereby
-              LSC was granted an option to earn a 51% interest in HeliosX's
+              LSC was granted an option to earn a 51% interest in D2 Lithium's
               Lithium properties in Argentina. Lithium brine bodies in salt
               lakes, or salars, are formed in basins where water has leached the
               Lithium from the surrounding rock and is trapped and concentrated
@@ -178,7 +178,7 @@ const Project = () => {
             potassium, which is equivalent to 239,200 tonnes of Lithium
             carbonate and 1.03 million tonnes of potash based on 5.32 tonnes of
             Lithium carbonate being equivalent to one tonne of Lithium and 1.91
-            tonnes of potash being equivalent to one tonne of potassium. HeliosX
+            tonnes of potash being equivalent to one tonne of potassium. D2 Lithium
             believes that a drill program on its concessions could produce
             similar results as Orocobre and ultimately lead to delineating its
             own resource. Also active in Jujuy province, and adjacent to the
@@ -191,7 +191,7 @@ const Project = () => {
             Lithium brines in the Andes mountains region that encompasses parts
             of Argentina and Chile. This area, commonly referred to as the
             “Lithium Triangle,” includes the Salinas Grandes salar, which is the
-            site of HeliosX’s extensive land package. In the mid-1990s, the
+            site of D2 Lithium’s extensive land package. In the mid-1990s, the
             development of these large-scale, low-cost brine resources in Chile
             and Argentina by Sociedad Quimica y Minera S.A. (NYSE: SQM),
             Rockwood Lithium Inc. (NYSE: ROC) and FMC Lithium (NYSE: FMC)
@@ -243,7 +243,7 @@ const Project = () => {
                 </p>
                 <div>
                   <p className="text-primaryColor text-xs  md:text-sm">
-                    Helios<span className="text-white">X control 100%</span>
+                  D2 <span className="text-white">Lithium control 100%</span>
                   </p>
                   <p className="text-white text-xs md:text-sm">
                     interest in mineral claims
@@ -264,7 +264,7 @@ const Project = () => {
             Historically, the energy industry has proven the productive
             capability of the reservoirs, and substantial wellbore penetrations
             assist with stratigraphic analysis to optimize potential locations.
-            Work is ongoing in the region as HeliosX continues with a detailed
+            Work is ongoing in the region as D2 Lithium continues with a detailed
             Western Canadian Sedimentary Basin study to identify optimal
             locations for prospective lithium brine reservoirs.
           </p>
