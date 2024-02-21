@@ -42,8 +42,8 @@ const Login = () => {
     <div className="flex">
       <div className="bg-login bg-cover bg-no-repeat bg-center hidden md:flex md:w-1/2 h-screen">
         <div className="bg-black opacity-[0.6] h-full w-full">
-          <Link href="/homepage">
-            <img src="logo.svg" className="pt-10 md:pl-10 w-[250px] cursor-pointer" />
+          <Link href="/homepage" className="bg-white">
+            <img src="D2_Lithium_Corp_LOGO_v1.jpg" className="pt-10 md:pl-10 w-[150px] cursor-pointer " />
           </Link>
         </div>
       </div>
