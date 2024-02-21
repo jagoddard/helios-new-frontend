@@ -76,22 +76,31 @@ const Homepage = ({ data }: HomepageProps) => {
             height="fit-content"
           />
         </div>
+        {/* <div className="bg-lithiumBanner bg-cover bg-center h-[600px]">
+          <div className="flex justify-center items-center p-4 bg-bgOpacity w-full h-full">
+            <p className="text-white text-2xl md:text-4xl font-bold">
+              Welcome to D2 Lithium Corp
+            </p>
+          </div>
+        </div> */}
       </section>
       <section className={styles.homeAbout}>
         <div className={styles.homeAboutInner}>
           <div>
             <p className={styles.homeAboutTitle}>
-              Helios<span className=" text-white">X</span>
+              D2 <span className=" text-white">Lithium</span>
             </p>
             <p className="text-white text-[18px] md:text-[26px] font-semibold">
-              TSX.v: <span className="text-primaryColor">HX </span>| OTCQB: <span className="text-primaryColor">HXLTF </span>| Germany: <span className="text-primaryColor">C2U0</span>
+              TSX.v: <span className="text-primaryColor">DTWO </span>| OTCQB:{" "}
+              <span className="text-primaryColor">DTWOF </span>| Germany:{" "}
+              <span className="text-primaryColor">C2U0</span>
             </p>
           </div>
           <p className={styles.homeAboutSubTitle}>
             A Lithium Brine (Battery Metal) Exploration Company
           </p>
           <p className={styles.homeAboutDesc}>
-            HeliosX is an industry leading, integrated Lithium exploration
+            D2 Lithium is an industry leading, integrated Lithium exploration
             company, and one of the few international investment opportunities
             with approximately 832,000 gross acres diversified across three
             highly prospective regions: Jujuy (Argentina ~ 230,000 acres),
@@ -173,7 +182,13 @@ const Homepage = ({ data }: HomepageProps) => {
 
       <section className={styles.kum}>
         <div className={styles.kumGroup}>
-          <Swiper
+          <KnowMoreComp
+            articleData={data.articles}
+            heading="Articles"
+            viewMore={routes.investorLithiumArticles}
+            route={`/pdf-viewer/articles`}
+          />
+          {/* <Swiper
             slidesPerView={1}
             spaceBetween={0}
             navigation={true}
@@ -184,8 +199,8 @@ const Homepage = ({ data }: HomepageProps) => {
               },
             }}
             modules={[Navigation]}
-          >
-            {/* <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
+          > */}
+          {/* <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
               <KnowMoreComp
                 articleData={data.news}
                 heading="News Releases"
@@ -193,15 +208,15 @@ const Homepage = ({ data }: HomepageProps) => {
                 route={`/pdf-viewer/news`}
               />
             </SwiperSlide> */}
-            <SwiperSlide className="swiper-slide mx-auto md:ml-0">
+          {/* <SwiperSlide className="swiper-slide mx-auto md:ml-0">
               <KnowMoreComp
                 articleData={data.articles}
                 heading="Articles"
                 viewMore={routes.investorLithiumArticles}
                 route={`/pdf-viewer/articles`}
               />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide mx-auto md:ml-4">
+            </SwiperSlide> */}
+          {/* <SwiperSlide className="swiper-slide mx-auto md:ml-4">
               <div className="w-[90vw] mx-auto md:w-[650px] h-[560px] md:h-[742px] bg-black rounded-lg">
                 <TwitterTimelineEmbed
                   sourceType="profile"
@@ -212,8 +227,8 @@ const Homepage = ({ data }: HomepageProps) => {
                   placeholder={twitterPlaceholder}
                 />
               </div>
-            </SwiperSlide>
-          </Swiper>
+            </SwiperSlide> */}
+          {/* </Swiper> */}
         </div>
       </section>
 
