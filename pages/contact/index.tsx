@@ -23,7 +23,9 @@ const index = () => {
             <p className="pt-4 md:w-1/2 text-white">
               D2 Lithium Corp.
               <br />
-              V2Y 0G9 Canada
+              201-8861-201 Stresst
+              <br />
+              Langley, BC, V2Y0G6, Canada,
             </p>
             <p className="md:w-1/2 text-white">Phone: 604-681-6151</p>
             <p className=" md:w-1/2 text-white">Email: brian@d2lithium.com</p>
@@ -45,7 +47,9 @@ const index = () => {
             <p className="pt-4 md:w-1/2 text-white">
               Odyssey Trust Co.
               <br />
-              323-409 Granville Street, Vancouver,<br />BC, V6C 1T2 Canada
+              323-409 Granville Street
+              <br />
+              Vancouver, BC V6C 1T2 Canada
             </p>
             <p className=" md:w-1/2 text-white">Phone: 778.819.1184</p>
           </div>
@@ -82,7 +86,9 @@ const index = () => {
             <p className="pt-4 text-white">
               DeVisser Gray LLP
               <br />
-              401-905 West Pender Street, Vancouver BC,<br />V6C 1L6 Canada
+              401-905 West Pender Street,
+              <br />
+              Vancouver, BC V6C 1L6
             </p>
           </div>
           <div className="md:w-1/2"></div>
