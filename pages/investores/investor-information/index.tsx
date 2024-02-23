@@ -46,7 +46,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
             </p>
           </div>
           <div className="stockInfo overflow-auto mb-10">
-            <table className="w-full m-auto mt-10 ">
+            <table className="w-[800px] m-auto mt-10 ">
               <thead className="bg-tableHeadeBg">
                 <tr>
                   <th className="py-4">

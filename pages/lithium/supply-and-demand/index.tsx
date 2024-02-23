@@ -40,7 +40,7 @@ const index = () => {
                     <p className='mb-3 text-white'>Addition of lithium carbonate to aluminum potlines lowers the melting point of the cryolite bath, allows a lower operating temperature for the cells, increases the electrical conductivity, and decreases bath viscosity. U.S. primary aluminum production and U.S. lithium consumption for aluminum production in 2012 remained near the level in 2011.</p>
                     <p className='text-white'>"Must-Know": What makes Alcoa bullish on aluminum demand?
                         <Link href="https://finance.yahoo.com/news/must-know-makes-alcoa-bullish-130043815.html" passHref>
-                            <a target="_blank" rel="noopener noreferrer" className='text-primaryColor'>
+                            <a target="_blank" rel="noopener noreferrer" className='text-readMore'>
                                 {" "} Read More
                             </a>
                         </Link>
@@ -83,7 +83,7 @@ const index = () => {
                         <p className='text-white text-center'>Solar panels that use lithium solutions to store the energy they create.</p>
                     </div>
                     <p className='mb-3 text-white'>For further information we recommend reading the entire U.S.G.S Report at:
-                        {" "} Read More
+                        {" "} <span className='text-readMore'>Read More</span>
                     </p>
                     <p className='text-headerMobile md:text-header font-semibold mt-10 mb-3 text-white'>WORDS FROM INDUSTRY LEADERS</p>
                     <p className='text-primaryColor mb-6'>SQM media release April 4th 2014</p>

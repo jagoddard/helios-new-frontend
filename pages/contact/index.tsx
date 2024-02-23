@@ -88,7 +88,7 @@ const index = () => {
               <br />
               401-905 West Pender Street,
               <br />
-              Vancouver, BC V6C 1L6
+              Vancouver, BC V6C 1L6 Canada
             </p>
           </div>
           <div className="md:w-1/2"></div>
