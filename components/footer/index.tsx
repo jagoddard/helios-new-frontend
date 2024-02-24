@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className={styles.groupOfSocialIcon}>
           <Link
-            href="https://www.linkedin.com/company/heliosxlithium/"
+            href="#"
             passHref
           >
             <a target="_blank" rel="noopener noreferrer">
@@ -87,7 +87,7 @@ const Footer = () => {
               {/* <img src="/linkedinDark.svg" className={styles.fotterSocialIcon} /> */}
             </a>
           </Link>
-          <Link href="https://twitter.com/Heliosx_lithium" passHref>
+          <Link href="#" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <img
                 src="/twitterLight.svg"
@@ -96,7 +96,7 @@ const Footer = () => {
               {/* <img src="/twitterDark.svg" className={styles.fotterSocialIcon} /> */}
             </a>
           </Link>
-          <Link href="https://www.facebook.com/HeliosXLithium" passHref>
+          <Link href="#" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <img
                 src="/facebookLight.svg"

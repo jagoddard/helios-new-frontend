@@ -67,7 +67,7 @@ const Homepage = ({ data }: HomepageProps) => {
         <Header tabname="Home" />
         <div className={styles.hero}>
           <ReactPlayer
-            url="videos/homepageVideo.m4v"
+            url="videos/2018_05_31_08_43_38_video_May_31_2018.mp4"
             loop={true}
             controls={false}
             playing={true}
@@ -76,10 +76,14 @@ const Homepage = ({ data }: HomepageProps) => {
             height="fit-content"
           />
         </div>
-        {/* <div className="bg-lithiumBanner bg-cover bg-center h-[600px]">
+        {/* <div className="bg-hero bg-cover bg-center h-[600px]">
           <div className="flex justify-center items-center p-4 bg-bgOpacity w-full h-full">
-            <p className="text-white text-2xl md:text-4xl font-bold">
-              Welcome to D2 Lithium Corp
+            <p className="text-white md:text-4xl font-bold text-center">
+              <span className="text-[40px]">Welcome to</span>
+              <br />
+              <span className="text-primaryColor text-[60px]">
+                D2 Lithium Corporation
+              </span>
             </p>
           </div>
         </div> */}
@@ -102,9 +106,9 @@ const Homepage = ({ data }: HomepageProps) => {
           <p className={styles.homeAboutDesc}>
             D2 Lithium is an industry leading, integrated Lithium exploration
             company, and one of the few international investment opportunities
-            with approximately 832,000 gross acres diversified across three
-            highly prospective regions: Jujuy (Argentina ~ 230,000 acres),
-            Nevada (USA ~ 17,000 acres) and Alberta (Canada ~ 585,000 acres).{" "}
+            with approximately 250,000 gross acres diversified across two highly
+            prospective regions: in Jujuy province in Argentina ~ 230,000 acres
+            and in Nevada USA ~ 17,000 acres.
           </p>
           <p className={styles.homeAboutDesc}>
             Our assets are subjected to rigorous technical evaluation using
@@ -126,11 +130,11 @@ const Homepage = ({ data }: HomepageProps) => {
             years to days. This reduces costs, increases profitability and
             ensures long-term social license.
           </p>
-          <p className={styles.homeAboutLastDesc}>
+          {/* <p className={styles.homeAboutLastDesc}>
             Our management team has a long track record executing resource
             projects that meet the highest ESG standards and ensure equitable
             Indigenous participation.
-          </p>
+          </p> */}
         </div>
         <img src="bgAbout.svg" className={styles.homeaboutBackground} />
       </section>

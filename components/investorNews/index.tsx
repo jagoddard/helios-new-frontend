@@ -12,7 +12,7 @@ const InvestorNews = ({ image, newsText, lithiumLink }: Props) => {
       <p className='text-newsText mt-4'>{newsText}</p>
       <Link href={lithiumLink} passHref>
         <a target="_blank" rel="noopener noreferrer">
-          <p className='text-primaryColor mt-4 cursor-pointer hover:text-[#e0b996]'>Read More</p>
+          <p className='text-readMore mt-4 cursor-pointer hover:text-[#e0b996]'>Read More</p>
         </a>
       </Link>
     </div>

@@ -13,7 +13,7 @@ const index = () => {
                     <img src='/lithiumtech.png' className='headerMd:w-1/2' />
                     <Link href="https://www.visualcapitalist.com/lithium-key-ingredient-powering-todays-technology/" passHref>
                         <a target="_blank" rel="noopener noreferrer">
-                            <button className='mt-12 rounded-[10px] bg-[#25272A] text-[#F78222] px-10 py-3'>Click To View More</button>
+                            <button className='mt-12 rounded-[10px] bg-[#25272A] text-primaryColor px-10 py-3'>Click To View More</button>
                         </a>
                     </Link>
                 </div>

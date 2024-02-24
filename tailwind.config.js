@@ -32,7 +32,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         // 'heroImage': "url('/banner.png')",
-        'heroVedio':"url('/vedio/homepage.mp4')",
+        'heroImage':"url('/ArgentinaProject.jpg')",
         'bgAbout':"url('/bgAbout.svg')",
         'abouteBanner':"url('/aboutBanner.jpg')",
         'lithiumBanner':"url('/lithumImage.jpg')",
@@ -46,7 +46,7 @@ module.exports = {
       }
     },
     colors:{
-      primaryColor:'#F18628',
+      primaryColor:'#59b95f',
       white:'#fff',
       black:'#000',
       bgOpacity:'#00000069',
@@ -61,10 +61,10 @@ module.exports = {
       borderright:'#FFFBFB',
       newsText:'#CFCFCF',
       marketSidebar:'#FFE5D3',
-      subtitle:'#FF8832',
+      subtitle:'#59b95f',
       desc:'#424040',
       newsItemBg: '#353535',
-      newsItemDate:'#F78222',
+      newsItemDate:'#59b95f',
       mapmarkbg:'#0000007a',
       textGary:'#EEEEEE',
       wwhColor:'#3E3D3D',
@@ -75,7 +75,8 @@ module.exports = {
       primaryLight: '#f7822280',
       addEditBg:'#FFF8F2',
       //dark
-      darkTheme:'#3B3D40'
+      darkTheme:'#3B3D40',
+      readMore:'#F18628'
      
     },
     fontFamily:{

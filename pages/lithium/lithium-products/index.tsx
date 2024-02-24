@@ -16,7 +16,7 @@ const index = () => {
                     <p className='mb-3 text-white'>"The future of aviation is being built with aluminum-lithium and Alcoa is making big moves to capture that demand" Klaws Klein, Alcoa Chairman and CEO. "This state of the art facility positions Alcoa as the world's premier aluminum-lithium supplier, offering the broadest portfolio of aluminum. Lithium components for next generation aircraft"</p>
                     <p className='mb-3 text-white'>Alcoa Opens World's Largest Aluminum-Lithium Aerospace Plant in Indiana:</p>
                     <Link href="https://news.alcoa.com/home/default.aspx" passHref>
-                        <a target="_blank" rel="noopener noreferrer" className='text-primaryColor mb-3'>
+                        <a target="_blank" rel="noopener noreferrer" className='text-readMore mb-3'>
                             {" "} Read More
                         </a>
                     </Link>
@@ -27,7 +27,7 @@ const index = () => {
                     <p className='mb-3 text-white'>It is estimated that in 2014 smartphones users, worldwide, will total 1.75 billion. In this same time period, Gartner speculates that worldwide traditional PC's, tablets, ultra mobile and mobile phone shipments are on pace to grow 7.6 percent, an increase of 2.5 billion units. Between 2013 and 2017, mobile phone penetration will rise from 61.1% to 69.4% of the global population, according to a new emerging report "Worldwide mobile phone users." On average, mobile devices usually carry between 8-25 grams of lithium, depending on the watt hour ratings of the device. In contrast, vehicles can carry anywhere from 0.3Kg (300g) to 5 Kg of lithium, depending on the type of battery and the size of the car.</p>
                     <p className='mb-3 text-white'>Smartphone Users Worldwide Will Total 1.75 Billion in 2014:
                     <Link href="https://www.insiderintelligence.com/insights/mobile-users-smartphone-usage/" passHref>
-                        <a target="_blank" rel="noopener noreferrer" className='text-primaryColor mb-3'>
+                        <a target="_blank" rel="noopener noreferrer" className='text-readMore mb-3'>
                             {" "} Read More
                         </a>
                     </Link>

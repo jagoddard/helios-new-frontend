@@ -25,7 +25,7 @@ const index = () => {
                     </div>
                     <p className='mb-1 text-white'>The best explanation of lithium brine based deposit can be found the USGS (United Stated Geological Survey):
                     <Link href="https://pubs.usgs.gov/of/2013/1006/OF13-1006.pdf" passHref>
-                        <a target="_blank" rel="noopener noreferrer" className='text-primaryColor mb-3'>
+                        <a target="_blank" rel="noopener noreferrer" className='text-readMore mb-3'>
                             {" "} Read More
                         </a>
                     </Link>

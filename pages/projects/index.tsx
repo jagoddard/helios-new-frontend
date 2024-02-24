@@ -206,7 +206,7 @@ const Project = () => {
             2019, Pluspetrol earned a 51% interest in Dajin Resources S.A.
           </p>
         </section>
-        <section className="my-20">
+        {/* <section className="my-20">
           <Title title="FOX CREEK, ALBERTA, CANADA" />
           <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 my-5">
             <div className="md:w-1/2">
@@ -260,7 +260,9 @@ const Project = () => {
               <img src="foxCreek.svg" className="h-auto w-full" />
             </div>
           </div>
-          <p className="text-white mt-3">
+         
+        </section> */}
+         <p className="text-white mt-3">
             Historically, the energy industry has proven the productive
             capability of the reservoirs, and substantial wellbore penetrations
             assist with stratigraphic analysis to optimize potential locations.
@@ -268,7 +270,6 @@ const Project = () => {
             Western Canadian Sedimentary Basin study to identify optimal
             locations for prospective lithium brine reservoirs.
           </p>
-        </section>
       </div>
     </ProjectContainer>
   );
