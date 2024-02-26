@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
-    "start:local": "next start"
+    "start:local": "next dev"
   },
   "dependencies": {
     "@types/react-simple-maps": "^1.0.8",
