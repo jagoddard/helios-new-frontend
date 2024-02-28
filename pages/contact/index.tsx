@@ -23,11 +23,11 @@ const index = () => {
             <p className="pt-4 md:w-1/2 text-white">
               D2 Lithium Corp.
               <br />
-              201-8861-201 Stresst
+              202-8661-201 Street
               <br />
               Langley, BC V2Y 0G6 Canada
             </p>
-            <p className="md:w-1/2 text-white">Phone: 604-681-6151</p>
+            <p className="md:w-1/2 text-white">Phone: 604.681.6151</p>
             <p className=" md:w-1/2 text-white">Email: brian@d2lithium.com</p>
           </div>
           <div className="md:w-1/2">
@@ -86,7 +86,7 @@ const index = () => {
             <p className="pt-4 text-white">
               DeVisser Gray LLP
               <br />
-              401-905 West Pender Street,
+              401-905 West Pender Street
               <br />
               Vancouver, BC V6C 1L6 Canada
             </p>

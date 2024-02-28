@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { reduceString } from '../../utils/reduceString'
 interface Props {
     // newsImage: any,
@@ -15,9 +16,9 @@ const SocialArtical = ({ headline, description, date, fileLink }: Props) => {
                     {
                         fileLink != '#' ? (
                             <p className='text-white text-base md:text-newsArticalHeader hover:text-primaryColor'>
-                                <a href={fileLink} target="_blank" rel="noopener noreferrer">
+                                <Link href={fileLink} passHref>
                                     {reduceString(40, headline)}
-                                </a>
+                                </Link>
                             </p>
                         ) : (
                             <p className='text-white text-base md:text-2xl hover:text-primaryColor'>

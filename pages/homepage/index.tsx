@@ -18,6 +18,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import { getAllNews } from "../../services/news";
 import { getAllArticles } from "../../services/articles";
 import dynamic from "next/dynamic";
+import NewsTicker from "../../components/newsTicker";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -88,55 +89,60 @@ const Homepage = ({ data }: HomepageProps) => {
           </div>
         </div> */}
       </section>
-      <section className={styles.homeAbout}>
-        <div className={styles.homeAboutInner}>
-          <div>
-            <p className={styles.homeAboutTitle}>
-              D2 <span className=" text-white">Lithium</span>
+      <section className="relative">
+        <NewsTicker />
+      </section>
+      <section>
+        <div className={styles.homeAbout}>
+          <div className={styles.homeAboutInner}>
+            <div>
+              <p className={styles.homeAboutTitle}>
+                D2 <span className=" text-white">Lithium</span>
+              </p>
+              <p className="text-white text-[18px] md:text-[26px] font-semibold">
+                TSX.v: <span className="text-primaryColor">DTWO </span>| OTCQB:{" "}
+                <span className="text-primaryColor">DTWOF </span>| Germany:{" "}
+                <span className="text-primaryColor">C2U0</span>
+              </p>
+            </div>
+            <p className={styles.homeAboutSubTitle}>
+              A Lithium Brine (Battery Metal) Exploration Company
             </p>
-            <p className="text-white text-[18px] md:text-[26px] font-semibold">
-              TSX.v: <span className="text-primaryColor">DTWO </span>| OTCQB:{" "}
-              <span className="text-primaryColor">DTWOF </span>| Germany:{" "}
-              <span className="text-primaryColor">C2U0</span>
+            <p className={styles.homeAboutDesc}>
+              D2 Lithium is an industry leading, integrated Lithium exploration
+              company, and one of the few international investment opportunities
+              with approximately 250,000 gross acres diversified across two
+              highly prospective regions: in Jujuy province in Argentina ~
+              230,000 acres and in Nevada USA ~ 17,000 acres.
             </p>
-          </div>
-          <p className={styles.homeAboutSubTitle}>
-            A Lithium Brine (Battery Metal) Exploration Company
-          </p>
-          <p className={styles.homeAboutDesc}>
-            D2 Lithium is an industry leading, integrated Lithium exploration
-            company, and one of the few international investment opportunities
-            with approximately 250,000 gross acres diversified across two highly
-            prospective regions: in Jujuy province in Argentina ~ 230,000 acres
-            and in Nevada USA ~ 17,000 acres.
-          </p>
-          <p className={styles.homeAboutDesc}>
-            Our assets are subjected to rigorous technical evaluation using
-            proprietary, geological modelling and brine production simulation by
-            a team with decades of international experience. This de-risks our
-            assets, optimizes capital deployment and ensures a clear
-            line-of-sight to commercialization.
-          </p>
-          <p className={styles.homeAboutDesc}>
-            Through our work with global Direct Lithium Extraction (DLE)
-            leaders, we will conduct Front End Engineering Design (FEED)
-            studies, followed by demonstration facilities and commercial,
-            scalable operations.
-          </p>
-          <p className={styles.homeAboutDesc}>
-            The benefits of deploying DLE technologies are: the elimination of
-            evaporation ponds, a significant reduction in land disturbance, much
-            lower water consumption and expediting the extraction process from
-            years to days. This reduces costs, increases profitability and
-            ensures long-term social license.
-          </p>
-          {/* <p className={styles.homeAboutLastDesc}>
+            <p className={styles.homeAboutDesc}>
+              Our assets are subjected to rigorous technical evaluation using
+              proprietary, geological modelling and brine production simulation
+              by a team with decades of international experience. This de-risks
+              our assets, optimizes capital deployment and ensures a clear
+              line-of-sight to commercialization.
+            </p>
+            <p className={styles.homeAboutDesc}>
+              Through our work with global Direct Lithium Extraction (DLE)
+              leaders, we will conduct Front End Engineering Design (FEED)
+              studies, followed by demonstration facilities and commercial,
+              scalable operations.
+            </p>
+            <p className={styles.homeAboutDesc}>
+              The benefits of deploying DLE technologies are: the elimination of
+              evaporation ponds, a significant reduction in land disturbance,
+              much lower water consumption and expediting the extraction process
+              from years to days. This reduces costs, increases profitability
+              and ensures long-term social license.
+            </p>
+            {/* <p className={styles.homeAboutLastDesc}>
             Our management team has a long track record executing resource
             projects that meet the highest ESG standards and ensure equitable
             Indigenous participation.
           </p> */}
+          </div>
+          <img src="bgAbout.svg" className={styles.homeaboutBackground} />
         </div>
-        <img src="bgAbout.svg" className={styles.homeaboutBackground} />
       </section>
       <section className="py-10 px-10 md:px-20 bg-darkTheme">
         <p className="text-[32px] md:text-[40px] text-center font-bold font-sans text-white">
@@ -184,15 +190,15 @@ const Homepage = ({ data }: HomepageProps) => {
         </div>
       </section>
 
-      <section className={styles.kum}>
+      {/* <section className={styles.kum}>
         <div className={styles.kumGroup}>
           <KnowMoreComp
             articleData={data.articles}
             heading="Articles"
             viewMore={routes.investorLithiumArticles}
             route={`/pdf-viewer/articles`}
-          />
-          {/* <Swiper
+          /> */}
+      {/* <Swiper
             slidesPerView={1}
             spaceBetween={0}
             navigation={true}
@@ -204,7 +210,7 @@ const Homepage = ({ data }: HomepageProps) => {
             }}
             modules={[Navigation]}
           > */}
-          {/* <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
+      {/* <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
               <KnowMoreComp
                 articleData={data.news}
                 heading="News Releases"
@@ -212,7 +218,7 @@ const Homepage = ({ data }: HomepageProps) => {
                 route={`/pdf-viewer/news`}
               />
             </SwiperSlide> */}
-          {/* <SwiperSlide className="swiper-slide mx-auto md:ml-0">
+      {/* <SwiperSlide className="swiper-slide mx-auto md:ml-0">
               <KnowMoreComp
                 articleData={data.articles}
                 heading="Articles"
@@ -220,7 +226,7 @@ const Homepage = ({ data }: HomepageProps) => {
                 route={`/pdf-viewer/articles`}
               />
             </SwiperSlide> */}
-          {/* <SwiperSlide className="swiper-slide mx-auto md:ml-4">
+      {/* <SwiperSlide className="swiper-slide mx-auto md:ml-4">
               <div className="w-[90vw] mx-auto md:w-[650px] h-[560px] md:h-[742px] bg-black rounded-lg">
                 <TwitterTimelineEmbed
                   sourceType="profile"
@@ -232,9 +238,9 @@ const Homepage = ({ data }: HomepageProps) => {
                 />
               </div>
             </SwiperSlide> */}
-          {/* </Swiper> */}
-        </div>
-      </section>
+      {/* </Swiper> */}
+      {/* </div>
+      </section> */}
 
       <section className="bg-[#25272A]">
         <div className={styles.mapBackground}>

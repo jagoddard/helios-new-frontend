@@ -64,46 +64,37 @@ const Footer = () => {
 
         <div className={styles.developBy}>
           Site is Developed and Maintained by{" "}
-          <a
-            className="underline hover:text-primaryColor"
-            href="http://bodhisaar.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="http://bodhisaar.com/" className="underline hover:text-primaryColor"
+            target="_blank" passHref>
             Bodhisaar Learning
-          </a>
+          </Link>
         </div>
 
         <div className={styles.groupOfSocialIcon}>
           <Link
             href="#"
+            target="_blank"
             passHref
           >
-            <a target="_blank" rel="noopener noreferrer">
               <img
                 src="/linkedinLight.svg"
                 className={styles.fotterSocialIcon}
               />
               {/* <img src="/linkedinDark.svg" className={styles.fotterSocialIcon} /> */}
-            </a>
           </Link>
-          <Link href="#" passHref>
-            <a target="_blank" rel="noopener noreferrer">
+          <Link href="#" target="_blank" passHref>
               <img
                 src="/twitterLight.svg"
                 className={styles.fotterSocialIcon}
               />
               {/* <img src="/twitterDark.svg" className={styles.fotterSocialIcon} /> */}
-            </a>
           </Link>
-          <Link href="#" passHref>
-            <a target="_blank" rel="noopener noreferrer">
+          <Link href="#" target="_blank" passHref>
               <img
                 src="/facebookLight.svg"
                 className={styles.fotterSocialIcon}
               />
               {/* <img src="/facebookDark.svg" className={styles.fotterSocialIcon} /> */}
-            </a>
           </Link>
         </div>
       </section>

@@ -16,15 +16,13 @@ const NewsItem = ({ title, newsDate, newsDescription, pdfLink}: Props) => {
                 </div>
                 <div className='flex md:justify-end gap-5 md:w-[20%] mt-5 md:mt-0'>
                     {pdfLink &&
-                        <Link href={pdfLink}>
-                            <a target="_blank" rel="noopener noreferrer">
+                        <Link href={pdfLink} target="_blank" passHref>
                                 <div
                                     className='flex gap-2 items-center cursor-pointer'
                                 >
                                     <img src="/pdf.png" className='w-4 h-5' />
                                     <p className='text-primaryColor text-base'>View</p>
                                 </div>
-                            </a>
                         </Link>
                     }
                 </div>
