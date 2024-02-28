@@ -18,7 +18,7 @@ const index = () => {
           Facts.
         </p>
         <div className="flex flex-col items-center justify-center">
-          <img src="/lithiumtech.png" className="headerMd:w-1/2" />
+          <img src="/lithiumtech.jpg" className="headerMd:w-1/2" />
           <Link
             href="https://www.visualcapitalist.com/lithium-key-ingredient-powering-todays-technology/"
             target="_blank"
