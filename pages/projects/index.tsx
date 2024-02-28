@@ -71,7 +71,7 @@ const Project = () => {
           <div className="mt-5 mb-2 flex flex-col-reverse md:flex-row items-center gap-10">
             <p className="text-white md:w-[50%]">
               Dajin Resources (US) Corp. holds a 100% interest in 139 placer
-              mineral claims covering 8,825 acres in the Alkali Lake, in
+              mineral claims covering 2,832.4 acres in the Alkali Lake, in
               Esmeralda County, Nevada. The Alkali Lake Lithium property is
               located about 7 miles northeast of Albemarle's Silver Peak Lithium
               mine; which is the only operational, Lithium brine mine in North
@@ -107,7 +107,7 @@ const Project = () => {
                     Country, Nevada, USA
                   </p>
                   <p className="text-white text-xs md:text-sm">
-                    Alkali Lake – 8,825 acres
+                    Alkali Lake – 2,832.4 acres
                   </p>
                 </div>
               </div>

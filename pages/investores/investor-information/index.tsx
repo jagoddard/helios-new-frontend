@@ -46,8 +46,8 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
             </p>
           </div>
           <div className="stockInfo overflow-auto mb-10">
-            <table className="w-[800px] m-auto mt-10 ">
-              <thead className="bg-tableHeadeBg">
+            <table className="w-[700px] m-auto mt-10 ">
+              <thead className="bg-primaryColor">
                 <tr>
                   <th className="py-4">
                     <p className="px-10 md:px-0 md:border-r border-borderright">
@@ -77,25 +77,25 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               <tbody className="bg-white">
                 <tr>
                   <td className="text-black">DTWO</td>
-                  <td className="bg-[#FFF8F2] text-black">TSX Venture</td>
-                  <td></td>
-                  <td className="bg-[#FFF8F2] text-black"></td>
+                  <td className="bg-[#C8FFCB] text-black">TSX Venture</td>
+                  <td>36,231,804</td>
+                  <td className="bg-[#C8FFCB] text-black">1,335,000</td>
                   {/* <td></td> */}
                 </tr>
                 <tr>
                   <td>DTWOF</td>
-                  <td className="bg-[#FFF8F2] text-black">OTC Markets</td>
-                  <td className="text-black">36,231,804</td>
-                  <td className="bg-[#FFF8F2] text-black">1,335,000</td>
+                  <td className="bg-[#C8FFCB] text-black">OTC Markets</td>
+                  <td className="text-black"></td>
+                  <td className="bg-[#C8FFCB] text-black"></td>
                   {/* <td className="text-black">
                     
                   </td> */}
                 </tr>
                 <tr>
                   <td className="text-black">C2U0</td>
-                  <td className="bg-[#FFF8F2] text-black">Germany</td>
+                  <td className="bg-[#C8FFCB] text-black">Germany</td>
                   <td></td>
-                  <td className="bg-[#FFF8F2]"></td>
+                  <td className="bg-[#C8FFCB]"></td>
                   {/* <td></td> */}
                 </tr>
               </tbody>
@@ -130,15 +130,15 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                 Lithium <span className="text-primaryColor">News</span>
               </p>
               <p className="text-xl mt-5 mb-4 text-white">
-              D2 Lithium is committed to getting our company message out to the
-                investment community. Our goal is to inform shareholders in a
-                timely manner of corporate developments, and to inform readers
+                D2 Lithium is committed to getting our company message out to
+                the investment community. Our goal is to inform shareholders in
+                a timely manner of corporate developments, and to inform readers
                 about Lithium producer developments around the world. D2 Lithium
                 wants to keep readers up-to-date on events that will materially
                 affect the price movement of various forms of lithium.
               </p>
               <p className="text-xl text-white mb-2">
-              D2 Lithium is committed to telling our story and has retained
+                D2 Lithium is committed to telling our story and has retained
                 various channels of distribution including the service of
                 TheNewswire, Benchmark Mineral Intelligence and Lithium
                 Investing News to disseminate our company’s news.
@@ -148,7 +148,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
               <InvestorNews
                 image="/news1.png"
                 newsText="We are part of the Investing News Network. We bring unbiased, independent news and information, specifically for investors, miners and end users interested in Lithium. Our mission is to become the number one source of independent, unbiased news and education helping investors realize their financial goals. To be internationally respected for our integrity, our people and our commitment to excellence. And to create an environment where sophisticated investors can understand and connect directly with trusted organizations and businesses."
-                lithiumLink="https://investingnews.com/company-pro/files/lithium-exploration-argentina-nevada-dajin-resources/"
+                lithiumLink="https://investingnews.com/search/?q=lithium+"
               />
               <InvestorNews
                 image="/news2.png"
