@@ -17,8 +17,10 @@ const index = () => {
           keep up. Take a look through this infographic to learn more Lithium
           Facts.
         </p>
-        <div className="flex flex-col items-center justify-center">
-          <img src="/lithiumtech.jpg" className="header Md:w-1/2" />
+        <div className="flex justify-center">
+          <img src="/lithiumtech.jpg" className="md:w-[600px]" />
+        </div>
+        <div className="flex justify-center">
           <Link
             href="https://www.visualcapitalist.com/lithium-key-ingredient-powering-todays-technology/"
             target="_blank"
