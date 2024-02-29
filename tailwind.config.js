@@ -76,7 +76,7 @@ module.exports = {
       addEditBg:'#FFF8F2',
       //dark
       darkTheme:'#3B3D40',
-      readMore:'#F18628'
+      readMore:'#59b95f'
      
     },
     fontFamily:{
