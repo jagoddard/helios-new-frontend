@@ -20,7 +20,7 @@ const NewsItem = ({ title, newsDate, newsDescription, pdfLink}: Props) => {
                                 <div
                                     className='flex gap-2 items-center cursor-pointer'
                                 >
-                                    <img src="/pdf.png" className='w-4 h-5' />
+                                    <img src="/pdf.png" className='w-5 h-5' />
                                     <p className='text-primaryColor text-base'>View</p>
                                 </div>
                         </Link>

@@ -99,7 +99,7 @@ const AddEdit = ({
   };
 
   return (
-    <div className="bg-addEditBg py-4 px-20 w-[700px] m-auto relative">
+    <div className="bg-[#d4ffd7] py-4 px-20 w-[700px] m-auto relative">
       {!isAddNew && (
         <div className="flex justify-end gap-4">
           <button
