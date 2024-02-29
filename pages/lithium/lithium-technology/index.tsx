@@ -18,7 +18,7 @@ const index = () => {
           Facts.
         </p>
         <div className="flex justify-center">
-          <img src="/lithiumtech.jpg" className="md:w-[600px]" />
+          <img src="/lithiumTech.jpg" className="md:w-[600px]" />
         </div>
         <div className="flex justify-center">
           <Link
