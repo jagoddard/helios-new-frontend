@@ -89,7 +89,7 @@ const Homepage = ({ data }: HomepageProps) => {
           </div>
         </div> */}
       </section>
-      <section className="relative">
+      <section className="h-0">
         <NewsTicker />
       </section>
       <section>
@@ -100,9 +100,9 @@ const Homepage = ({ data }: HomepageProps) => {
                 D2 <span className=" text-white">Lithium</span>
               </p>
               <p className="text-white text-[18px] md:text-[26px] font-semibold">
-                TSX.v: <span className="text-primaryColor">DTWO </span>| OTCQB:{" "}
-                <span className="text-primaryColor">DTWOF </span>| Germany:{" "}
-                <span className="text-primaryColor">C2U0</span>
+                TSX.v: <span className="text-primaryColor"><Link  href="https://finance.yahoo.com/quote/DTWO.V/" target="_blank" passHref>DTWO</Link> </span>| OTCQB:{" "}
+                <span className="text-primaryColor"><Link href="https://finance.yahoo.com/quote/DTWOF/" target="_blank" passHref>DTWOF</Link> </span>| Germany:{" "}
+                <span className="text-primaryColor"><Link href="https://finance.yahoo.com/quote/C2U.DU" target="_blank" passHref>C2U0</Link></span>
               </p>
             </div>
             <p className={styles.homeAboutSubTitle}>
