@@ -89,7 +89,7 @@ const Homepage = ({ data }: HomepageProps) => {
           </div>
         </div> */}
       </section>
-      <section className="h-0 ">
+      <section className="h-0">
         <NewsTicker />
       </section>
       <section>
