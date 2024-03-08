@@ -53,7 +53,7 @@ const TeelsMarsh = () => {
             <div className="md:w-1/2">
               <img src="/teelsLocation.png" />
             </div>
-          </div>
+          </div> 
         </section>
         <section className="px-5 md:px-20 py-10">
           <div className="flex flex-col md:flex-row items-center gap-10">

@@ -106,10 +106,10 @@ const Header = ({ tabname }: HeaderProps) => {
                         ></div>
                     </div>
                 </div> */}
-                {loginContext.isLoggedIn ? 
+                {/* {loginContext.isLoggedIn ? 
                     <button className={styles.login} onClick={handleLogout}>Logout</button> 
                     : 
-                    <Link href={routes.login}><button className={styles.login}>Login</button></Link>}
+                    <Link href={routes.login}><button className={styles.login}>Login</button></Link>} */}
             </div>
 
             <div className='visible headerMd:hidden flex justify-end items-center'>
