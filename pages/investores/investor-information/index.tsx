@@ -82,6 +82,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   <td className="bg-[#C8FFCB] text-black">1,335,000</td>
                   {/* <td></td> */}
                 </tr>
+                
                 <tr>
                   <td>DTWOF</td>
                   <td className="bg-[#C8FFCB] text-black">OTC Markets</td>

@@ -28,7 +28,7 @@ const index = () => {
               Lithium & Technologies Corp.
             </p>
           </div>
-        </section> */}
+        </section> */} 
         <section className="px-5 md:px-20 py-10 bg-bgColor border-t-2 border-primaryColor">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex gap-2 items-start md:w-1/2">

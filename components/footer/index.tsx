@@ -37,7 +37,8 @@ const Footer = () => {
               </Link>
             )}
           </div>
-          </div>
+          </div> 
+          
           <div className={styles.footerNavbarMobile}>
             <div className={styles.footerNavItemMobile}>
               <Link href={routes.homepage}>

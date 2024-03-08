@@ -22,6 +22,7 @@ const index = () => {
                         </div>
                         <p className='text-center mt-6 text-white'><span className='text-primaryColor'>100%</span> holds by Dajin Resources (US) Corp.</p>
                     </div>
+                    
                 </section>
                 <section className='px-5 md:px-20 py-10 bg-bgColor'>
                     <div className='flex flex-col md:flex-row items-center gap-10'>

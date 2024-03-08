@@ -70,7 +70,7 @@ const index = () => {
                     <div className='my-6 flex justify-center'>
                         <img src='/explo.png' className='md:w-1/2' />
                     </div>
-                </section>
+                </section> 
                 <section className='px-5 md:px-20 py-10'>
                     <p className='font-semibold mb-3 text-primaryColor text-xl md:text-4xl'>OTHER AGREEMENTS</p>
                     <p className='text-white '>In July, 2015, Dajin signed an agreement with the Cooperativa and Community of Tres Morros for the right to explore the San Jose and Navidad concessions. This agreement gives D2 Lithium the right to explore the 4,400 hectare (10,625 acres) San Jose- Navidad concessions within the Guayatoyoc salar. The mining leases held by the Cooperative, “Navidad” and “San Jose”, cover a total area of 4,300 hectares (10,625 acres). An initial payment of $US20,000 has been made and the Cooperativa now must acquire the exploration permits to receive a further payment of $US40,000. These permits will be the first to be granted to D2 Lithium for exploration work in Guayatoyoc, a salar where Dajin has staked ground of 80,248 hectares (198,000 acres).</p>

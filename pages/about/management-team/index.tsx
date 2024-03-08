@@ -9,6 +9,7 @@ const ManagementTeam = () => {
         <p className="text-headerMobile md:text-header font-semibold text-white">
           MANAGEMENT & DIRECTORS
         </p>
+        
         {/* <AboutData
                     title="Christopher Brown"
                     subTitle="CEO & Director, HeliosX"

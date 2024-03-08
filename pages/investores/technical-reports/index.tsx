@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
 };
 
 const TechnicalReports = ({ data }: Props) => {
-  return (
+  return ( 
     <InvestorContainer selectedTab="Technical Reports">
       <section className="py-10 px-5 md:px-20 border-b-8 border-primaryColor bg-darkTheme">
         <p className="text-headerMobile md:text-header font-semibold mb-6 text-white">
