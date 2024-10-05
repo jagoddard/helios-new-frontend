@@ -8,7 +8,7 @@ const Project = () => {
       <div className="px-5 md:px-20 py-10 border-b-8 border-newsItemDate bg-darkTheme">
         <section>
           <p className="font-semibold text-headerMobile md:text-header text-white uppercase">
-            PROJECTS
+            PROJECT
           </p>
           <p className="text-[#F2F2F2] my-5">
             All project entities, reports and intellectual property are wholly
@@ -66,7 +66,7 @@ const Project = () => {
             </p>
           </div>
         </section>
-        <section className="my-20">
+        {/* <section className="my-20">
           <Title title="ALKALI LAKE, ESMERALDA COUNTY, NEVADA, USA" />
           <div className="mt-5 mb-2 flex flex-col-reverse md:flex-row items-center gap-10">
             <p className="text-white md:w-[50%]">
@@ -205,7 +205,7 @@ const Project = () => {
             related expenditure of CDN $2,000,000 on the Project. In October
             2019, Pluspetrol earned a 51% interest in Dajin Resources S.A.
           </p>
-        </section>
+        </section> */}
         {/* <section className="my-20">
           <Title title="FOX CREEK, ALBERTA, CANADA" />
           <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 my-5">
@@ -262,14 +262,14 @@ const Project = () => {
           </div>
          
         </section> */}
-         <p className="text-white mt-3">
+         {/* <p className="text-white mt-3">
             Historically, the energy industry has proven the productive
             capability of the reservoirs, and substantial wellbore penetrations
             assist with stratigraphic analysis to optimize potential locations.
             Work is ongoing in the region as D2 Lithium continues with a detailed
             Western Canadian Sedimentary Basin study to identify optimal
             locations for prospective lithium brine reservoirs.
-          </p>
+          </p> */}
       </div>
     </ProjectContainer>
   );
