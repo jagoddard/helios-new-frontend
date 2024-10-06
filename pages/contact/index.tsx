@@ -94,6 +94,7 @@ const index = () => {
           </div>
           <div className="md:w-1/2"></div>
         </div>
+        
 
         <div className="flex flex-col md:flex-row gap-10">
           <div className="md:w-1/2">
