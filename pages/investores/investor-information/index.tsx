@@ -79,7 +79,7 @@ const InvestorInformation = ({ data }: InvestorInfoProps) => {
                   <td className="text-black">DTWO</td>
                   <td className="bg-[#C8FFCB] text-black">TSX Venture</td>
                   <td>36,231,804</td>
-                  <td className="bg-[#C8FFCB] text-black">1,335,000</td>
+                  <td className="bg-[#C8FFCB] text-black">1,045,000</td>
                   {/* <td></td> */}
                 </tr>
                 

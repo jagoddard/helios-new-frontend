@@ -27,11 +27,11 @@ const index = () => {
               <br />
               Langley, BC V2Y 0G6 Canada
             </p>
-            
+
             <p className="md:w-1/2 text-white">Phone: 604.681.6151</p>
             <p className=" md:w-1/2 text-white">Email: brian@d2lithium.com</p>
           </div>
-          <div className="md:w-1/2">
+          {/* <div className="md:w-1/2">
             <Address address="FIELD OFFICE, ARGENTINA" />
             <p className="pt-4 md:w-1/2 text-white">
               Dajin Resources S.A. Beccar Cosme M. Varela C&C
@@ -40,7 +40,7 @@ const index = () => {
               Argentina
             </p>
             <p className=" md:w-1/2 text-white">Phone: 011.54.11.4315.2444</p>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col md:flex-row gap-10 mb-10">
           <div className="md:w-1/2">
@@ -90,6 +90,26 @@ const index = () => {
               401-905 West Pender Street
               <br />
               Vancouver, BC V6C 1L6 Canada
+            </p>
+          </div>
+          <div className="md:w-1/2"></div>
+        </div>
+        <div className="flex flex-col md:flex-row gap-10 mt-5">
+          <div className="md:w-1/2">
+            <Address address="LEGAL" />
+            <p className="pt-4 text-white">
+              OLEN AASEN LAW
+              <br />
+              520-2508 Watson Street
+              <br />
+              Vancouver, BC V5T 3G9 Canada
+            </p>
+            <p className="pt-4 text-white">
+              KAEMPFER CROWELL
+              <br />
+              50 West Libery Street, Suite 1100
+              <br />
+              Reno, NV 89501 U.S.A
             </p>
           </div>
           <div className="md:w-1/2"></div>

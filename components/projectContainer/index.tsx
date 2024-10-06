@@ -18,14 +18,14 @@ const ProjectContainer = ({ selectedTab, children }: ProjectProps) => {
                 <Header tabname='Projects' />
                 <section className='h-[400px] md:h-[500px] relative'>
                     <div className='flex justify-center items-center p-4 bg-bgOpacity absolute bottom-20'>
-                        <p className='text-primaryColor text-2xl md:text-4xl font-bold'>Projects</p>
+                        <p className='text-primaryColor text-2xl md:text-4xl font-bold'>Project</p>
                     </div>
                 </section>
             </section>
             <section className='hidden md:flex justify-center gap-10 bg-bgColor py-4 px-6'>
                 <Link href={routes.teelsMarsh}><p className={`${selectedTab === "Teels Marsh" ? "text-primaryColor" : "text-white"} cursor-pointer text-xl`}>Teels Marsh</p></Link>
-                <Link href={routes.alkaliLake}><p className={`${selectedTab === "Alkali Lake" ? "text-primaryColor" : "text-white"} cursor-pointer text-xl`}>Alkali Lake</p></Link>
-                <Link href={routes.guayatoyoc}><p className={`${selectedTab === "Guayatoyoc" ? "text-primaryColor" : "text-white"} cursor-pointer text-xl`}>Guayatoyoc</p></Link>
+                {/* <Link href={routes.alkaliLake}><p className={`${selectedTab === "Alkali Lake" ? "text-primaryColor" : "text-white"} cursor-pointer text-xl`}>Alkali Lake</p></Link>
+                <Link href={routes.guayatoyoc}><p className={`${selectedTab === "Guayatoyoc" ? "text-primaryColor" : "text-white"} cursor-pointer text-xl`}>Guayatoyoc</p></Link> */}
                 {/* <Link href={routes.foxCreek}><p className={`${selectedTab === "Fox Creek" ? "text-primaryColor" : "text-white"} cursor-pointer text-xl`}>Fox Creek</p></Link> */}
             </section>
             <section className='bg-bgColor py-4 px-20 w-full md:hidden'>

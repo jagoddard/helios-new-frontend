@@ -45,14 +45,14 @@ const ManagementTeam = () => {
           subTitle="Director"
           desc="Mr. Hibberd is currently Chairman of the Board of Canacol Energy Ltd. Mr. Hibberd has been Chairman and CEO of MJH Services Inc., a corporate finance advisory firm since 1995. He is also currently Vice Chairman of Sunshine Oilsands Ltd. and Chairman of PetroFrontier Corp. and serves as a board member of CanAsia Energy Corp. Formerly, he was Chairman of Heritage Oil Plc, Heritage Oil Corporation and Greenfields Petroleum Corporation; and former director of Montana Exploration Corp., Avalite Inc., Challenger Energy Corp., Deer Creek Energy, Iteration Energy Ltd., Pan Orient Energy Corp., Rally Energy Corp., Sagres Energy, Skope Energy Inc. and Zapata Energy Corporation. Mr. Hibberd holds a BA and an MBA from Western University and an LLB from the University of Toronto. He is also a member of the Law Society of Upper Canada."
         />
-        <p className="text-2xl md:text-4xl font-semibold mt-20 text-white">
+        {/* <p className="text-2xl md:text-4xl font-semibold mt-20 text-white">
           DAJIN RESOURCES S.A.
         </p>
         <AboutData
           title="Cosme Beccar-Verela"
           subTitle=""
           desc="Cosme Beccar-Verela was born in New York City and graduated as a lawyer at the University of Buenos Aires in 1989. He practiced as a Foreign Associate in Winthrop, Stimson, Putnam & Roberts, New York (1990) and in Huygué de Mahenge, Bloxham et Michaud, Paris (1995). He was an associate Professor of Contract Law in the University of Buenos Aires from his graduation until 2004. Cosme represented Placer Dome while this company explored in Argentina; signed contracts on behalf of Placer with the provincial authorities of Catamarca (Cerro Atajo) and Neuquén (Andacollo). He has represented Continental Illinois Bank and was member of the Committee of banking lawyers as well as a member of the Board of American Express Argentina and of ABB Oil & Gas. His legal practice also includes insurance, trading and industrial companies. Cosme is fluent in English, French and Portuguese and has basic knowledge of Dutch."
-        />
+        /> */}
         <img
           src="/bgAbout.svg"
           className="hidden md:w-[45%] md:block absolute top-0 right-0"

@@ -45,24 +45,24 @@ const markers: markersTypes[] = [
     //         </div>
     //     )
     // },
-    {
-        markerOffset: 15,
-        markerYOffset: -20,
-        name: "Akali Lake Valley, Nevada, USA",
-        acerage: "(2,832.4 acres)",
-        coordinates: [-119.84732024641305, 41.71314416252361],
-        mapImg: (
-            <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-                <iframe
-                    style={{ width: "100%", height: "100%" }}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60226.03345774173!2d-119.8896263376504!3d41.72070168421398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5782ad9e0813cd7f!2zNDHCsDQyJzQyLjAiTiAxMTnCsDUwJzQ5LjAiVw!5e1!3m2!1sen!2sin!4v1664451088298!5m2!1sen!2sin"
-                    loading="lazy"
-                >
-                </iframe>
-            </div>
+    // {
+    //     markerOffset: 15,
+    //     markerYOffset: -20,
+    //     name: "Akali Lake Valley, Nevada, USA",
+    //     acerage: "(2,832.4 acres)",
+    //     coordinates: [-119.84732024641305, 41.71314416252361],
+    //     mapImg: (
+    //         <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
+    //             <iframe
+    //                 style={{ width: "100%", height: "100%" }}
+    //                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60226.03345774173!2d-119.8896263376504!3d41.72070168421398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5782ad9e0813cd7f!2zNDHCsDQyJzQyLjAiTiAxMTnCsDUwJzQ5LjAiVw!5e1!3m2!1sen!2sin!4v1664451088298!5m2!1sen!2sin"
+    //                 loading="lazy"
+    //             >
+    //             </iframe>
+    //         </div>
 
-        )
-    },
+    //     )
+    // },
     {
         markerOffset: -210,
         markerYOffset: -10,
@@ -80,21 +80,21 @@ const markers: markersTypes[] = [
             </div>
         )
     },
-    {
-        markerOffset: -210,
-        markerYOffset: -10,
-        name: "Guayatayoc, Jujuy, Argentina",
-        acerage: "(230,000 acres)",
-        coordinates: [-66.21195190525212, -23.964050144675575],
-        mapImg: <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-            <iframe 
-                style={{ width: "100%", height: "100%" }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126702.44203729229!2d-66.25291198248605!3d-23.98186383360072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x347bee773b7d5307!2zMjPCsDU3JzUzLjAiUyA2NsKwMTInNDMuMCJX!5e1!3m2!1sen!2sin!4v1664452680707!5m2!1sen!2sin"
-                loading="lazy" 
-            > 
-            </iframe>
-        </div>
-    },
+    // {
+    //     markerOffset: -210,
+    //     markerYOffset: -10,
+    //     name: "Guayatayoc, Jujuy, Argentina",
+    //     acerage: "(230,000 acres)",
+    //     coordinates: [-66.21195190525212, -23.964050144675575],
+    //     mapImg: <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
+    //         <iframe 
+    //             style={{ width: "100%", height: "100%" }}
+    //             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126702.44203729229!2d-66.25291198248605!3d-23.98186383360072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x347bee773b7d5307!2zMjPCsDU3JzUzLjAiUyA2NsKwMTInNDMuMCJX!5e1!3m2!1sen!2sin!4v1664452680707!5m2!1sen!2sin"
+    //             loading="lazy" 
+    //         > 
+    //         </iframe>
+    //     </div>
+    // },
 ];
 
 const annotations: annotationTypes[] = [
@@ -103,21 +103,21 @@ const annotations: annotationTypes[] = [
     //     dx: -20,
     //     dy: -8
     // },
-    {
-        coordinates: [-119.84732024641305, 41.71314416252361],
-        dx: 23,
-        dy: -17
-    },
+    // {
+    //     coordinates: [-119.84732024641305, 41.71314416252361],
+    //     dx: 23,
+    //     dy: -17
+    // },
     {
         coordinates: [-118.34694327503382, 38.20556233485941],
         dx: -20,
         dy: -8
     },
-    {
-        coordinates: [-66.21195190525212, -23.964050144675575],
-        dx: -20,
-        dy: -8
-    }
+    // {
+    //     coordinates: [-66.21195190525212, -23.964050144675575],
+    //     dx: -20,
+    //     dy: -8
+    // }
 
 ]
 
