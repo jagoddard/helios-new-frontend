@@ -38,13 +38,13 @@ const MobileTabs = ({ tabData }: MobileTabProps) => {
             </div>
             {
                 isPopoverOpen ? (
-                    <div className='absolute min-h-[144px] w-60 bg-mobileDropdownBg top-11 flex flex-col justify-center items-center z-50'>
+                    <div className='absolute min-h-[144px] w-60 bg-[#d4ffd7] top-11 flex flex-col justify-center items-center z-50'>
                         {
                             unSelectedTabs && unSelectedTabs.map((tab: TabType, index: number) => (
                                 <div
                                     key={index}
                                     onClick={() => handleTabChange(tab)}
-                                    className={`w-4/5 ${index !== unSelectedTabs.length - 1 ? "border-b-2 border-b-primaryLight" : ""} `}
+                                    className={`w-4/5 ${index !== unSelectedTabs.length - 1 ? "border-b-2 border-b-[#59b95f]" : ""} `}
                                 >
                                     <p className='text-lg font-medium leading-10'>{tab.name}</p>
                                 </div>

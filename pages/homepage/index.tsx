@@ -18,6 +18,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import { getAllNews } from "../../services/news";
 import { getAllArticles } from "../../services/articles";
 import dynamic from "next/dynamic";
+import NewsTicker from "../../components/newsTicker";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -67,7 +68,7 @@ const Homepage = ({ data }: HomepageProps) => {
         <Header tabname="Home" />
         <div className={styles.hero}>
           <ReactPlayer
-            url="videos/homepageVideo.m4v"
+            url="videos/2018_05_31_08_43_38_video_May_31_2018.mp4"
             loop={true}
             controls={false}
             playing={true}
@@ -76,54 +77,72 @@ const Homepage = ({ data }: HomepageProps) => {
             height="fit-content"
           />
         </div>
-      </section>
-      <section className={styles.homeAbout}>
-        <div className={styles.homeAboutInner}>
-          <div>
-            <p className={styles.homeAboutTitle}>
-              Helios<span className=" text-white">X</span>
-            </p>
-            <p className="text-white text-[18px] md:text-[26px] font-semibold">
-              TSX.v: <span className="text-primaryColor">HX </span>| OTCQB: <span className="text-primaryColor">HXLTF </span>| Germany: <span className="text-primaryColor">C2U0</span>
+        {/* <div className="bg-hero bg-cover bg-center h-[600px]">
+          <div className="flex justify-center items-center p-4 bg-bgOpacity w-full h-full">
+            <p className="text-white md:text-4xl font-bold text-center">
+              <span className="text-[40px]">Welcome to</span>
+              <br />
+              <span className="text-primaryColor text-[60px]">
+                D2 Lithium Corporation
+              </span>
             </p>
           </div>
-          <p className={styles.homeAboutSubTitle}>
-            A Lithium Brine (Battery Metal) Exploration Company
-          </p>
-          <p className={styles.homeAboutDesc}>
-            HeliosX is an industry leading, integrated Lithium exploration
-            company, and one of the few international investment opportunities
-            with approximately 832,000 gross acres diversified across three
-            highly prospective regions: Jujuy (Argentina ~ 230,000 acres),
-            Nevada (USA ~ 17,000 acres) and Alberta (Canada ~ 585,000 acres).{" "}
-          </p>
-          <p className={styles.homeAboutDesc}>
-            Our assets are subjected to rigorous technical evaluation using
-            proprietary, geological modelling and brine production simulation by
-            a team with decades of international experience. This de-risks our
-            assets, optimizes capital deployment and ensures a clear
-            line-of-sight to commercialization.
-          </p>
-          <p className={styles.homeAboutDesc}>
-            Through our work with global Direct Lithium Extraction (DLE)
-            leaders, we will conduct Front End Engineering Design (FEED)
-            studies, followed by demonstration facilities and commercial,
-            scalable operations.
-          </p>
-          <p className={styles.homeAboutDesc}>
-            The benefits of deploying DLE technologies are: the elimination of
-            evaporation ponds, a significant reduction in land disturbance, much
-            lower water consumption and expediting the extraction process from
-            years to days. This reduces costs, increases profitability and
-            ensures long-term social license.
-          </p>
-          <p className={styles.homeAboutLastDesc}>
+        </div> */}
+      </section>
+      <section className="h-0">
+        <NewsTicker />
+      </section>
+      <section>
+        <div className={styles.homeAbout}>
+          <div className={styles.homeAboutInner}>
+            <div>
+              <p className={styles.homeAboutTitle}>
+                D2 <span className=" text-white">Lithium</span>
+              </p>
+              <p className="text-white text-[18px] md:text-[26px] font-semibold">
+                TSX.v: <span className="text-primaryColor"><Link  href="https://finance.yahoo.com/quote/DTWO.V/" target="_blank" passHref>DTWO</Link> </span>| OTCQB:{" "}
+                <span className="text-primaryColor"><Link href="https://finance.yahoo.com/quote/DTWOF/" target="_blank" passHref>DTWOF</Link> </span>| Germany:{" "}
+                <span className="text-primaryColor"><Link href="https://finance.yahoo.com/quote/C2U.DU" target="_blank" passHref>C2U0</Link></span>
+              </p>
+            </div>
+            <p className={styles.homeAboutSubTitle}>
+              A Lithium Brine (Battery Metal) Exploration Company
+            </p>
+            <p className={styles.homeAboutDesc}>
+              D2 Lithium is an industry leading, integrated Lithium exploration
+              company, and one of the few international investment opportunities
+              with approximately 250,000 gross acres diversified across two
+              highly prospective regions: in Jujuy province in Argentina ~
+              230,000 acres and in Nevada USA ~ 17,000 acres.
+            </p>
+            <p className={styles.homeAboutDesc}>
+              Our assets are subjected to rigorous technical evaluation using
+              proprietary, geological modelling and brine production simulation
+              by a team with decades of international experience. This de-risks
+              our assets, optimizes capital deployment and ensures a clear
+              line-of-sight to commercialization.
+            </p>
+            <p className={styles.homeAboutDesc}>
+              Through our work with global Direct Lithium Extraction (DLE)
+              leaders, we will conduct Front End Engineering Design (FEED)
+              studies, followed by demonstration facilities and commercial,
+              scalable operations.
+            </p>
+            <p className={styles.homeAboutDesc}>
+              The benefits of deploying DLE technologies are: the elimination of
+              evaporation ponds, a significant reduction in land disturbance,
+              much lower water consumption and expediting the extraction process
+              from years to days. This reduces costs, increases profitability
+              and ensures long-term social license.
+            </p>
+            {/* <p className={styles.homeAboutLastDesc}>
             Our management team has a long track record executing resource
             projects that meet the highest ESG standards and ensure equitable
             Indigenous participation.
-          </p>
+          </p> */}
+          </div>
+          <img src="bgAbout.svg" className={styles.homeaboutBackground} />
         </div>
-        <img src="bgAbout.svg" className={styles.homeaboutBackground} />
       </section>
       <section className="py-10 px-10 md:px-20 bg-darkTheme">
         <p className="text-[32px] md:text-[40px] text-center font-bold font-sans text-white">
@@ -171,9 +190,15 @@ const Homepage = ({ data }: HomepageProps) => {
         </div>
       </section>
 
-      <section className={styles.kum}>
+      {/* <section className={styles.kum}>
         <div className={styles.kumGroup}>
-          <Swiper
+          <KnowMoreComp
+            articleData={data.articles}
+            heading="Articles"
+            viewMore={routes.investorLithiumArticles}
+            route={`/pdf-viewer/articles`}
+          /> */}
+      {/* <Swiper
             slidesPerView={1}
             spaceBetween={0}
             navigation={true}
@@ -184,24 +209,24 @@ const Homepage = ({ data }: HomepageProps) => {
               },
             }}
             modules={[Navigation]}
-          >
-            <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
+          > */}
+      {/* <SwiperSlide className="swiper-slide mx-auto md:ml-[60px]">
               <KnowMoreComp
                 articleData={data.news}
                 heading="News Releases"
                 viewMore={routes.latestNewReleases}
                 route={`/pdf-viewer/news`}
               />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide mx-auto md:ml-0">
+            </SwiperSlide> */}
+      {/* <SwiperSlide className="swiper-slide mx-auto md:ml-0">
               <KnowMoreComp
                 articleData={data.articles}
                 heading="Articles"
                 viewMore={routes.investorLithiumArticles}
                 route={`/pdf-viewer/articles`}
               />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide mx-auto md:ml-4">
+            </SwiperSlide> */}
+      {/* <SwiperSlide className="swiper-slide mx-auto md:ml-4">
               <div className="w-[90vw] mx-auto md:w-[650px] h-[560px] md:h-[742px] bg-black rounded-lg">
                 <TwitterTimelineEmbed
                   sourceType="profile"
@@ -212,10 +237,10 @@ const Homepage = ({ data }: HomepageProps) => {
                   placeholder={twitterPlaceholder}
                 />
               </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </section>
+            </SwiperSlide> */}
+      {/* </Swiper> */}
+      {/* </div>
+      </section> */}
 
       <section className="bg-[#25272A]">
         <div className={styles.mapBackground}>

@@ -1,23 +1,24 @@
 import { useState, createContext } from "react";
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Head from 'next/head';
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import Script from 'next/script';
+import Script from "next/script";
 import AppLoginContext from "../components/AppLoginContext";
-
+import "./../components/newsTicker/newsTicker.css";
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [token, setToken] = useState("")
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState("");
   return (
-    <AppLoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, token, setToken }}>
+    <AppLoginContext.Provider
+      value={{ isLoggedIn, setIsLoggedIn, token, setToken }}
+    >
       <Head>
-        <title>HeliosX</title>
+        <title>D2 Lithium</title>
       </Head>
       <main className="">
-
         <Component {...pageProps}></Component>
         <Script
           src="https://qmod.quotemedia.com/js/qmodLoader.js"
@@ -30,4 +31,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp
+export default MyApp;

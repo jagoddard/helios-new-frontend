@@ -29,20 +29,20 @@ const Markets = () => {
             {marketTabs === "TSX" ?
               <AdvancedChart widgetProps={{
                 "theme": "dark",
-                "symbol": "HX",
+                "symbol": "DTWO",
                 "width": "100%",
                 "height": "500px",
               }} /> : (
                 marketTabs === "OTC" ?
                   <AdvancedChart widgetProps={{
                     "theme": "dark",
-                    "symbol": "HXLTF",
+                    "symbol": "DTWOF",
                     "width": "100%",
                     "height": "500px",
                   }} /> :
                   <AdvancedChart widgetProps={{
                     "theme": "dark",
-                    "symbol": "C2U0",
+                    "symbol": "BER:C2U",
                     "width": "100%",
                     "height": "500px",
                   }} />
