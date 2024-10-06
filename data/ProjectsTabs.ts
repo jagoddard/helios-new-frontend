@@ -17,9 +17,10 @@ export const ProjectTabs: TabType[] = [
     {
         name: "Guayatoyoc",
         link: routes.guayatoyoc
-    },
-    {
-        name: "Fox Creek",
-        link: routes.foxCreek
     }
+    // ,
+    // {
+    //     name: "Fox Creek",
+    //     link: routes.foxCreek
+    // }
 ]

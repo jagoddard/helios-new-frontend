@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { reduceString } from '../../utils/reduceString'
 interface Props {
     // newsImage: any,
@@ -9,15 +10,15 @@ interface Props {
 }
 const SocialArtical = ({ headline, description, date, fileLink }: Props) => {
     return (
-        <div className='flex justify-between border-b border-bgColor pb-3 mt-6 cursor-pointer md:w-[600px]'>
+        <div className='flex justify-between border-b border-bgColor pb-3 mt-6 cursor-pointer'>
             <div className='flex gap-3 items-center'>
                 <div className='ml-2 md:mr-0'>
                     {
                         fileLink != '#' ? (
                             <p className='text-white text-base md:text-newsArticalHeader hover:text-primaryColor'>
-                                <a href={fileLink} target="_blank" rel="noopener noreferrer">
+                                <Link href={fileLink} passHref>
                                     {reduceString(40, headline)}
-                                </a>
+                                </Link>
                             </p>
                         ) : (
                             <p className='text-white text-base md:text-2xl hover:text-primaryColor'>

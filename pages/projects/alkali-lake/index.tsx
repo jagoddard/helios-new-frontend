@@ -6,9 +6,9 @@ const index = () => {
         <ProjectContainer selectedTab="Alkali Lake" >
             <div className='border-b-8 border-primaryColor bg-darkTheme'>
                 <section className='px-5 md:px-20 py-10'>
-                    <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>ALKALI SPRING LITHIUM PROJECT – NEVADA</p>
+                    <p className='text-headerMobile md:text-header font-semibold mb-3 text-white'>ALKALI SPRING LITHIUM PROJECT, NEVADA, USA</p>
                    
-                    <p className='text-white'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 8,825 acres in the Alkali Valley, in Esmeralda County, Nevada.</p>
+                    <p className='text-white'>Dajin Resources (US) Corp. holds a 100% interest in 139 placer mineral claims covering 2,832.4 acres in the Alkali Valley, in Esmeralda County, Nevada.</p>
                     <div className='md:w-[60%] m-auto bg-bgColor py-5 px-8 mt-10 rounded-2xl projectBoxShadow'>
                         <div className='flex flex-col md:flex-row gap-10 md:gap-0 justify-between'>
                             <div className='w-full flex flex-col justify-center items-center'>
@@ -16,12 +16,13 @@ const index = () => {
                                 <p className='pt-2 text-white'>Hectares</p>
                             </div>
                             <div className='md:border-l border-t md:border-t-0 border-b md:border-b-0 border-white py-10 md:py-0 w-full flex flex-col justify-center items-center'>
-                                <p className='text-primaryColor font-bold text-xl'>8,825</p>
+                                <p className='text-primaryColor font-bold text-xl'>2,832.4</p>
                                 <p className='pt-2 text-white'>Acres</p>
                             </div>
                         </div>
                         <p className='text-center mt-6 text-white'><span className='text-primaryColor'>100%</span> holds by Dajin Resources (US) Corp.</p>
                     </div>
+                    
                 </section>
                 <section className='px-5 md:px-20 py-10 bg-bgColor'>
                     <div className='flex flex-col md:flex-row items-center gap-10'>

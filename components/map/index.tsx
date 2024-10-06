@@ -28,41 +28,41 @@ type annotationTypes = {
 }
 
 const markers: markersTypes[] = [
-    {
-        markerOffset: -210,
-        markerYOffset: -10,
-        name: "Fox Creek, Alberta, Canada",
-        acerage: "(583,952 acres)",
-        coordinates: [-116.79502835738636, 54.39761248388819],
-        mapImg: (
-            <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-                <iframe
-                    style={{ width: "100%", height: "100%" }}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4495.284040462123!2d-116.79742373751738!3d54.396184368988614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f7e230138a9c55!2zNTTCsDIzJzUxLjAiTiAxMTbCsDQ3JzQyLjAiVw!5e1!3m2!1sen!2sin!4v1664452379618!5m2!1sen!2sin"
-                    loading="lazy"
-                >
-                </iframe>
-            </div>
-        )
-    },
-    {
-        markerOffset: 15,
-        markerYOffset: -20,
-        name: "Alkali Lake",
-        acerage: "(8,825 acres)",
-        coordinates: [-119.84732024641305, 41.71314416252361],
-        mapImg: (
-            <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-                <iframe
-                    style={{ width: "100%", height: "100%" }}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60226.03345774173!2d-119.8896263376504!3d41.72070168421398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5782ad9e0813cd7f!2zNDHCsDQyJzQyLjAiTiAxMTnCsDUwJzQ5LjAiVw!5e1!3m2!1sen!2sin!4v1664451088298!5m2!1sen!2sin"
-                    loading="lazy"
-                >
-                </iframe>
-            </div>
+    // {
+    //     markerOffset: -210,
+    //     markerYOffset: -10,
+    //     name: "Fox Creek, Alberta, Canada",
+    //     acerage: "(583,952 acres)",
+    //     coordinates: [-116.79502835738636, 54.39761248388819],
+    //     mapImg: (
+    //         <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
+    //             <iframe
+    //                 style={{ width: "100%", height: "100%" }}
+    //                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4495.284040462123!2d-116.79742373751738!3d54.396184368988614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f7e230138a9c55!2zNTTCsDIzJzUxLjAiTiAxMTbCsDQ3JzQyLjAiVw!5e1!3m2!1sen!2sin!4v1664452379618!5m2!1sen!2sin"
+    //                 loading="lazy"
+    //             >
+    //             </iframe>
+    //         </div>
+    //     )
+    // },
+    // {
+    //     markerOffset: 15,
+    //     markerYOffset: -20,
+    //     name: "Akali Lake Valley, Nevada, USA",
+    //     acerage: "(2,832.4 acres)",
+    //     coordinates: [-119.84732024641305, 41.71314416252361],
+    //     mapImg: (
+    //         <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
+    //             <iframe
+    //                 style={{ width: "100%", height: "100%" }}
+    //                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60226.03345774173!2d-119.8896263376504!3d41.72070168421398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5782ad9e0813cd7f!2zNDHCsDQyJzQyLjAiTiAxMTnCsDUwJzQ5LjAiVw!5e1!3m2!1sen!2sin!4v1664451088298!5m2!1sen!2sin"
+    //                 loading="lazy"
+    //             >
+    //             </iframe>
+    //         </div>
 
-        )
-    },
+    //     )
+    // },
     {
         markerOffset: -210,
         markerYOffset: -10,
@@ -80,44 +80,44 @@ const markers: markersTypes[] = [
             </div>
         )
     },
-    {
-        markerOffset: -210,
-        markerYOffset: -10,
-        name: "Guayatayoc, Jujuy, Argentina",
-        acerage: "(230,000 acres)",
-        coordinates: [-66.21195190525212, -23.964050144675575],
-        mapImg: <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
-            <iframe 
-                style={{ width: "100%", height: "100%" }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126702.44203729229!2d-66.25291198248605!3d-23.98186383360072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x347bee773b7d5307!2zMjPCsDU3JzUzLjAiUyA2NsKwMTInNDMuMCJX!5e1!3m2!1sen!2sin!4v1664452680707!5m2!1sen!2sin"
-                loading="lazy" 
-            > 
-            </iframe>
-        </div>
-    },
+    // {
+    //     markerOffset: -210,
+    //     markerYOffset: -10,
+    //     name: "Guayatayoc, Jujuy, Argentina",
+    //     acerage: "(230,000 acres)",
+    //     coordinates: [-66.21195190525212, -23.964050144675575],
+    //     mapImg: <div className='h-[400px] w-32 md:w-72 border-2 border-primaryColor rounded-md'>
+    //         <iframe 
+    //             style={{ width: "100%", height: "100%" }}
+    //             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126702.44203729229!2d-66.25291198248605!3d-23.98186383360072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x347bee773b7d5307!2zMjPCsDU3JzUzLjAiUyA2NsKwMTInNDMuMCJX!5e1!3m2!1sen!2sin!4v1664452680707!5m2!1sen!2sin"
+    //             loading="lazy" 
+    //         > 
+    //         </iframe>
+    //     </div>
+    // },
 ];
 
 const annotations: annotationTypes[] = [
-    {
-        coordinates: [-116.79502835738636, 54.39761248388819],
-        dx: -20,
-        dy: -8
-    },
-    {
-        coordinates: [-119.84732024641305, 41.71314416252361],
-        dx: 23,
-        dy: -17
-    },
+    // {
+    //     coordinates: [-116.79502835738636, 54.39761248388819],
+    //     dx: -20,
+    //     dy: -8
+    // },
+    // {
+    //     coordinates: [-119.84732024641305, 41.71314416252361],
+    //     dx: 23,
+    //     dy: -17
+    // },
     {
         coordinates: [-118.34694327503382, 38.20556233485941],
         dx: -20,
         dy: -8
     },
-    {
-        coordinates: [-66.21195190525212, -23.964050144675575],
-        dx: -20,
-        dy: -8
-    }
+    // {
+    //     coordinates: [-66.21195190525212, -23.964050144675575],
+    //     dx: -20,
+    //     dy: -8
+    // }
 
 ]
 
@@ -165,7 +165,7 @@ const Map = ({ setContent }: MapProps) => {
                             dx={annotation.dx}
                             dy={annotation.dy}
                             connectorProps={{
-                                stroke: "#F18628",
+                                stroke: "#59b95f",
                                 strokeWidth: 3,
                                 strokeLinecap: "round"
                             }}
@@ -177,8 +177,8 @@ const Map = ({ setContent }: MapProps) => {
                         <Marker key={name} coordinates={coordinates}>
                             <circle
                                 r={5}
-                                fill="#F18628"
-                                stroke="#000"
+                                fill="#59b95f"
+                                stroke="#59b95f"
                                 strokeWidth={1}
                                 style={{ cursor: "pointer" }}
                             />
@@ -199,7 +199,7 @@ const Map = ({ setContent }: MapProps) => {
                                     <rect width="225" height="51" rx="8" fill="black" fillOpacity="0.48" />
                                     <text textAnchor="middle" x={110} y={20} fill='#FFF' style={{ cursor: "pointer" }}>{name}</text>
                                     <text textAnchor="middle" x={110+5} y={40} fill='#FFF' style={{ cursor: "pointer" }}>{acerage}</text>
-                                    <rect x="1" y="1" width="223" height="50" rx="7" stroke="#F78222" strokeWidth="2" />
+                                    <rect x="1" y="1" width="223" height="50" rx="7" stroke="#59b95f" strokeWidth="2" />
                                 </g>
                                 <defs>
                                     <filter id="filter0_b_557_2017" x="-6" y="-6" width="237" height="93" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">

@@ -86,7 +86,7 @@
     }
 
     .kumCardTitle {
-        @apply text-kumItemTitle text-[32px] md:text-[40px] mb-12 font-bold
+        @apply text-white text-[32px] md:text-[40px] mb-12 font-bold text-center
     }
 
     .kmuButton {

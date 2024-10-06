@@ -28,7 +28,7 @@ const index = () => {
               Lithium & Technologies Corp.
             </p>
           </div>
-        </section> */}
+        </section> */} 
         <section className="px-5 md:px-20 py-10 bg-bgColor border-t-2 border-primaryColor">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex gap-2 items-start md:w-1/2">
@@ -94,7 +94,7 @@ const index = () => {
             Historically, the energy industry has proven the productive
             capability of the reservoirs, and substantial wellbore penetrations
             assist with stratigraphic analysis to optimize potential locations.
-            Work is ongoing in the region as HeliosX continues with a detailed
+            Work is ongoing in the region as D2 Lithium continues with a detailed
             Western Canadian Sedimentary Basin study to identify optimal
             locations for prospective lithium brine reservoirs.
           </p>

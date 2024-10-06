@@ -49,7 +49,7 @@ const Dashboard = () => {
                 <Header tabname='Dashboard' />
             </section>
             <section className='py-12 md:py-10 px-5 md:px-20 border-b-4  mt-20 border-primaryColor'>
-                <div className='flex justify-between bg-[#ffcba1] rounded-[8px] px-8 py-5 w-3/5 m-auto'>
+                <div className='flex justify-between bg-[#91D695] rounded-[8px] px-8 py-5 w-3/5 m-auto'>
                     <p className='text-xl font-semibold text-center'>Please select the section you want to update</p>
                     <div className="relative">
                         <select
@@ -67,8 +67,8 @@ const Dashboard = () => {
 
                             })}
                         </select>
-                        <div className="pointer-events-none absolute right-0 top-0 bottom-0 flex items-center px-2 text-gray-700">
-                            <svg className="h-4 w-4" fill='#F18628' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <div className="pointer-events-none absolute right-0 -top-4 bottom-0 flex items-center px-2 text-gray-700">
+                            <svg className="h-4 w-4" fill='#59b95f' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                             </svg>
                         </div>
