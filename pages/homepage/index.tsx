@@ -250,7 +250,6 @@ const Homepage = ({ data }: HomepageProps) => {
           <div className={styles.mapContainer}>
             <Map setContent={setContent} />
           </div>
-          
         </div>
       </section>
       <ReactTooltip className="tooltip-override">
